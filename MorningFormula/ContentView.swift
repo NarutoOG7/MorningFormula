@@ -13,7 +13,9 @@ import PhotosUI
 struct ContentView: View {
     
     var body: some View {
-        ProfileOnboardingView()
+        WeekView()
+//        TabBarView()
+//        ProfileOnboardingView()
     }
     
 //
