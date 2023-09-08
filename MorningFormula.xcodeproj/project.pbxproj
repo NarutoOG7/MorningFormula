@@ -13,9 +13,6 @@
 		C92E3F882A52417D00E90371 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C92E3F872A52417D00E90371 /* Preview Assets.xcassets */; };
 		C937811E2AA3901300EF490C /* RuleOfThirds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C937811D2AA3901300EF490C /* RuleOfThirds.swift */; };
 		C93781212AA39DF100EF490C /* SwiftUICalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C93781202AA39DF100EF490C /* SwiftUICalendar */; };
-		C93781242AA39E1000EF490C /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93781232AA39E1000EF490C /* MonthView.swift */; };
-		C93781262AA3A53700EF490C /* InformationViewWithSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93781252AA3A53700EF490C /* InformationViewWithSelection.swift */; };
-		C93781282AA3A92200EF490C /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93781272AA3A92200EF490C /* CustomCalendar.swift */; };
 		C937812A2AA3C47300EF490C /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93781292AA3C47300EF490C /* DayView.swift */; };
 		C937812D2AA3C48E00EF490C /* DayTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C937812C2AA3C48E00EF490C /* DayTaskCell.swift */; };
 		C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */; };
@@ -23,6 +20,10 @@
 		C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */; };
 		C9A086162AA61D5600C2CC14 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086152AA61D5600C2CC14 /* Task.swift */; };
 		C9A086182AA6631900C2CC14 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086172AA6631900C2CC14 /* WeekView.swift */; };
+		C9A0861A2AA76D1400C2CC14 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086192AA76D1400C2CC14 /* PlannerView.swift */; };
+		C9A0861E2AA8468700C2CC14 /* Funk.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0861D2AA8468700C2CC14 /* Funk.swift */; };
+		C9A086202AA966A800C2CC14 /* TaskWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0861F2AA966A800C2CC14 /* TaskWeekView.swift */; };
+		C9A086222AAA1BF800C2CC14 /* SwipeArrayPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086212AAA1BF800C2CC14 /* SwipeArrayPlay.swift */; };
 		C9F225C22A54D5D80074AE89 /* ProfileOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F225C12A54D5D80074AE89 /* ProfileOnboardingView.swift */; };
 		C9F225C42A550BA30074AE89 /* GenderChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F225C32A550BA30074AE89 /* GenderChoiceView.swift */; };
 		C9F225C62A550BCB0074AE89 /* ProfileOnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F225C52A550BCB0074AE89 /* ProfileOnboardingVM.swift */; };
@@ -36,9 +37,6 @@
 		C92E3F842A52417D00E90371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C92E3F872A52417D00E90371 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C937811D2AA3901300EF490C /* RuleOfThirds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleOfThirds.swift; sourceTree = "<group>"; };
-		C93781232AA39E1000EF490C /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
-		C93781252AA3A53700EF490C /* InformationViewWithSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewWithSelection.swift; sourceTree = "<group>"; };
-		C93781272AA3A92200EF490C /* CustomCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendar.swift; sourceTree = "<group>"; };
 		C93781292AA3C47300EF490C /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		C937812C2AA3C48E00EF490C /* DayTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTaskCell.swift; sourceTree = "<group>"; };
 		C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -46,6 +44,10 @@
 		C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderExt.swift; sourceTree = "<group>"; };
 		C9A086152AA61D5600C2CC14 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C9A086172AA6631900C2CC14 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		C9A086192AA76D1400C2CC14 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
+		C9A0861D2AA8468700C2CC14 /* Funk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funk.swift; sourceTree = "<group>"; };
+		C9A0861F2AA966A800C2CC14 /* TaskWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskWeekView.swift; sourceTree = "<group>"; };
+		C9A086212AAA1BF800C2CC14 /* SwipeArrayPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeArrayPlay.swift; sourceTree = "<group>"; };
 		C9F225C12A54D5D80074AE89 /* ProfileOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOnboardingView.swift; sourceTree = "<group>"; };
 		C9F225C32A550BA30074AE89 /* GenderChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderChoiceView.swift; sourceTree = "<group>"; };
 		C9F225C52A550BCB0074AE89 /* ProfileOnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOnboardingVM.swift; sourceTree = "<group>"; };
@@ -104,10 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				C937812B2AA3C47C00EF490C /* Day */,
-				C93781232AA39E1000EF490C /* MonthView.swift */,
-				C93781252AA3A53700EF490C /* InformationViewWithSelection.swift */,
-				C93781272AA3A92200EF490C /* CustomCalendar.swift */,
 				C9A086172AA6631900C2CC14 /* WeekView.swift */,
+				C9A086192AA76D1400C2CC14 /* PlannerView.swift */,
+				C9A0861D2AA8468700C2CC14 /* Funk.swift */,
+				C9A0861F2AA966A800C2CC14 /* TaskWeekView.swift */,
+				C9A086212AAA1BF800C2CC14 /* SwipeArrayPlay.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -246,23 +249,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A086222AAA1BF800C2CC14 /* SwipeArrayPlay.swift in Sources */,
 				C92E3F832A52417C00E90371 /* ContentView.swift in Sources */,
 				C9A086122AA40BC000C2CC14 /* AddTaskView.swift in Sources */,
 				C937812A2AA3C47300EF490C /* DayView.swift in Sources */,
 				C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */,
 				C92E3F812A52417C00E90371 /* MorningFormulaApp.swift in Sources */,
+				C9A0861A2AA76D1400C2CC14 /* PlannerView.swift in Sources */,
 				C9F225C42A550BA30074AE89 /* GenderChoiceView.swift in Sources */,
 				C9A086182AA6631900C2CC14 /* WeekView.swift in Sources */,
 				C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */,
-				C93781242AA39E1000EF490C /* MonthView.swift in Sources */,
+				C9A0861E2AA8468700C2CC14 /* Funk.swift in Sources */,
 				C9A086162AA61D5600C2CC14 /* Task.swift in Sources */,
 				C937812D2AA3C48E00EF490C /* DayTaskCell.swift in Sources */,
-				C93781282AA3A92200EF490C /* CustomCalendar.swift in Sources */,
 				C9F225C22A54D5D80074AE89 /* ProfileOnboardingView.swift in Sources */,
-				C93781262AA3A53700EF490C /* InformationViewWithSelection.swift in Sources */,
 				C9F225C62A550BCB0074AE89 /* ProfileOnboardingVM.swift in Sources */,
 				C937811E2AA3901300EF490C /* RuleOfThirds.swift in Sources */,
 				C9F225CD2A55A3680074AE89 /* GoalsInput.swift in Sources */,
+				C9A086202AA966A800C2CC14 /* TaskWeekView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
