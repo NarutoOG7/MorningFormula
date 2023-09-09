@@ -13,12 +13,16 @@ import PhotosUI
 struct ContentView: View {
     
     var body: some View {
-        PlanBView()
-//        TaskWeekView()
-//        PlannerView()
-//        WeekView()
-//        TabBarView()
-//        ProfileOnboardingView()
+//        GeometryReader { geo in
+        CalendarWeekCarousel()
+//            SwipingWeekView()
+//            PlanBView()
+            //        TaskWeekView()
+//                    PlannerView()
+//                    WeekView(geo: geo)
+            //        TabBarView()
+            //        ProfileOnboardingView()
+//        }
     }
     
 //
