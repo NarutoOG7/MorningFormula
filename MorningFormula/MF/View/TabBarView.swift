@@ -10,6 +10,8 @@ import SwiftUI
 struct TabBarView: View {
     
     @State private var selection = 0
+    
+    @ObservedObject var calendarManager = CalendarManager.instance
 
     var body: some View {
         TabView(selection: $selection) {
@@ -20,7 +22,7 @@ struct TabBarView: View {
     private var dayView: some View {
         
         NavigationView {
-            DayView()
+            DayView(day: $calendarManager.selectedDate)
                 .navigationTitle("")
         }
         .tabItem {

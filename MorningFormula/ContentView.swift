@@ -9,12 +9,16 @@ import SwiftUI
 import PhotosUI
 
 
-
 struct ContentView: View {
     
+    @ObservedObject var vm = CalendarManager.instance
+    
     var body: some View {
+        CalendarView()
+//        RoutineView(date: $vm.selectedDate, forward: vm.forward, backward: vm.backward)
 //        GeometryReader { geo in
-        CalendarWeekCarousel()
+//        Home()
+//        CalendarWeekCarousel()
 //            SwipingWeekView()
 //            PlanBView()
             //        TaskWeekView()

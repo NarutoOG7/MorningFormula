@@ -15,6 +15,8 @@ class DayVVM: ObservableObject {
 
 struct DayView: View {
     
+    @Binding var day: Date
+    
     @State var isShowingAddNewTask = false
     @ObservedObject var dayVVM = DayVVM.instance
     
@@ -61,7 +63,7 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        let dayView = DayView()
+        let dayView = DayView(day: .constant(Date()))
         let _ = dayView.dayVVM.tasks = [Task.exampleOne, Task.exampleTwo]
         return dayView
     }

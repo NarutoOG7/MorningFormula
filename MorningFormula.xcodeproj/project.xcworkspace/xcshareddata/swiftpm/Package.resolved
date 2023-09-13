@@ -1,12 +1,93 @@
 {
   "pins" : [
     {
+      "identity" : "combine-schedulers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/combine-schedulers",
+      "state" : {
+        "revision" : "ec62f32d21584214a4b27c8cee2b2ad70ab2c38a",
+        "version" : "0.11.0"
+      }
+    },
+    {
+      "identity" : "ecscrollview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EvanCooper9/ECScrollView",
+      "state" : {
+        "revision" : "1bbe4c5c136dc923ecff9381c16203328a335451",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "fscalendar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WenchaoD/FSCalendar.git",
+      "state" : {
+        "revision" : "0fbdec5172fccb90f707472eeaea4ffe095278f6",
+        "version" : "2.8.4"
+      }
+    },
+    {
+      "identity" : "jzcalendarweekview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zjfjack/JZCalendarWeekView.git",
+      "state" : {
+        "revision" : "6177be0ddb1257711186b8a282dfef5dcb274786",
+        "version" : "0.7.2"
+      }
+    },
+    {
+      "identity" : "swift-concurrency-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
+      "state" : {
+        "revision" : "479750bd98fac2e813fffcf2af0728b5b0085795",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "swift-week-view",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EvanCooper9/swift-week-view",
+      "state" : {
+        "branch" : "swiftui",
+        "revision" : "b8204bc0e76b2034975f4540690b4e1d441f83c1"
+      }
+    },
+    {
       "identity" : "swiftuicalendar",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GGJJack/SwiftUICalendar",
       "state" : {
         "revision" : "7ecd220909bc25529e35e2addb513a20abbfec82",
         "version" : "0.1.14"
+      }
+    },
+    {
+      "identity" : "swiftuiinfinitecarousel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dancarvajc/SwiftUIInfiniteCarousel.git",
+      "state" : {
+        "revision" : "c95fb3c3500131dffcea86ca0a8a367bc64bde1b",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swiftuipager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fermoya/SwiftUIPager.git",
+      "state" : {
+        "revision" : "4ddc04c801aac143090bb14cf26603a3bf9c74cb",
+        "version" : "2.5.0"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "50843cbb8551db836adec2290bb4bc6bac5c1865",
+        "version" : "0.9.0"
       }
     }
   ],

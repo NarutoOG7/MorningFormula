@@ -205,60 +205,70 @@
 ////    }
 ////}
 ////
+///
+import SwiftUI
+
+enum SwipeDirection {
+    case backward, forward
+}
+
 //struct RoutineView: View {
 //
-//    @ObservedObject var calendarManager = CalendarManager.instance
+//    let calendarStore = CalendarViewStore.instance
+//    @ObservedObject var calendarVM = CalendarViewModel.instance
 //
 //    @Binding var date: Date
-//    
+//
 //    @State private var swipeDirection: SwipeDirection?
-//
-//
-//    @ObservedObject var taskWeekVM = TaskWeekVM.instance
 //
 //    @GestureState private var translation: CGFloat = 0
 //    @State private var offset: CGFloat = 0
 //
 //
+//    let forward: () -> Void
+//    let backward: () -> Void
 //
 //    var body: some View {
-//            ZStack {
+//        ZStack {
+//            ForEach(0..<5) { _ in
 //                RoundedRectangle(cornerRadius: 25)
 //                    .fill(.yellow)
 //                    .ignoresSafeArea()
 //                Text(date.formatted())
 //            }
-//        
+//        }
 //            .gesture(
-//                DragGesture()
-//                    .updating($translation) { value, state, _ in
-//                        state = value.translation.width
-//                    }
-//                    .onEnded { value in
-//                        let threshold: CGFloat = UIScreen.main.bounds.width / 2
-//                        if value.translation.width > threshold {
-//                            // Swipe right (previous week)
-//                            withAnimation {
-//                                self.date = taskWeekVM.previousDay(date: date)
-////                                calendarManager.currentDate = taskWeekVM.previousDay(date: calendarManager.currentDate)
-//                                //                                offset -= UIScreen.main.bounds.width
-//                            }
-//                        } else if value.translation.width < -threshold {
-//                            // Swipe left (next week)
-//                            withAnimation {
-//                                self.date = taskWeekVM.nextDay(date: date)
-////                                calendarManager.currentDate = taskWeekVM.nextDay(date: calendarManager.currentDate)
-//                                //                                taskWeekVM.nextWeek()
-//                                //                                offset += UIScreen.main.bounds.width
-//                            }
+//                DragGesture(minimumDistance: 3.0,
+//                            coordinateSpace: .local)
+//                .onEnded({ value in
+//
+//                    switch (value.translation.width, value.translation.height) {
+//
+//                    case (...0, -200...200):
+//                        print("left swipe")
+//                        self.swipeDirection = .forward
+//                        withAnimation {
+//                            forward()
 //                        }
+//
+//
+//                    case (0..., -200...200):
+//                        print("right swipe")
+//                        self.swipeDirection = .backward
+//                        withAnimation {
+//                            backward()
+//                        }
+//                    default: print("no clue")
 //                    }
-//            )
+//                }))
+//            .transition(.asymmetric(
+//                insertion: swipeDirection == .forward ? .move(edge: .trailing) : .move(edge: .leading),
+//                removal: swipeDirection == .forward ? .move(edge: .leading) : .move(edge: .trailing)))
 //    }
 //
 //
 //}
-//
+
 //
 ////var body: some View {
 ////    let datesInAYear = calendarManager.datesInAYear(from: date)
@@ -278,3 +288,65 @@
 ////
 ////    }
 ////}
+
+
+struct RoutineView: View {
+
+    let calendarStore = CalendarViewStore.instance
+    @ObservedObject var calendarVM = CalendarManager.instance
+
+    @Binding var date: Date
+    
+    @State private var swipeDirection: SwipeDirection?
+
+    @GestureState private var translation: CGFloat = 0
+    @State private var offset: CGFloat = 0
+
+    let forward: () -> Void
+    let backward: () -> Void
+
+    var body: some View {
+        GeometryReader { geometry in
+            HStack {
+                ForEach(0..<10) { _ in
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(.yellow)
+                            .ignoresSafeArea()
+                        Text(date.formatted())
+                    }
+                    .frame(width: geometry.size.width)
+                }
+            }
+            
+            .offset(x: self.offset) // Offset the view horizontally
+            .gesture(
+                DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
+                    .updating($translation) { value, state, _ in
+                        state = value.translation.width
+                    }
+                    .onEnded { value in
+                        let swipeThreshold = geometry.size.width * 0.4 // Adjust the threshold as needed
+                        if value.translation.width > swipeThreshold {
+                            self.swipeDirection = .backward
+                            withAnimation {
+                                self.offset = geometry.size.width
+                            }
+                            self.backward()
+                        } else if value.translation.width < -swipeThreshold {
+                            self.swipeDirection = .forward
+                            withAnimation {
+                                self.offset = -geometry.size.width
+                            }
+                            self.forward()
+                        } else {
+                            self.swipeDirection = nil
+                            withAnimation {
+                                self.offset = 0
+                            }
+                        }
+                    }
+            )
+        }
+    }
+}
