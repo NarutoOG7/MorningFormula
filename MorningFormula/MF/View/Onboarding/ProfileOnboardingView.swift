@@ -62,14 +62,24 @@ struct RoundedTextStyle: TextFieldStyle {
 
 struct ProfileOnboardingView: View {
     @State private var nameInput = ""
+    @State private var wakeTime = Date()
+    @State private var sleepTime = Date()
+
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 25) {
-            nameView
-            genderChoice
-            GoalsInput()
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 25) {
+                nameView
+                genderChoice
+                wakeTimeView
+                sleepTimeView
+                DescriptiveWordsInput()
+                    .padding(.top, -35)
+                Spacer()
+                nextButton
+            }
+            .padding()
         }
-        .padding()
     }
     
     private var nameView: some View {
@@ -82,10 +92,53 @@ struct ProfileOnboardingView: View {
         }
     }
     
+    private var wakeTimeView: some View {
+        VStack(alignment: .leading) {
+            Text("What time do you wake up?")
+                .font(.headline)
+                .foregroundColor(.gray)
+                DatePicker(selection: $wakeTime, displayedComponents: .hourAndMinute) {}
+                    .frame(width: 80)
+            
+        }
+    }
+    
+    private var sleepTimeView: some View {
+        VStack(alignment: .leading) {
+            Text("What time do you go to sleep?")
+                .font(.headline)
+                .foregroundColor(.gray)
+            DatePicker(selection: $sleepTime, displayedComponents: .hourAndMinute) {}
+                .frame(width: 80)
+
+        }
+    }
+    
+    
     private var genderChoice: some View {
         GenderChoiceView()
     }
+    
+    
+    private var nextButton: some View {
+        HStack {
+            Spacer()
+            
+            NavigationLink {
+                GoalsInput()
+            } label: {
+                Text("Next")
+                    .padding(.horizontal)
+                    .padding(.vertical, 7)
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(.black)
+                    )
+            }
+        }
+    }
 }
+
 
 struct ProfileOnboardingView_Previews: PreviewProvider {
     static var previews: some View {

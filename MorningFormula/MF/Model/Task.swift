@@ -59,4 +59,15 @@ struct Task: Identifiable {
         description: "Sit down and read a fictional novel. Enjoy this time.",
         isComplete: false,
         chosenColor: .mint)
+    
+    static let exampleThree = Task(
+        id: "exThree",
+        title: "Code for hours",
+        starTime: Date(timeIntervalSinceNow: 5200),
+        endTime: Date(timeIntervalSinceNow: 7800) ,
+        description: "Code at least 4 hours",
+        isComplete: false,
+        chosenColor: .mint)
+    
+    static let examples = [exampleOne, exampleTwo, exampleThree]
 }

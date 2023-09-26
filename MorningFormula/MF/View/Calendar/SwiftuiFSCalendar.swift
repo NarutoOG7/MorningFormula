@@ -27,6 +27,8 @@ struct SwiftUIFSCalendar: UIViewRepresentable {
         fsCalendar.scrollDirection = .horizontal
         fsCalendar.scope = .week
         fsCalendar.locale = Locale(identifier: "en")
+//        fsCalendar.scrollEnabled = vm.gesture ?? 0 <= 100 ? true : false
+        fsCalendar.scrollEnabled = false
         
         fsCalendar.calendarHeaderView.isHidden = true
         
@@ -82,7 +84,7 @@ struct SwiftUIFSCalendar: UIViewRepresentable {
             parent.vm.selectedDate = date
             calendar.select(date)
         }
-        
+
         
         func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
             
@@ -100,6 +102,7 @@ struct SwiftUIFSCalendar: UIViewRepresentable {
         func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
             parent.fsCalendar.frame = CGRect(origin: calendar.frame.origin,
                                              size: bounds.size)
+//            parent.vm.gesture = bounds.
         }
         
         

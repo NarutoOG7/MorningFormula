@@ -465,125 +465,100 @@
 //}
 //
 //
-//struct SwipeableStack<AnyData:Hashable, Content>: View where Content: View {
-//    
-//    var anyData: [AnyData] = []
-//    let content: (AnyData, ViewPosition) -> Content
-//    var jumpTo: AnyData?
-//    
-//    
-//    
-//    init(_ data: [AnyData], jumpTo: AnyData? = nil, dataIndex: Binding<Int>, @ViewBuilder content: @escaping (AnyData, ViewPosition) -> Content) {
-//        self.anyData = data
-//        self.content = content
-//        self._dataIndex = dataIndex
-//        if let jumpTo {
-//            self.jumpTo = jumpTo
-//        }
-////        self.dataIndex = dataIndex
-//    }
-//    @Binding var dataIndex: Int
-//    @State private var dragged = CGSize.zero
-//    
-//    
-//    var previousExist: Bool {
-//        (dataIndex - 1) >= 0
-//    }
-//    
-//    var nextExists: Bool {
-//        dataIndex < anyData.count - 1
-//    }
-//
-//    
-//    var body: some View {
-//        GeometryReader { geo in
-//            let frameWidth = geo.size.width
-//            
-//            HStack(spacing: 0) {
-//                if previousExist {
-//                    content(anyData[dataIndex - 1], .previousView) /// Previous
-//                        .frame(width: frameWidth)
-//                        .offset(x: previousExist ? -frameWidth : 0)
-//                }
-//                content(anyData[dataIndex], .centerView) /// Current
-//                    .frame(width: frameWidth)
-//                    .offset(x: previousExist ? -frameWidth : 0)
-//                if nextExists {
-//                    content(anyData[dataIndex + 1], .nextView) /// Next
-//                        .frame(width: frameWidth)
-//                        .offset(x: previousExist ? -frameWidth : 0)
-//                }
-//            }
-//            .onAppear {
-//                
-//                if let jumpTo {
-//                    if let pos = anyData.firstIndex(of: jumpTo) {
-//                        dataIndex = pos
-//                    }
-//                }
-//            }
-//            
-//            .offset(x: dragged.width)
-//            .gesture(DragGesture()
-//                .onChanged({ value in
-//                    dragged.width = value.translation.width
-//                })
-//                    .onEnded({ value in
-//                        var indexOffset = 0
-//                        withAnimation(.easeInOut(duration: 0.3)) {
-//                            dragged = CGSize.zero
-//                            if value.predictedEndTranslation.width < -frameWidth / 2 && nextExists {
-//                                dragged.width = -frameWidth
-//                                indexOffset = 1 /// Next
-//                            }
-//                            if value.predictedEndTranslation.width > frameWidth / 2 && previousExist {
-//                                dragged.width = frameWidth
-//                                indexOffset = -1 /// Previous
-//                            }
-//                        }
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-//                            dataIndex += indexOffset
-//                            dragged = CGSize.zero
-//                        }
-//                    })
-//            )
-//        }
-//    }
-//    
-////    mutating func jumpToItem(_ item: AnyData) {
-////        print(item)
-////        if let pos = anyData.firstIndex(of: item) {
-////            dataIndex = pos
-////        }
-////    }
-//    
-//    mutating func jumpToItem(_ item: AnyData) {
-//        if let pos = anyData.firstIndex(where: { $0 == item }) {
-//            dataIndex = pos
-//        }
-//    }
-//}
-//
-//struct DayCard: View {
-//    
-//    let date: Date
-//    let geo: GeometryProxy
-//    
-//    var body: some View {
-//        ZStack {
-//        RoundedRectangle(cornerRadius: 25)
-//            .fill(.yellow)
-//            .ignoresSafeArea()
-//        Text(date.formatted())
-//
-//}
-//    .padding(.top, 100)
-//    .frame(width: geo.size.width)
-//    }
-//}
-//
-//enum ViewPosition {
-//    case previousView
-//    case centerView
-//    case nextView
-//}
+
+import SwiftUI
+
+    struct SwipeableStack<AnyData: Hashable, Content>: View where Content: View {
+
+        var anyData: [AnyData] = []
+        let content: (AnyData, ViewPosition) -> Content
+        let forward: () -> Void // Function to be called when swiping forward
+        let backward: () -> Void // Function to be called when swiping backward
+        
+        @Binding var dataIndex: Int
+        @State private var dragged = CGSize.zero
+        
+        @State private var isSwiping = false
+        
+        var previousExist: Bool {
+            (dataIndex - 1) >= 0
+        }
+        
+        var nextExists: Bool {
+            dataIndex < anyData.count - 1
+        }
+        
+        init(_ data: [AnyData], dataIndex: Binding<Int>, forward: @escaping () -> Void, backward: @escaping () -> Void, @ViewBuilder content: @escaping (AnyData, ViewPosition) -> Content) {
+            self.anyData = data
+            self.content = content
+            self._dataIndex = dataIndex
+            self.forward = forward
+            self.backward = backward
+        }
+        
+        var body: some View {
+            GeometryReader { geo in
+                let frameWidth = geo.size.width
+                
+                HStack(spacing: 0) {
+                    if previousExist {
+                        content(anyData[dataIndex - 1], .previousView) /// Previous
+                            .frame(width: frameWidth)
+                            .offset(x: previousExist ? -frameWidth : 0)
+                    }
+                    content(anyData[dataIndex], .centerView) /// Current
+                        .frame(width: frameWidth)
+                        .offset(x: previousExist ? -frameWidth : 0)
+                    if nextExists {
+                        content(anyData[dataIndex + 1], .nextView) /// Next
+                            .frame(width: frameWidth)
+                            .offset(x: previousExist ? -frameWidth : 0)
+                    }
+                }
+                .offset(x: dragged.width)
+                .highPriorityGesture(DragGesture()
+                    .onChanged({ value in
+                        let translation = value.translation
+                        dragged.width = translation.width
+                        if translation.width > 0 && !isSwiping {
+                            backward()
+                            print(translation)
+                        } else if translation.width < 0 && !isSwiping {
+                            forward()
+                            print(translation)
+
+                        }
+                        self.isSwiping = true
+                    })
+                    .onEnded({ value in
+                        var indexOffset = 0
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            dragged = CGSize.zero
+                            if value.predictedEndTranslation.width < -frameWidth / 2 && nextExists {
+                                dragged.width = -frameWidth
+                                indexOffset = 1 /// Next
+//                                forward()
+                            }
+                            if value.predictedEndTranslation.width > frameWidth / 2 && previousExist {
+                                dragged.width = frameWidth
+                                indexOffset = -1 /// Previous
+//                                backward()
+                            }
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            dataIndex += indexOffset
+                            dragged = CGSize.zero
+                        }
+                        self.isSwiping = false
+                    })
+                )
+            }
+        }
+    }
+
+
+enum ViewPosition {
+    case previousView
+    case centerView
+    case nextView
+}

@@ -55,6 +55,15 @@
       }
     },
     {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/swiftui-introspect",
+      "state" : {
+        "branch" : "main",
+        "revision" : "15f8fa99d1d5c97d0491c945310887e044617fe9"
+      }
+    },
+    {
       "identity" : "swiftuicalendar",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GGJJack/SwiftUICalendar",

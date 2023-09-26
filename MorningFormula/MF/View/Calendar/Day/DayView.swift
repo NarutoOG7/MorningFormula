@@ -35,8 +35,9 @@ struct DayView: View {
     
     private var list: some View {
         
-        List($dayVVM.tasks.sorted(by: { $0.starTime.wrappedValue < $1.starTime.wrappedValue})) { task in
-                DayTaskCell(task: task)
+//        List($dayVVM.tasks.sorted(by: { $0.starTime.wrappedValue < $1.starTime.wrappedValue})) { task in
+        List(Task.examples) { task in
+            DayTaskCell(task: .constant(task))
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
             }

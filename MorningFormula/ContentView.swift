@@ -14,7 +14,16 @@ struct ContentView: View {
     @ObservedObject var vm = CalendarManager.instance
     
     var body: some View {
-        CalendarView()
+        
+//        AddGoalView()
+//            .padding()
+        
+        NavigationStack {
+            ProfileOnboardingView()
+        }
+        
+//        Onboarding()
+//        CalendarView()
 //        RoutineView(date: $vm.selectedDate, forward: vm.forward, backward: vm.backward)
 //        GeometryReader { geo in
 //        Home()

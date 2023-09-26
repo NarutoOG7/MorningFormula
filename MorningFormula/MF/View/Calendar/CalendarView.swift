@@ -17,8 +17,9 @@ struct CalendarView: View {
             GeometryReader { geo in
                 weeklyCalendarView(geo)
                 VStack {
-                    Spacer()
-                    DayCardView(geo)
+                    Spacer(minLength: geo.size.height * 0.25)
+                    DayCardView(geo: geo)
+//                    ScrollableDateView()
 //                    RoutineView(date: $viewModel.selectedDate, forward: viewModel.forward, backward: viewModel.backward)
 //                        .frame(width: geo.size.width, height: geo.size.height * 0.75)
                 }
@@ -32,6 +33,7 @@ struct CalendarView: View {
                 .font(.title3)
             calendarViewStore.calendar
                 .frame(maxHeight: geo.size.height / 1.75)
+//                .allowsHitTesting(false)
         }
         .padding(.top)
     }

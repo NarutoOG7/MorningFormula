@@ -214,8 +214,8 @@ struct CalendarWeekCarousel: View {
 
 struct CalendarWeekCarousel_Previews: PreviewProvider {
     static var previews: some View {
-//        CalendarWeekCarousel()
-        Home()
+        CalendarWeekCarousel()
+//        Home()
     }
 }
 
@@ -351,22 +351,7 @@ struct Tab: Identifiable, Hashable {
     var dates: [Date]
 }
 
-struct Home: View {
-    @State var tabs = [
-        Tab(dates:
-                [ Date(), Date(), Date(), Date(), Date(), Date(), Date() ]),
-        Tab(dates:
-                [ Date(), Date(), Date(), Date(), Date(), Date(), Date() ]),
-        Tab(dates:
-                [ Date(), Date(), Date(), Date(), Date(), Date(), Date() ])
-            ]
-    
-    @State var currentIndex = 0
-    
-    var body: some View {
-        InfiniteCarouselView(tabs: $tabs, currentIndex: $currentIndex)
-    }
-}
+
 
 struct OffsetKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
