@@ -221,6 +221,7 @@ struct ListItemBackground: View {
 struct GoalsInput: View {
     
     @ObservedObject var viewModel = AddGoalsVM.instance
+    @ObservedObject var userManager = UserManager.instance
     
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
@@ -282,8 +283,10 @@ struct GoalsInput: View {
     private var nextButton: some View {
         HStack {
             Spacer()
-            NavigationLink {
-                Home()
+            Button {
+//                DispatchQueue.main.async {
+                    userManager.finishedOnboarding()
+//                }
             } label: {
                 Text("Next")
                     .font(.title)

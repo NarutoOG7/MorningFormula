@@ -12,15 +12,41 @@ import PhotosUI
 struct ContentView: View {
     
     @ObservedObject var vm = CalendarManager.instance
+    @ObservedObject var userManager = UserManager.instance
+    @State var hasFinishedOnboarding = false
     
     var body: some View {
+            if userManager.signedIn {
+                let _ = userManager.hasUserFinishedOnboarding { hasFinished in
+                    self.hasFinishedOnboarding = hasFinished
+
+                }
+                if hasFinishedOnboarding {
+                    NavigationStack {
+                        
+                        TabBarView()
+                    }
+                    
+                } else {
+                    NavigationStack {
+                        ProfileOnboardingView()
+                    }
+                }
+            } else {
+                SignUpView()
+
+            }
+
+//        }
         
 //        AddGoalView()
 //            .padding()
         
-        NavigationStack {
-            ProfileOnboardingView()
-        }
+//        NavigationStack {
+//            ProfileOnboardingView()
+//        }
+        
+//        TTSViewTryOut()
         
 //        Onboarding()
 //        CalendarView()

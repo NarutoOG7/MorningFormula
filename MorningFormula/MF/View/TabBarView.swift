@@ -15,24 +15,53 @@ struct TabBarView: View {
 
     var body: some View {
         TabView(selection: $selection) {
-            dayView
+            formulaView
+            homeView
+            settingsView
         }
     }
     
-    private var dayView: some View {
-        
-        NavigationView {
-            DayView(day: $calendarManager.selectedDate)
-                .navigationTitle("")
-        }
-        .tabItem {
-            Text("Day")
-            Image(systemName: "calendar.day.timeline.leading")
-            
-        }
-        .tag(0)
-        
+
+    
+    private var formulaView: some View {
+        FormulaBuilderView()
+            .tabItem {
+                Text("Formula")
+                Image(systemName: "testtube.2")
+            }
+            .tag(0)
     }
+    
+    private var homeView: some View {
+        Home()
+            .tabItem {
+                Text("Home")
+                Image(systemName: "house")
+            }
+            .tag(1)
+    }
+    
+    private var settingsView: some View {
+        SettingsView()
+            .tabItem {
+                Text("Settings")
+                Image(systemName: "gear")
+            }
+            .tag(2)
+    }
+    
+    
+//    private var weekView: some View {
+//
+//
+//        .tabItem {
+//            Text("Day")
+//            Image(systemName: "calendar.day.timeline.leading")
+//
+//        }
+//        .tag(0)
+//
+//    }
     
 }
 

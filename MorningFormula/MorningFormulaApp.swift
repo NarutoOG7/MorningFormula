@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+
 @main
 struct MorningFormulaApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
