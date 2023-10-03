@@ -12,10 +12,14 @@ import SwiftUI
 struct MorningFormulaApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var userManager = UserManager.instance
+    @StateObject var userDefaultsManager = UserDefaultsManager.instance
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userManager)
+                .environmentObject(userDefaultsManager)
         }
     }
 }

@@ -9,16 +9,16 @@ import SwiftUI
 
 enum InputGroups {
     case descriptiveWords
-    case goals
+    case virtues
     case rules
     case affirmations
     
     var title: String {
         switch self {
         case .descriptiveWords:
-            return "" /// Nil on purpose
-        case .goals:
-            return "What are your goals?"
+            return "" /// Nil on purpose for UI sake
+        case .virtues:
+            return "" /// Nil on purpose for UI sake
         case .rules:
             return "What personal rules would you like to follow?"
         case .affirmations:
@@ -30,8 +30,8 @@ enum InputGroups {
         switch self {
         case .descriptiveWords:
             return "What words describe you?"
-        case .goals:
-            return "Include any short and long term goals and shape them as if they will happen. example: I will travel to Iceland where I will ride in a helicopter to explore unspoiled highland wonders."
+        case .virtues:
+            return "What are your virtues?"
         case .rules:
             return "example: I spend one hour per day reading."
         case .affirmations:
@@ -44,13 +44,13 @@ enum InputGroups {
         case .descriptiveWords:
             return "ex. Family Man, iOS Developer, Brother, etc."
             
-        case .goals:
-            return "ex. Eat healthier"
+        case .virtues:
+            return "ex. Courageous, Honest, Grateful"
             
         case .rules:
-            return "ex. I sleep 8 hours per night"
+            return "ex. I sleep 8 hours per night."
         case .affirmations:
-           return "ex. I am worthy of my goals"
+           return "ex. I am worthy of my goals."
         }
     }
     
@@ -285,7 +285,7 @@ struct GoalsInput: View {
             Spacer()
             Button {
 //                DispatchQueue.main.async {
-                    userManager.finishedOnboarding()
+                    userManager.userFinishedOnboarding()
 //                }
             } label: {
                 Text("Next")

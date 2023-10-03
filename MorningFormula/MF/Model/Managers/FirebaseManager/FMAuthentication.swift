@@ -18,61 +18,61 @@ extension FirebaseManager {
                     self.errorManager.setError(error.localizedDescription)
                 }
                 if success == true {
-                    self.userManager.userSignedIn(id ?? UUID().uuidString)
+                    
+                    self.userManager.userSignedUp(id ?? UUID().uuidString)
                 }
             }
         }
     }
 
     func signUp(email: String, password: String, withCompletion completion: @escaping(Bool, String?, Error?) -> Void) {
-        
-        let group = DispatchGroup()
-        
-        var complete = false
-        var id: String? = nil
-        var err: Error? = nil
-        
-        group.enter()
         self.auth.createUser(withEmail: email, password: password) { result, error in
-
             if let error = error {
-//                completion(false, nil, error)
-                complete = false
-                id = nil
-                err = error
+                completion(false, nil, error)
             }
             if let result = result {
-                group.enter()
-                self.addUserToFirestore(result) { error in
-                    if let error  = error {
-//                        completion(false, nil, error)
-                        complete = false
-                        id = nil
-                        err = error
-                    } else {
-                        complete = true
-                        id = result.user.uid
-                        err = nil
+                self.userAuthData = result
+                completion(true, result.user.uid, nil)
+            }
+        }
+    }
+    
+    
+    func signIn(email: String, password: String, withCompletion completion: @escaping(Bool, String?, Error?) -> Void) {
+        self.auth.signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                completion(false, nil, error)
+            }
+            if let result = result {
+                    completion(true, result.user.uid, nil)
+            }
+        }
+    }
+    
+    func logInTapped(email: String, password: String) {
+        let group = DispatchGroup()
+        
+        var onboardingComplete = false
+        var userID = ""
+        group.enter()
+        self.signIn(email: email, password: password) { success, id, error in
+            if let error = error {
+                self.errorManager.setError(error.localizedDescription)
+            }
+            if success {
+                if let id = id {
+                    group.enter()
+                    self.getFirestoreUserData(userID: id) { finishedOnboarding, error in
+                        onboardingComplete = finishedOnboarding
+                        userID = id
+                        group.leave()
                     }
-                    group.leave()
                 }
             }
             group.leave()
         }
-        
         group.notify(queue: .main) {
-            completion(complete, id, err)
-        }
-    }
-    
-    func signIn(email: String, password: String, withCompletion completion: @escaping(Bool, Error?) -> Void) {
-        self.auth.signIn(withEmail: email, password: password) { result, error in
-            if let error = error {
-                completion(false, error)
-            }
-            if let _ = result {
-                completion(true, nil)
-            }
+            self.userManager.userSignedIn(userID, onboardingComplete)
         }
     }
     
@@ -87,6 +87,15 @@ extension FirebaseManager {
             }
     }
     
+    func logOutTapped() {
+        self.logOut { error in
+            if let error = error {
+                print(error.localizedDescription)
+                self.errorManager.setError(error.localizedDescription)
+            }
+        }
+    }
+    
     func addUserToFirestore(_ user: AuthDataResult, withcCompletion completion: @escaping(Error?) -> Void) {
         
         guard let db = db else { return }
@@ -95,6 +104,7 @@ extension FirebaseManager {
         
         db.collection("Users").document(documentID).setData([
             "id" : user.uid,
+            "email" : user.email ?? "",
             "finishedOnboarding" : false
         ]) { error in
             
@@ -121,17 +131,19 @@ extension FirebaseManager {
             })
     }
     
-    func getFirestoreUserData(userID: String, withCompletion completion: @escaping(_ finishedOnboarding: Bool? , Error?) -> Void) {
+    func getFirestoreUserData(userID: String, withCompletion completion: @escaping(_ finishedOnboarding: Bool , Error?) -> Void) {
         guard let db = db else {  return }
+        print(userID)
         db.collection("Users")
             .whereField("id", isEqualTo: userID)
             .getDocuments
         { snapshot, error in
             guard let snapshot = snapshot,
-                  let doc = snapshot.documents.first else { completion(nil, error)
+                  let doc = snapshot.documents.first else { completion(false, error)
                 return
             }
             let firestoreData = doc.data()["finishedOnboarding"] as? Bool ?? false
+            print(firestoreData)
             completion(firestoreData, nil)
         }
     }

@@ -34,11 +34,7 @@ struct SettingsView: View {
     }
     
     private func logOutTapped() {
-        auth.logOut { error in
-            if let error = error {
-                ErrorManager.instance.setError(error.localizedDescription)
-            }
-        }
+        auth.logOutTapped()
     }
     
 }

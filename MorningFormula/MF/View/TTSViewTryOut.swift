@@ -8,7 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-struct Voice: Identifiable {
+struct Voice: Identifiable, Hashable {
     
     let id: String
     let name: String
@@ -22,6 +22,18 @@ struct Voice: Identifiable {
         gender = avVoice.gender.rawValue
         language = avVoice.language
         isAVVoice = true
+    }
+    
+    init(id: String,
+         name: String,
+         gender: Int,
+         language: String,
+         isAVVoice: Bool) {
+        self.id = id
+        self.name = name
+        self.gender = gender
+        self.language = language
+        self.isAVVoice = false
     }
     
     func speak(_ text: String, rate: Float = 1) {
@@ -43,6 +55,13 @@ struct Voice: Identifiable {
     func genderFromID(_ id: Int) -> String {
         id == 0 ? "male" : "female"
     }
+    
+    static let examples = [
+        Voice(id: "one", name: "Morgan Freeman", gender: 1, language: "en-US", isAVVoice: false),
+        Voice(id: "two", name: "Travis Etienne", gender: 1, language: "en-US", isAVVoice: false),
+        Voice(id: "three", name: "Jaxon Smith-Njigba", gender: 1, language: "en-US", isAVVoice: false),
+        Voice(id: "four", name: "Trevor Lawrence", gender: 1, language: "en-US", isAVVoice: false),
+    ]
 }
 
 class TTSManager: ObservableObject {

@@ -26,7 +26,7 @@ struct AddGoalView: View {
                     .padding(.bottom)
 //                Spacer()
                 titleField
-                
+//                Text("Include any short and long term goals and shape them as if they will happen. example: I will travel to Iceland where I will ride in a helicopter to explore unspoiled highland wonders.")
                 
                 goalDateView
                 activitiesView

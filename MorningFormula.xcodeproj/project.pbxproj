@@ -42,6 +42,8 @@
 		C97F25352AC8065300D04C0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25342AC8065300D04C0A /* Constants.swift */; };
 		C97F25372AC80AF700D04C0A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25362AC80AF700D04C0A /* UserDefaultsManager.swift */; };
 		C97F253A2AC916E400D04C0A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25392AC916E400D04C0A /* SettingsView.swift */; };
+		C97F253C2AC934A200D04C0A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F253B2AC934A200D04C0A /* LogInView.swift */; };
+		C97F253E2AC936E900D04C0A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F253D2AC936E900D04C0A /* AuthenticationView.swift */; };
 		C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */; };
 		C9A086122AA40BC000C2CC14 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086112AA40BC000C2CC14 /* AddTaskView.swift */; };
 		C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */; };
@@ -101,6 +103,8 @@
 		C97F25342AC8065300D04C0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C97F25362AC80AF700D04C0A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C97F25392AC916E400D04C0A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C97F253B2AC934A200D04C0A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		C97F253D2AC936E900D04C0A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9A086112AA40BC000C2CC14 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderExt.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				C97F252E2AC7EFEE00D04C0A /* SignUpView.swift */,
+				C97F253B2AC934A200D04C0A /* LogInView.swift */,
+				C97F253D2AC936E900D04C0A /* AuthenticationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				C97F253A2AC916E400D04C0A /* SettingsView.swift in Sources */,
 				C9A0863F2AB1773600C2CC14 /* CalendarManager.swift in Sources */,
 				C97F25262AC7CE1500D04C0A /* FMAuthentication.swift in Sources */,
+				C97F253C2AC934A200D04C0A /* LogInView.swift in Sources */,
 				C9A0861A2AA76D1400C2CC14 /* PlannerView.swift in Sources */,
 				C97F252B2AC7E43400D04C0A /* Formula.swift in Sources */,
 				C97F25292AC7E13400D04C0A /* FirebaseUser.swift in Sources */,
@@ -459,6 +466,7 @@
 				C9A086162AA61D5600C2CC14 /* Task.swift in Sources */,
 				C937812D2AA3C48E00EF490C /* DayTaskCell.swift in Sources */,
 				C9A086412AB1776400C2CC14 /* CalendarViewStore.swift in Sources */,
+				C97F253E2AC936E900D04C0A /* AuthenticationView.swift in Sources */,
 				C9F225C22A54D5D80074AE89 /* ProfileOnboardingView.swift in Sources */,
 				C9540CF62AC22BA60067C6DE /* ColorSelection.swift in Sources */,
 				C9A0865E2ABC8BE300C2CC14 /* AddGoalView.swift in Sources */,

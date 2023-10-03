@@ -18,19 +18,19 @@ class FirebaseManager {
     @ObservedObject var errorManager = ErrorManager.instance
     @ObservedObject var userManager = UserManager.instance
     
+    var userAuthData: AuthDataResult? {
+        didSet {
+            guard let data = userAuthData else { return }
+            self.addUserToFirestore(data) { error in
+                if let error  = error {
+                    self.errorManager.setError(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     init() {
         db = Firestore.firestore()
-        
-//        self.getFirestoreUserData(userID: userManager.userID ?? "") { finishedOnboarding, error in
-//                    if let error = error {
-//                        print(error.localizedDescription)
-//                        self.errorManager.setError(error.localizedDescription)
-//                    }
-//                    if let finishedOnboarding = finishedOnboarding {
-//                        self.userManager.userHasFinishedOnboarding = finishedOnboarding
-//                    }
-//                }
-            
     }
     
 }
