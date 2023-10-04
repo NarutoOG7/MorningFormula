@@ -44,6 +44,7 @@
 		C97F253A2AC916E400D04C0A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25392AC916E400D04C0A /* SettingsView.swift */; };
 		C97F253C2AC934A200D04C0A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F253B2AC934A200D04C0A /* LogInView.swift */; };
 		C97F253E2AC936E900D04C0A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F253D2AC936E900D04C0A /* AuthenticationView.swift */; };
+		C97F25402ACCDF4200D04C0A /* SpotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F253F2ACCDF4200D04C0A /* SpotifyView.swift */; };
 		C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */; };
 		C9A086122AA40BC000C2CC14 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086112AA40BC000C2CC14 /* AddTaskView.swift */; };
 		C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */; };
@@ -105,6 +106,7 @@
 		C97F25392AC916E400D04C0A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C97F253B2AC934A200D04C0A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C97F253D2AC936E900D04C0A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		C97F253F2ACCDF4200D04C0A /* SpotifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyView.swift; sourceTree = "<group>"; };
 		C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9A086112AA40BC000C2CC14 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderExt.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				C97F25242AC7CE0800D04C0A /* FirebaseManager */,
+				C97F25322AC8060700D04C0A /* UserManager.swift */,
 				C97F25302AC8053900D04C0A /* ErrorManager.swift */,
 				C97F25362AC80AF700D04C0A /* UserDefaultsManager.swift */,
 			);
@@ -235,7 +238,6 @@
 			children = (
 				C97F25202AC7CBBF00D04C0A /* FirebaseManager.swift */,
 				C97F25252AC7CE1500D04C0A /* FMAuthentication.swift */,
-				C97F25322AC8060700D04C0A /* UserManager.swift */,
 			);
 			path = FirebaseManager;
 			sourceTree = "<group>";
@@ -300,6 +302,7 @@
 				C9540D042AC273BB0067C6DE /* Home.swift */,
 				C9540D0F2AC526E60067C6DE /* FormulaBuilderView.swift */,
 				C9540D112AC74BB30067C6DE /* TTSViewTryOut.swift */,
+				C97F253F2ACCDF4200D04C0A /* SpotifyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				C9A0865A2ABBE05C00C2CC14 /* Season.swift in Sources */,
 				C97F253A2AC916E400D04C0A /* SettingsView.swift in Sources */,
 				C9A0863F2AB1773600C2CC14 /* CalendarManager.swift in Sources */,
+				C97F25402ACCDF4200D04C0A /* SpotifyView.swift in Sources */,
 				C97F25262AC7CE1500D04C0A /* FMAuthentication.swift in Sources */,
 				C97F253C2AC934A200D04C0A /* LogInView.swift in Sources */,
 				C9A0861A2AA76D1400C2CC14 /* PlannerView.swift in Sources */,

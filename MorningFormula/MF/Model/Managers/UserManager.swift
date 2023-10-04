@@ -16,24 +16,24 @@ class UserManager: ObservableObject {
     
     @ObservedObject var errorManager = ErrorManager.instance
     
-    func userSignedUp(_ id: String) {
-        self.setSignedInStatus(true)
-        self.setOnboardingStatus(false)
-        self.setUserID(id)
-    }
+        func userSignedUp(_ id: String) {
+            self.setSignedInStatus(true)
+            self.setOnboardingStatus(false)
+            self.setUserID(id)
+        }
     
-    func userSignedIn(_ id: String, _ finishedOnboarding: Bool) {
-        self.setSignedInStatus(true)
-        self.setOnboardingStatus(finishedOnboarding)
-        self.setUserID(id)
-    }
+        func userSignedIn(_ id: String, _ finishedOnboarding: Bool) {
+            self.setSignedInStatus(true)
+            self.setOnboardingStatus(finishedOnboarding)
+            self.setUserID(id)
+        }
     
-    func signUserOut() {
-        self.setSignedInStatus(false)
-        self.setOnboardingStatus(false)
-        self.setUserID(nil)
-    }
-
+        func signUserOut() {
+            self.setSignedInStatus(false)
+            self.setOnboardingStatus(false)
+            self.setUserID(nil)
+        }
+    
     func userFinishedOnboarding() {
         if let userID = userID {
             
@@ -43,7 +43,7 @@ class UserManager: ObservableObject {
                     self.errorManager.setError(error.localizedDescription)
                 }
             }
-            self.setOnboardingStatus(true)
+                        self.setOnboardingStatus(true)
         }
     }
     
@@ -58,9 +58,9 @@ class UserManager: ObservableObject {
     
     func setOnboardingStatus(_ status: Bool) {
         DispatchQueue.main.async {
-        self.finishedOnboarding = status
-        UserDefaults.standard.set(status, forKey: K.UserDefaults.finishedOnboarding.rawValue)
-    }
+            self.finishedOnboarding = status
+            UserDefaults.standard.set(status, forKey: K.UserDefaults.finishedOnboarding.rawValue)
+        }
     }
     
     func setUserID(_ id: String?) {

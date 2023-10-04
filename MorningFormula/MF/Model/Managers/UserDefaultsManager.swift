@@ -14,4 +14,28 @@ class UserDefaultsManager: ObservableObject {
     @ObservedObject var userManager = UserManager.instance
     @ObservedObject var errorManager = ErrorManager.instance
     
+    
+    func checkIfUserIsSignedIn() {
+        let status = UserDefaults.standard.bool(forKey: K.UserDefaults.signedIn.rawValue)
+        userManager.setSignedInStatus(status)
+    }
+    
+    func checkOnboardingStatus() {
+        let status = UserDefaults.standard.bool(forKey: K.UserDefaults.finishedOnboarding.rawValue)
+        userManager.setOnboardingStatus(status)
+    }
+    
+//    func checkIfIsGuest() {
+//        if let data = UserDefaults.standard.data(forKey: K.UserDefaults.isGuest) {
+//
+//            do {
+//                let decoder = JSONDecoder()
+//                let isGuest = try decoder.decode(Bool.self, from: data)
+//                userStore.isGuest = isGuest
+//            } catch {
+//                print("Unable to Decode Note (\(error)")
+//            }
+//        }
+//    }
+    
 }

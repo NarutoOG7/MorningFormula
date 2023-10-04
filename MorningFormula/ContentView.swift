@@ -27,6 +27,16 @@ struct ContentView: View {
             if userManager.finishedOnboarding {
                 NavigationStack {
                     TabBarView()
+                        .onAppear {
+                            SpotifyManager.inestance.getAccessToken { token, error in
+                                if let error = error {
+                                    print(error.localizedDescription)
+                                }
+                                if let token = token {
+                                    print(token)
+                                }
+                            }
+                        }
                 }
 
             } else {

@@ -284,9 +284,8 @@ struct GoalsInput: View {
         HStack {
             Spacer()
             Button {
-//                DispatchQueue.main.async {
+                userManager.setOnboardingStatus(true)
                     userManager.userFinishedOnboarding()
-//                }
             } label: {
                 Text("Next")
                     .font(.title)

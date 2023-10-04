@@ -65,6 +65,7 @@ extension FirebaseManager {
                     self.getFirestoreUserData(userID: id) { finishedOnboarding, error in
                         onboardingComplete = finishedOnboarding
                         userID = id
+                        print(finishedOnboarding)
                         group.leave()
                     }
                 }
@@ -72,6 +73,7 @@ extension FirebaseManager {
             group.leave()
         }
         group.notify(queue: .main) {
+            print(onboardingComplete)
             self.userManager.userSignedIn(userID, onboardingComplete)
         }
     }
@@ -119,6 +121,7 @@ extension FirebaseManager {
     
     func updateFirestoreUser(userID: String, finishedOnboarding: Bool, withCompletion completion: @escaping(Error?) -> Void) {
         guard let db = db else { return }
+        print(userID)
         db.collection("Users").document(userID)
             .updateData([
                 "finishedOnboarding" : finishedOnboarding
