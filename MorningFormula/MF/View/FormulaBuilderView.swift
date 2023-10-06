@@ -11,14 +11,19 @@ struct FormulaBuilderView: View {
     
     @State var selectedNarrator = ""
     @State var virtueStrings: [String] = []
+    @State var showsSpotify = true
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
                 narratorView
                 virtuesView
+                SpotifyView()
             }
         }
+//        .sheet(isPresented: $showsSpotify) {
+//            SpotifyView()
+//        }
     }
     
     func doneTapped() {

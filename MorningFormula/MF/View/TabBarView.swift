@@ -25,6 +25,7 @@ struct TabBarView: View {
     
     private var formulaView: some View {
         FormulaBuilderView()
+            .padding()
             .tabItem {
                 Text("Formula")
                 Image(systemName: "testtube.2")
@@ -40,6 +41,7 @@ struct TabBarView: View {
             }
             .tag(1)
     }
+    
     
     private var settingsView: some View {
         SettingsView()

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 //let authOptions: [String:Any] = [
 //    "headers" : [
@@ -17,8 +18,66 @@ import SwiftUI
 //    "json" : true
 //]
 
+enum SpotifyAPIConstants {
+    static let apiHost = "api.spotify.com"
+    static let authHost = "accounts.spotify.com"
+    static let clientID = "49521fc971524abdafef4a9a0c8109bf"
+    static let clientSecret = "04ea55ed23164bc0ad72d674d8549734"
+    static let redirectUri = "https://www.google.com"
+    static let responseType = "token"
+    static let scopes = "user-read-private"
+
+    static var authParams = [
+        "response_type" : responseType,
+        "client_id" : clientID,
+        "redirect_uri" : redirectUri,
+        "scopes" : scopes
+    ]
+
+}
+
 class SpotifyManager: ObservableObject {
     static let inestance = SpotifyManager()
+    
+    func three() {
+        if let request = getAccessTokenURLRoundTwoFight() {
+            let session = URLSession.shared
+            let task = session.dataTask(with: request, completionHandler: { data, response, error in
+                      
+                 guard error == nil else {
+                     return
+                 }
+                      
+                if let data = data {
+                    
+                    do {
+                        //create json object from data
+                        if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+                            print(json)
+                            print(json["access_token"])
+                        }
+                        
+                    } catch let error {
+                        print(error.localizedDescription)
+                    }
+                }
+             })
+
+             task.resume()
+        }
+    }
+    
+    func getAccessTokenURLRoundTwoFight() -> URLRequest? {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = SpotifyAPIConstants.authHost
+        components.path = "/authorize"
+        components.queryItems = SpotifyAPIConstants.authParams.map( { URLQueryItem(name: $0, value: $1) })
+        
+        guard let url = components.url else { return nil }
+        
+        return URLRequest(url: url)
+    }
     
     func getAccessToken(withCompletion completion: @escaping(String?, Error?) -> Void) {
         let clientID = "49521fc971524abdafef4a9a0c8109bf"
@@ -27,7 +86,8 @@ class SpotifyManager: ObservableObject {
         
 
         let headers = [
-            "Authorization" : authKey
+            "Content-Type" : "application/x-www-form-urlencoded",
+            "Authorization" : "Basic NDk1MjFmYzk3MTUyNGFiZGFmZWY0YTlhMGM4MTA5YmY6MDRlYTU1ZWQyMzE2NGJjMGFkNzJkNjc0ZDg1NDk3MzQ"
             ]
         let parameters = [
             "grant_type" : "client_credentials"
@@ -74,16 +134,42 @@ class SpotifyManager: ObservableObject {
 
         }
     }
+    
 }
 
 struct SpotifyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            SpotifyManager.inestance.getAccessToken { token, error in
+                if let token = token {
+                    print(token)
+                }
+            }
+        } label: {
+            Text("Spotify Token")
+        }
+
+            
     }
 }
 
 struct SpotifyView_Previews: PreviewProvider {
     static var previews: some View {
         SpotifyView()
+    }
+}
+
+struct WebView: UIViewRepresentable {
+ 
+    var request: URLRequest?
+ 
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+ 
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        if let request = request {
+            webView.load(request)
+        }
     }
 }
