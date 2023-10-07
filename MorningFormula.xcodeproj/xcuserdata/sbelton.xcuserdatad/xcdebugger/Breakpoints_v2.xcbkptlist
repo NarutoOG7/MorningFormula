@@ -55,48 +55,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A2669FF7-9173-4041-841A-AB12416376B3"
+            uuid = "7A026B23-CC41-44EB-848A-0D98DF3FFA2E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/SpotifyView.swift"
+            filePath = "MorningFormula/MF/Model/Managers/SpotifyManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "getAccessToken(withCompletion:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getSongFromEmotion(_:withCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED4B2476-21B3-4A81-BDEA-C69ED9DA41B0"
+            uuid = "FF7E789F-C055-4766-B118-151EFB6EA064"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/SpotifyView.swift"
+            filePath = "MorningFormula/MF/Model/Managers/SpotifyManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "three()"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getSongFromEmotion(_:withCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "57639966-B728-416C-B73B-ED5D76029CAC"
+            uuid = "CEBEC4E2-ECA5-4EB8-AD6F-D5306DEA4693"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/SpotifyView.swift"
+            filePath = "MorningFormula/MF/Model/Managers/SpotifyManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "updateUIView(_:context:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getSongFromEmotion(_:withCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
