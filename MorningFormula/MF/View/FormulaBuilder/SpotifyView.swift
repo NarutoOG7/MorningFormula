@@ -8,21 +8,17 @@
 import SwiftUI
 import WebKit
 
-
-
-
-
-
-
 struct SpotifyView: View {
     
     @State var accessCode = ""
+    @State var items: [SpotifyItem] = []
     
     var body: some View {
 
         VStack {
             accessCodeView
             getSongView
+            itemsList
         }
             
     }
@@ -48,8 +44,9 @@ struct SpotifyView: View {
     
     var getSongView: some View {
         Button {
-            SpotifyManager.inestance.getSongFromEmotion(.excited) { item, error in
+            SpotifyManager.inestance.getSongFromEmotionUsingComponents(.excited) { item, error in
                 if let item = item {
+                    items.append(item)
                     print(item.name)
                 }
             }
@@ -58,12 +55,24 @@ struct SpotifyView: View {
         }
     }
     
+    var itemsList: some View {
+        List(items) { item in
+            VStack(alignment: .leading) {
+                Text(item.name)
+                    .fontWeight(.medium)
+                    .font(.title3)
+                Text(item.firstArtistName)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
+        }
+    }
 
 }
 
 struct SpotifyView_Previews: PreviewProvider {
     static var previews: some View {
-        SpotifyView()
+        SpotifyView(items: SpotifyItem.examples)
     }
 }
 

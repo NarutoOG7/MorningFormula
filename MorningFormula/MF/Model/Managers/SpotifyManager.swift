@@ -12,18 +12,25 @@ class SpotifyManager: ObservableObject {
     
     func getSongFromEmotion(_ emotion: Emotion, withCompletion completion: @escaping(SpotifyItem?, Error?) -> Void) {
         let baseURL = "https://api.spotify.com/v1/search"
-        let q = "?q=\(emotion.query.)/// "/// need to encode here!
+        let query = emotion.query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        let q = "?q=\(query)"
+        print(q)
         let type = "?type=track"
-        let limit = "?limit=10"
+        let limit = "?limit=3"
         let advancedURL = baseURL + q + type + limit
         
-        let authKey = "Bearer BQDyzp-8so8eqroh7OcFiCzstxqIlyLBa9Uu1dPBDN_bKbNnwMUIkochsJVgFw4SbpDO07l285iZX-MbQg79C4v9DY15e6UYUYyz8U4JgxpqOOzbTpU"
+        let authKey = "Bearer BQCeOgN0d-875UNgC5C6YyQHdc2wZe5hdr1x90fWa0B6Ijsrm3jEFHhuxmHc5jhtqnVWTf0qNnRfytqZWL-KaLZROsBmu6wQX_hNmY1PP4xKpP8HX-I"
         
+        let parameters = [
+            "type" : type,
+            "limit" : limit
+        ]
         let headers = [
             "Authorization" : authKey
         ]
         print(advancedURL)
-        if let url = NSURL(string: advancedURL) {
+        
+        if let url = NSURL(string: baseURL + q) {
             let request = NSMutableURLRequest(url: url as URL)
             request.httpMethod = "GET"
             request.allHTTPHeaderFields = headers
@@ -53,6 +60,64 @@ class SpotifyManager: ObservableObject {
             task.resume()
         }
     }
+    
+    func getSongFromEmotionUsingComponents(_ emotion: Emotion, withCompletion completion: @escaping(SpotifyItem?, Error?) -> Void) {
+        guard var baseURL = URLComponents(string: "https://api.spotify.com/v1/search") else {
+            completion(nil, NSError(domain: "SpotifyManager", code: 3, userInfo: ["message" : "BaseURL is nil"]))
+            return
+        }
+//            .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        let query = emotion.query
+        let type = "?type=track"
+        let limit = "?limit=3"
+            
+        let authKey = "Bearer BQCeOgN0d-875UNgC5C6YyQHdc2wZe5hdr1x90fWa0B6Ijsrm3jEFHhuxmHc5jhtqnVWTf0qNnRfytqZWL-KaLZROsBmu6wQX_hNmY1PP4xKpP8HX-I"
+        
+        
+        let headers = [
+            "Authorization" : authKey
+        ]
+        
+        baseURL.queryItems = [
+            URLQueryItem(name: "q", value: query),
+            URLQueryItem(name: "type", value: "track"),
+            URLQueryItem(name: "limit", value: "3")
+        ]
+        print(baseURL)
+        
+        baseURL.percentEncodedQuery = baseURL.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        if let url = baseURL.url {
+            let request = NSMutableURLRequest(url: url)
+            request.httpMethod = "GET"
+            request.allHTTPHeaderFields = headers
+            
+            let session = URLSession.shared
+            let task = session.dataTask(with: request as URLRequest) { data, response, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                if let data = data {
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: data) as? [String : Any] {
+                            if let items = json["items"] as? [String:Any] {
+//                                if let album = items["album"] as? [String:Any] {
+                                let album = JSONDecoder.
+                                
+                            } else {
+                                completion(nil, NSError(domain: "SpotifyManager", code: 1, userInfo: ["message" : "Items not found in response"]))
+                            }
+                        } else {
+                            completion(nil, NSError(domain: "SpotifyManager", code: 2, userInfo: ["message" : "Invalid JSON response."]))
+                        }
+                    } catch {
+                        
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+    
     
     func getAccessToken(withCompletion completion: @escaping(String?, Error?) -> Void) {
         let authKey = "Basic NDk1MjFmYzk3MTUyNGFiZGFmZWY0YTlhMGM4MTA5YmY6MDRlYTU1ZWQyMzE2NGJjMGFkNzJkNjc0ZDg1NDk3MzQ"
@@ -106,8 +171,8 @@ class SpotifyManager: ObservableObject {
         }
     }
     
-    func spotifySearch(query: String, withCompletion completion: @escaping(Track?, Error?) -> Void) {
-        
-    }
+//    func spotifySearch(query: String, withCompletion completion: @escaping(Track?, Error?) -> Void) {
+//
+//    }
     
 }

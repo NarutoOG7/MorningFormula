@@ -62,8 +62,8 @@
             filePath = "MorningFormula/MF/Model/Managers/SpotifyManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "getSongFromEmotion(_:withCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "MorningFormula/MF/Model/Managers/SpotifyManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "getSongFromEmotion(_:withCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,10 +94,58 @@
             filePath = "MorningFormula/MF/Model/Managers/SpotifyManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "getSongFromEmotion(_:withCompletion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD037741-5FD5-4451-B6FF-EF8FD3073844"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/SpotifyManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getSongFromEmotion(_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AD037741-5FD5-4451-B6FF-EF8FD3073844 - c7c9c56025b3e7d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.SpotifyManager.getSongFromEmotion(_: MorningFormula.Emotion, withCompletion: (Swift.Optional&lt;MorningFormula.SpotifyItem&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1736">
+               </Location>
+               <Location
+                  uuid = "AD037741-5FD5-4451-B6FF-EF8FD3073844 - c7c9c56025b3e7d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.SpotifyManager.getSongFromEmotion(_: MorningFormula.Emotion, withCompletion: (Swift.Optional&lt;MorningFormula.SpotifyItem&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1792">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
