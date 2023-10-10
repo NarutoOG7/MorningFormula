@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct SpotifyAlbum: Codable Identifiable {
+struct SpotifyRoot: Codable {
+    var tracks: Track
+}
+
+struct SpotifyAlbum: Codable, Identifiable {
     
     var id: String
-    var image: SpotifyImage
+    var images: [SpotifyImage]
     
-    static let example = SpotifyAlbum(id: "example", image: SpotifyImage.example)
+    static let example = SpotifyAlbum(id: "example", images: [SpotifyImage.example])
 }

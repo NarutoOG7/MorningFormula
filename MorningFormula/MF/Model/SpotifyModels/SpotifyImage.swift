@@ -9,9 +9,9 @@ import Foundation
 
 struct SpotifyImage: Codable {
     
-    var urlString: String
+    var url: String
     var width: Int
     var height: Int
     
-    static let example = SpotifyImage(urlString: "example.url", width: 300, height: 300)
+    static let example = SpotifyImage(url: "example.url", width: 300, height: 300)
 }

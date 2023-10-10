@@ -60,6 +60,22 @@ struct RoundedTextStyle: TextFieldStyle {
     }
 }
 
+struct GradientRoundedBackground: View {
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 5.0)
+                .stroke(
+                    LinearGradient(
+                        colors: [.red, .blue],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+        }
+    }
+}
+
 struct ProfileOnboardingView: View {
     @State private var nameInput = ""
     @State private var wakeTime = Date()

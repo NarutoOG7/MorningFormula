@@ -11,19 +11,24 @@ struct SpotifyItem: Codable, Identifiable {
     var id: String
     var name: String
     var album: SpotifyAlbum
-    var artist: [Artist]
+    var artists: [Artist]
     
     var firstArtistName: String {
-        artist.first?.name ?? ""
+        artists.first?.name ?? ""
+    }
+    
+    var stringValue: String {
+        "\(name) · \(firstArtistName)"
     }
     
     //MARK: - Examples
         
-    static let dream = SpotifyItem(id: "1", name: "Dream", album: SpotifyAlbum.example, artist: [Artist.shaboozey])
-    static let rollUp = SpotifyItem(id: "2", name: "Roll Up", album: SpotifyAlbum.example, artist: [Artist.wizKhalifa])
-    static let colorsNShapes = SpotifyItem(id: "3", name: "Colors and Shapes", album: SpotifyAlbum.example, artist: [Artist.macMiller])
+    static let dream = SpotifyItem(id: "1", name: "Dream", album: SpotifyAlbum.example, artists: [Artist.shaboozey])
+    static let rollUp = SpotifyItem(id: "2", name: "Roll Up", album: SpotifyAlbum.example, artists: [Artist.wizKhalifa])
+    static let colorsNShapes = SpotifyItem(id: "3", name: "Colors and Shapes", album: SpotifyAlbum.example, artists: [Artist.macMiller])
         
         static let examples = [
             dream, rollUp, colorsNShapes
         ]
 }
+

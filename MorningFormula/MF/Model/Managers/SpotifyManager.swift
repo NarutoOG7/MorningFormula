@@ -8,52 +8,76 @@
 import SwiftUI
 
 class SpotifyManager: ObservableObject {
-    static let inestance = SpotifyManager()
+    static let instance = SpotifyManager()
     
-    func getSongFromEmotion(_ emotion: Emotion, withCompletion completion: @escaping(SpotifyItem?, Error?) -> Void) {
-        let baseURL = "https://api.spotify.com/v1/search"
-        let query = emotion.query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
-        let q = "?q=\(query)"
-        print(q)
-        let type = "?type=track"
-        let limit = "?limit=3"
-        let advancedURL = baseURL + q + type + limit
+    private var accessCode = ""
+    
+    @Published var pauseSearch = false {
+        didSet {
+            if pauseSearch == true {
+                self.handleSearchPauseTimer()
+            }
+        }
+    }
+    
+    @Published var searchInput = ""
+//    {
+//        didSet {
+//            if searchInput.count > 2 {
+//                self.searchSongs(searchInput)
+//            }
+//        }
+//    }
+    
+    @Published var songTitlesForInputGroup: [String] = []
+    @Published var songs: [SpotifyItem] = [] {
+        didSet {
+            let songTitles = songs.map( { $0.stringValue })
+            songTitlesForInputGroup = songTitles
+        }
+    }
+    @ObservedObject var errorManager = ErrorManager.instance
+    
+    func getAccessCodeTapped() {
+        self.getAccessToken { token, error in
+            if let token = token {
+                self.accessCode = token
+            }
+        }
+    }
+    
+    func searchSongs(_ query: String) {
+        let keepSearching = !pauseSearch
+        if keepSearching {
+            self.getSongFromSearch(query) { root, error in
+                if let error = error {
+                    self.errorManager.setError(error.localizedDescription)
+                }
+                if let root = root {
+                    let newSongs = root.tracks.items
+                    DispatchQueue.main.async {
+                        self.songs = newSongs
+                        self.pauseSearch = true
+                    }
+                }
+            }
+        }
+    }
+    
+    func getSongFromSearch(_ query: String, withCompletion completion: @escaping(SpotifyRoot?, Error?) -> Void) {
         
-        let authKey = "Bearer BQCeOgN0d-875UNgC5C6YyQHdc2wZe5hdr1x90fWa0B6Ijsrm3jEFHhuxmHc5jhtqnVWTf0qNnRfytqZWL-KaLZROsBmu6wQX_hNmY1PP4xKpP8HX-I"
-        
-        let parameters = [
-            "type" : type,
-            "limit" : limit
-        ]
-        let headers = [
-            "Authorization" : authKey
-        ]
-        print(advancedURL)
-        
-        if let url = NSURL(string: baseURL + q) {
-            let request = NSMutableURLRequest(url: url as URL)
-            request.httpMethod = "GET"
-            request.allHTTPHeaderFields = headers
-            
+        if let request = urlRequestFromQuery(query) {
             let session = URLSession.shared
-            let task = session.dataTask(with: request as URLRequest) { data, response, error in
+            let task = session.dataTask(with: request) { data, response, error in
                 if let error = error {
                     print(error.localizedDescription)
                 }
                 if let data = data {
                     do {
-                        if let json = try JSONSerialization.jsonObject(with: data) as? [String : Any] {
-                            print(json)
-                            if let items = json["items"] as? [String:Any] {
-                                print(items)
-                            } else {
-                                completion(nil, NSError(domain: "SpotifyManager", code: 1, userInfo: ["message" : "Items not found in response"]))
-                            }
-                        } else {
-                            completion(nil, NSError(domain: "SpotifyManager", code: 2, userInfo: ["message" : "Invalid JSON response."]))
-                        }
+                        let root = try JSONDecoder().decode(SpotifyRoot.self, from: data)
+                        completion(root, nil)
                     } catch {
-                        
+                        print(error.localizedDescription)
                     }
                 }
             }
@@ -61,17 +85,13 @@ class SpotifyManager: ObservableObject {
         }
     }
     
-    func getSongFromEmotionUsingComponents(_ emotion: Emotion, withCompletion completion: @escaping(SpotifyItem?, Error?) -> Void) {
+    func urlRequestFromQuery(_ query: String) -> URLRequest? {
         guard var baseURL = URLComponents(string: "https://api.spotify.com/v1/search") else {
-            completion(nil, NSError(domain: "SpotifyManager", code: 3, userInfo: ["message" : "BaseURL is nil"]))
-            return
+//            error(NSError(domain: "SpotifyManager", code: 3, userInfo: ["message" : "BaseURL is nil"]))
+            return nil
         }
-//            .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
-        let query = emotion.query
-        let type = "?type=track"
-        let limit = "?limit=3"
-            
-        let authKey = "Bearer BQCeOgN0d-875UNgC5C6YyQHdc2wZe5hdr1x90fWa0B6Ijsrm3jEFHhuxmHc5jhtqnVWTf0qNnRfytqZWL-KaLZROsBmu6wQX_hNmY1PP4xKpP8HX-I"
+        
+        let authKey = "Bearer BQACndxKGMOUYr6NcKq-vQ9vHUFLHpd7SzQ2p9mLJ1haHzuDKaW51NBMYv_yKp0QgECIwy3NGD8_YwQ2t1nAZ6QQoFjR5W8ItmtVA0a1hgiFSAMKxYg"
         
         
         let headers = [
@@ -83,45 +103,20 @@ class SpotifyManager: ObservableObject {
             URLQueryItem(name: "type", value: "track"),
             URLQueryItem(name: "limit", value: "3")
         ]
-        print(baseURL)
         
         baseURL.percentEncodedQuery = baseURL.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
         if let url = baseURL.url {
             let request = NSMutableURLRequest(url: url)
             request.httpMethod = "GET"
             request.allHTTPHeaderFields = headers
-            
-            let session = URLSession.shared
-            let task = session.dataTask(with: request as URLRequest) { data, response, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                if let data = data {
-                    do {
-                        if let json = try JSONSerialization.jsonObject(with: data) as? [String : Any] {
-                            if let items = json["items"] as? [String:Any] {
-//                                if let album = items["album"] as? [String:Any] {
-                                let album = JSONDecoder.
-                                
-                            } else {
-                                completion(nil, NSError(domain: "SpotifyManager", code: 1, userInfo: ["message" : "Items not found in response"]))
-                            }
-                        } else {
-                            completion(nil, NSError(domain: "SpotifyManager", code: 2, userInfo: ["message" : "Invalid JSON response."]))
-                        }
-                    } catch {
-                        
-                    }
-                }
-            }
-            task.resume()
+            return request as URLRequest
         }
+            return nil
     }
     
     
     func getAccessToken(withCompletion completion: @escaping(String?, Error?) -> Void) {
-        let authKey = "Basic NDk1MjFmYzk3MTUyNGFiZGFmZWY0YTlhMGM4MTA5YmY6MDRlYTU1ZWQyMzE2NGJjMGFkNzJkNjc0ZDg1NDk3MzQ"
-
+        
         let headers = [
             "Content-Type" : "application/x-www-form-urlencoded",
             "Authorization" : "Basic NDk1MjFmYzk3MTUyNGFiZGFmZWY0YTlhMGM4MTA5YmY6MDRlYTU1ZWQyMzE2NGJjMGFkNzJkNjc0ZDg1NDk3MzQ"
@@ -175,4 +170,17 @@ class SpotifyManager: ObservableObject {
 //
 //    }
     
+    
+    private func handleSearchPauseTimer() {
+        var timer: Timer?
+        var secondsRemaining = 1
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            if secondsRemaining > 0 {
+                secondsRemaining -= 1
+            } else {
+                timer?.invalidate() // Stop the timer when countdown reaches 0
+                self.pauseSearch = false
+            }
+        }
+    }
 }

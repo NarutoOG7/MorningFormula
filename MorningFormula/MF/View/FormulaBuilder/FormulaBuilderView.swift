@@ -7,18 +7,26 @@
 
 import SwiftUI
 
+class FormulaManager: ObservableObject {
+    static let instance = FormulaManager()
+    
+    @Published var selectedNarrator = ""
+    @Published var virtueStrings: [String] = []
+    @Published var showsSpotify = true
+    @Published var favoriteSongTitles: [String] = []
+}
+
 struct FormulaBuilderView: View {
     
-    @State var selectedNarrator = ""
-    @State var virtueStrings: [String] = []
-    @State var showsSpotify = true
-    
+    @ObservedObject var formulaManager = FormulaManager.instance
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
                 narratorView
                 virtuesView
                 SpotifyView()
+
             }
         }
 //        .sheet(isPresented: $showsSpotify) {
@@ -31,6 +39,7 @@ struct FormulaBuilderView: View {
         convertStringsToVirtues()
     }
     
+   
 
 }
 
@@ -55,7 +64,7 @@ extension FormulaBuilderView {
     }
     
     private var narratorsList: some View {
-        Picker("", selection: $selectedNarrator) {
+        Picker("", selection: $formulaManager.selectedNarrator) {
             ForEach(Voice.examples) { voice in
                 Text(voice.name)
                 
@@ -68,13 +77,13 @@ extension FormulaBuilderView {
 extension FormulaBuilderView {
     
     var virtuesView: some View {
-        InputGroupView(inputGroup: .virtues, submissions: $virtueStrings)
+        InputGroupView(inputGroup: .virtues, submissions: $formulaManager.virtueStrings)
     }
     
     func convertStringsToVirtues() {
 
         var virtuesReturnable: [Virtue] = []
-        for string in virtueStrings {
+        for string in formulaManager.virtueStrings {
             let virtue = Virtue(text: string)
             let virtuesDoesntContainNewVirtue = !virtuesReturnable.contains(where: { $0.text == string })
             if virtuesDoesntContainNewVirtue {

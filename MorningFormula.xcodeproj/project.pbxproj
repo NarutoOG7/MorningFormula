@@ -53,6 +53,7 @@
 		C97F25542AD2770C00D04C0A /* SpotifyAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25532AD2770C00D04C0A /* SpotifyAlbum.swift */; };
 		C97F25562AD2775F00D04C0A /* SpotifyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25552AD2775F00D04C0A /* SpotifyImage.swift */; };
 		C97F25582AD279C400D04C0A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25572AD279C400D04C0A /* Track.swift */; };
+		C97F255A2AD4FEC200D04C0A /* AnyInputGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25592AD4FEC200D04C0A /* AnyInputGroupView.swift */; };
 		C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */; };
 		C9A086122AA40BC000C2CC14 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086112AA40BC000C2CC14 /* AddTaskView.swift */; };
 		C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */; };
@@ -123,6 +124,7 @@
 		C97F25532AD2770C00D04C0A /* SpotifyAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAlbum.swift; sourceTree = "<group>"; };
 		C97F25552AD2775F00D04C0A /* SpotifyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyImage.swift; sourceTree = "<group>"; };
 		C97F25572AD279C400D04C0A /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		C97F25592AD4FEC200D04C0A /* AnyInputGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyInputGroupView.swift; sourceTree = "<group>"; };
 		C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9A086112AA40BC000C2CC14 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderExt.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				C9F225C12A54D5D80074AE89 /* ProfileOnboardingView.swift */,
 				C9F225C32A550BA30074AE89 /* GenderChoiceView.swift */,
 				C9F225CC2A55A3680074AE89 /* GoalsInput.swift */,
+				C97F25592AD4FEC200D04C0A /* AnyInputGroupView.swift */,
 				C9A0865D2ABC8BE300C2CC14 /* AddGoalView.swift */,
 				C9540CEF2ABD01510067C6DE /* Onboarding.swift */,
 				C9540CF12AC201570067C6DE /* AddActivityView.swift */,
@@ -555,6 +558,7 @@
 				C9A086202AA966A800C2CC14 /* TaskWeekView.swift in Sources */,
 				C97F25452AD0EEF800D04C0A /* SpotifyManager.swift in Sources */,
 				C9A086492AB177FD00C2CC14 /* DayCardView.swift in Sources */,
+				C97F255A2AD4FEC200D04C0A /* AnyInputGroupView.swift in Sources */,
 				C97F25332AC8060700D04C0A /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
