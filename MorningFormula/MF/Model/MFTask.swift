@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Task: Identifiable {
+struct MFTask: Identifiable {
     var id: String
     var title: String
     var starTime: Date
@@ -43,7 +43,7 @@ struct Task: Identifiable {
     
     
     //MARK: - Examples
-    static let exampleOne = Task(
+    static let exampleOne = MFTask(
         id: "exOne",
         title: "Workout",
         starTime: Date(timeIntervalSinceNow: 1200),
@@ -51,7 +51,7 @@ struct Task: Identifiable {
         description: "Workout for atleast 45 minutes. Make sure to hit back muscles next.",
         isComplete: false,
         chosenColor: .orange)
-    static let exampleTwo = Task(
+    static let exampleTwo = MFTask(
         id: "exTwo",
         title: "Read a book for so long",
         starTime: Date(timeIntervalSinceNow: 3600),
@@ -60,7 +60,7 @@ struct Task: Identifiable {
         isComplete: false,
         chosenColor: .mint)
     
-    static let exampleThree = Task(
+    static let exampleThree = MFTask(
         id: "exThree",
         title: "Code for hours",
         starTime: Date(timeIntervalSinceNow: 5200),

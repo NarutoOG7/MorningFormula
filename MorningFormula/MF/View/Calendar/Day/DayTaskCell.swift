@@ -11,7 +11,7 @@ import SwiftUI
 
 struct DayTaskCell: View {
     
-    @Binding var task: Task
+    @Binding var task: MFTask
     
     var body: some View {
             HStack {
@@ -84,7 +84,7 @@ struct DayTaskCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black.opacity(0.8).edgesIgnoringSafeArea(.all)
-            DayTaskCell(task: .constant(Task.exampleOne))
+            DayTaskCell(task: .constant(MFTask.exampleOne))
 
         }
     }

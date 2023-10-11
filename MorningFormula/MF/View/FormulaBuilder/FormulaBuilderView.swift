@@ -14,18 +14,38 @@ class FormulaManager: ObservableObject {
     @Published var virtueStrings: [String] = []
     @Published var showsSpotify = true
     @Published var favoriteSongTitles: [String] = []
+    
+    @Published var rulesAsStrings: [String] = []
+    @Published var rules: [Rule] = [] {
+        didSet {
+            let newRules = rules.map({ $0.text })
+            rulesAsStrings = newRules
+        }
+    }
+    @Published var images: [UIImage] = []
+    
+    let formulaPageCount = 3
+    
 }
+
 
 struct FormulaBuilderView: View {
     
     @ObservedObject var formulaManager = FormulaManager.instance
 
+    @State private var ruleInput = ""
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
+                CapsuleProgressView(
+                    progress: 1,
+                    pageCount: formulaManager.formulaPageCount)
                 narratorView
                 virtuesView
-                SpotifyView()
+                rulesView
+                Spacer(minLength: 100)
+                nextButton
 
             }
         }
@@ -39,8 +59,17 @@ struct FormulaBuilderView: View {
         convertStringsToVirtues()
     }
     
-   
-
+    var nextButton: some View {
+        HStack {
+            Spacer()
+            NavigationLink {
+                SpotifyView()
+                    .padding()
+            } label: {
+                Text("Next")
+            }
+        }
+    }
 }
 
 struct FormulaBuilderView_Previews: PreviewProvider {
@@ -92,6 +121,20 @@ extension FormulaBuilderView {
         }
         // Save virtues to formula...
         // Save formula to firebase
+    }
+}
+
+//MARK: - Rules
+extension FormulaBuilderView {
+    
+    var rulesView: some View {
+        let rule = InputGroups.rules
+        return AnyGroupInputView(title: rule.title,
+                          subTitle: rule.subtitle,
+                          textFieldPlaceholder: rule.placeholder,
+                          onTextChange: { _ in return },
+                          submissions: $formulaManager.rulesAsStrings,
+                          autoFillOptions: .constant([]))
     }
 }
 

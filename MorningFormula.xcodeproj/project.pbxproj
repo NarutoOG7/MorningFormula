@@ -54,10 +54,12 @@
 		C97F25562AD2775F00D04C0A /* SpotifyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25552AD2775F00D04C0A /* SpotifyImage.swift */; };
 		C97F25582AD279C400D04C0A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25572AD279C400D04C0A /* Track.swift */; };
 		C97F255A2AD4FEC200D04C0A /* AnyInputGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25592AD4FEC200D04C0A /* AnyInputGroupView.swift */; };
+		C97F255C2AD6439C00D04C0A /* FormulaImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F255B2AD6439C00D04C0A /* FormulaImagesView.swift */; };
+		C97F255E2AD6543800D04C0A /* CapsuleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F255D2AD6543800D04C0A /* CapsuleProgressView.swift */; };
 		C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */; };
 		C9A086122AA40BC000C2CC14 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086112AA40BC000C2CC14 /* AddTaskView.swift */; };
 		C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */; };
-		C9A086162AA61D5600C2CC14 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086152AA61D5600C2CC14 /* Task.swift */; };
+		C9A086162AA61D5600C2CC14 /* MFTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086152AA61D5600C2CC14 /* MFTask.swift */; };
 		C9A086182AA6631900C2CC14 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086172AA6631900C2CC14 /* WeekView.swift */; };
 		C9A0861A2AA76D1400C2CC14 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A086192AA76D1400C2CC14 /* PlannerView.swift */; };
 		C9A086202AA966A800C2CC14 /* TaskWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0861F2AA966A800C2CC14 /* TaskWeekView.swift */; };
@@ -125,10 +127,12 @@
 		C97F25552AD2775F00D04C0A /* SpotifyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyImage.swift; sourceTree = "<group>"; };
 		C97F25572AD279C400D04C0A /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		C97F25592AD4FEC200D04C0A /* AnyInputGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyInputGroupView.swift; sourceTree = "<group>"; };
+		C97F255B2AD6439C00D04C0A /* FormulaImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaImagesView.swift; sourceTree = "<group>"; };
+		C97F255D2AD6543800D04C0A /* CapsuleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleProgressView.swift; sourceTree = "<group>"; };
 		C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9A086112AA40BC000C2CC14 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderExt.swift; sourceTree = "<group>"; };
-		C9A086152AA61D5600C2CC14 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C9A086152AA61D5600C2CC14 /* MFTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFTask.swift; sourceTree = "<group>"; };
 		C9A086172AA6631900C2CC14 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		C9A086192AA76D1400C2CC14 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
 		C9A0861F2AA966A800C2CC14 /* TaskWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskWeekView.swift; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 				C9540D0F2AC526E60067C6DE /* FormulaBuilderView.swift */,
 				C9540D112AC74BB30067C6DE /* TTSViewTryOut.swift */,
 				C97F253F2ACCDF4200D04C0A /* SpotifyView.swift */,
+				C97F255B2AD6439C00D04C0A /* FormulaImagesView.swift */,
 			);
 			path = FormulaBuilder;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				C9F225C92A550BF50074AE89 /* Onboarding */,
 				C97F254F2AD0EFD600D04C0A /* Home */,
 				C97F25502AD0EFE200D04C0A /* FormulaBuilder */,
+				C97F255D2AD6543800D04C0A /* CapsuleProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,7 +392,7 @@
 				C97F25412AD0EED200D04C0A /* SpotifyModels */,
 				C97F25272AC7E12200D04C0A /* FirebaseModels */,
 				C97F251F2AC7CBB000D04C0A /* Managers */,
-				C9A086152AA61D5600C2CC14 /* Task.swift */,
+				C9A086152AA61D5600C2CC14 /* MFTask.swift */,
 				C9A086402AB1776400C2CC14 /* CalendarViewStore.swift */,
 				C9A086422AB1778F00C2CC14 /* CalendarEXT.swift */,
 				C9A086442AB177A500C2CC14 /* DateEXT.swift */,
@@ -532,7 +538,7 @@
 				C97F25582AD279C400D04C0A /* Track.swift in Sources */,
 				C97F25352AC8065300D04C0A /* Constants.swift in Sources */,
 				C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */,
-				C9A086162AA61D5600C2CC14 /* Task.swift in Sources */,
+				C9A086162AA61D5600C2CC14 /* MFTask.swift in Sources */,
 				C937812D2AA3C48E00EF490C /* DayTaskCell.swift in Sources */,
 				C9A086412AB1776400C2CC14 /* CalendarViewStore.swift in Sources */,
 				C97F253E2AC936E900D04C0A /* AuthenticationView.swift in Sources */,
@@ -547,12 +553,14 @@
 				C9540D052AC273BB0067C6DE /* Home.swift in Sources */,
 				C97F252F2AC7EFEE00D04C0A /* SignUpView.swift in Sources */,
 				C9540CF02ABD01510067C6DE /* Onboarding.swift in Sources */,
+				C97F255E2AD6543800D04C0A /* CapsuleProgressView.swift in Sources */,
 				C9A086452AB177A500C2CC14 /* DateEXT.swift in Sources */,
 				C9540D072AC520230067C6DE /* Quote.swift in Sources */,
 				C9540D102AC526E60067C6DE /* FormulaBuilderView.swift in Sources */,
 				C9540D092AC521300067C6DE /* Principle.swift in Sources */,
 				C97F25312AC8053900D04C0A /* ErrorManager.swift in Sources */,
 				C937811E2AA3901300EF490C /* RuleOfThirds.swift in Sources */,
+				C97F255C2AD6439C00D04C0A /* FormulaImagesView.swift in Sources */,
 				C9F225CD2A55A3680074AE89 /* GoalsInput.swift in Sources */,
 				C9A086262AAC2EFA00C2CC14 /* CalendarWeekCarousel.swift in Sources */,
 				C9A086202AA966A800C2CC14 /* TaskWeekView.swift in Sources */,

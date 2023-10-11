@@ -11,36 +11,45 @@ import WebKit
 struct SpotifyView: View {
     
     @Environment(\.defaultMinListRowHeight) var minRowHeight
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     
     @ObservedObject var spotifyManager = SpotifyManager.instance
     @ObservedObject var formulaManager = FormulaManager.instance
+    
+    let title = "What are your favorite songs?"
+    let subTitle = "We will use these to recommend you songs.\n(optional)"
 
+    func textChanged(_ text: String) {
+        if text.count > 2 {
+            spotifyManager.searchSongs(text)
+        }
+    }
+    
     var body: some View {
 
         VStack {
+            CapsuleProgressView(
+                progress: 2,
+                pageCount: formulaManager.formulaPageCount)
+            AnyGroupInputView(
+                title: title,
+                subTitle: subTitle,
+                textFieldPlaceholder: "ex. Dream",
+                onTextChange: textChanged(_:),
+                submissions: $formulaManager.favoriteSongTitles,
+                autoFillOptions: $spotifyManager.songTitlesForInputGroup)
+
             accessCodeView
-//            HStack {
-//                searchBar
-//                searchButton
-//            }
-//            .padding()
-//            .background(
-//                RoundedRectangle(cornerRadius: 20)
-//                    .stroke(.blue, lineWidth: 2)
-//                )
-//            if spotifyManager.pauseSearch {
-//                ProgressView()
-//            } else {
-            AnyGroupInputView(title: "Spotify", subTitle: "Add songs", textFieldPlaceholder: "ex. Dream", onTextChange: { newInput in
-                if newInput.count > 2 {
-                    spotifyManager.searchSongs(newInput)
-                }
-            }, submissions: $formulaManager.favoriteSongTitles, autoFillOptions: $spotifyManager.songTitlesForInputGroup)
-//            AnyGroupInputView(title: "Spotify", subTitle: "Add songs", textFieldPlaceholder: "ex. Dream", onTextChange: <#(String) -> Void#>, submissions: $spotifyManager.songTitlesForInputGroup)
-//                itemsList
-//            }
+            Spacer(minLength: 100)
+            HStack {
+                previousButton
+                Spacer()
+                nextButton
+            }
+
         }
-            
+        .navigationBarBackButtonHidden()
     }
     
     var accessCodeView: some View {
@@ -54,33 +63,22 @@ struct SpotifyView: View {
             Text("Spotify Token")
         }
     }
-    
-    var itemsList: some View {
-        List(spotifyManager.songs) { song in
-            VStack(alignment: .leading) {
-                Text(song.name)
-                    .foregroundColor(.purple)
-                    .fontWeight(.medium)
-                    .font(.title3)
-                Text(song.firstArtistName)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-            }
-        }
-        .frame(minHeight: minRowHeight * 10)
-    }
-    
-    var searchBar: some View {
-        TextField("", text: $spotifyManager.searchInput)
-    }
-    
-    var searchButton: some View {
-        Button {
-            spotifyManager.searchSongs(spotifyManager.searchInput)
-        } label: {
-            Text("Search")
-        }
 
+    var nextButton: some View {
+        NavigationLink {
+            FormulaImagesView()
+                .padding()
+        } label: {
+            Text("Next")
+        }
+    }
+    
+    var previousButton: some View {
+        Button {
+            presentationMode.wrappedValue.dismiss()
+        } label: {
+            Text("Previous")
+        }
     }
 
 }
@@ -88,6 +86,7 @@ struct SpotifyView: View {
 struct SpotifyView_Previews: PreviewProvider {
     static var previews: some View {
         SpotifyView()
+            .padding()
 //        (items: SpotifyItem.examples)
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 class DayVVM: ObservableObject {
     static let instance = DayVVM()
     
-    @Published var tasks: [Task] = []
+    @Published var tasks: [MFTask] = []
 }
 
 struct DayView: View {
@@ -36,7 +36,7 @@ struct DayView: View {
     private var list: some View {
         
 //        List($dayVVM.tasks.sorted(by: { $0.starTime.wrappedValue < $1.starTime.wrappedValue})) { task in
-        List(Task.examples) { task in
+        List(MFTask.examples) { task in
             DayTaskCell(task: .constant(task))
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
@@ -65,7 +65,7 @@ struct DayView: View {
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
         let dayView = DayView(day: .constant(Date()))
-        let _ = dayView.dayVVM.tasks = [Task.exampleOne, Task.exampleTwo]
+        let _ = dayView.dayVVM.tasks = [MFTask.exampleOne, MFTask.exampleTwo]
         return dayView
     }
 }

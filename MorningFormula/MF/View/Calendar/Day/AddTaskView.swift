@@ -195,7 +195,7 @@ struct AddTaskView: View {
     }
     
     private func createTapped() {
-        let task = Task(id: UUID().uuidString,
+        let task = MFTask(id: UUID().uuidString,
                         title: titleInput,
                         starTime: startTime,
                         endTime: endTime,

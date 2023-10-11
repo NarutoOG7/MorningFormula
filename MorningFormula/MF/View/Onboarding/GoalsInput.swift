@@ -20,7 +20,7 @@ enum InputGroups {
         case .virtues:
             return "" /// Nil on purpose for UI sake
         case .rules:
-            return "What personal rules would you like to follow?"
+            return ""
         case .affirmations:
             return "What are some affirmations that resonate with you?"
         }
@@ -33,7 +33,7 @@ enum InputGroups {
         case .virtues:
             return "What are your virtues?"
         case .rules:
-            return "example: I spend one hour per day reading."
+            return "What personal rules do you follow or want to follow?"
         case .affirmations:
             return "example: I see opportunity everywhere I look. Opportunity is everywhere and it is there for me every day. I feel confident and positive with the abundance of opportunity."
         }
