@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+struct CapsTangle: View {
+        var body: some View {
+            ZStack {
+                Capsule()
+                    .frame(width: 200, height: 100)
+                    .foregroundColor(.blue)
+                    .offset(x: -50, y: 0)
+                    .clipShape(Capsule(style: .continuous))
+                
+                Rectangle()
+                    .frame(width: 200, height: 100)
+                    .foregroundColor(.green)
+                    .offset(x: 25, y: 0)
+                    .clipShape(Rectangle())
+            }
+        }
+}
+
 struct CapsuleProgressView: View {
     
     var progress: Int
@@ -18,11 +36,19 @@ struct CapsuleProgressView: View {
         GeometryReader { geometry in
             HStack(spacing: 2) {
                 ForEach(pages, id: \.self) { index in
-                        Capsule()
+                    if index - 1 == pages.indices.first ||
+                        index - 1 == pages.indices.last {
+                        CapsTangle()
                             .frame(width: geometry.size.width / 10,
                                    height: 10)
                             .foregroundColor(index <= self.progress ? .blue : .gray)
-
+                            .clipped()
+                    } else {
+                        Rectangle()
+                            .frame(width: geometry.size.width / 10,
+                                   height: 10)
+                            .foregroundColor(index <= self.progress ? .blue : .gray)
+                    }
                 }
             }
         }
@@ -60,6 +86,7 @@ struct TrapezoidalCapsule: Shape {
 
 struct CapsuleProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CapsuleProgressView(progress: 2, pageCount: 3)
+//        CapsuleProgressView(progress: 2, pageCount: 3)
+        CapsTangle()
     }
 }
