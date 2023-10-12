@@ -34,24 +34,58 @@ struct FormulaBuilderView: View {
     @ObservedObject var formulaManager = FormulaManager.instance
 
     @State private var ruleInput = ""
+    
+    @State var currentPage = 1
 
     var body: some View {
-        ScrollView {
             VStack(alignment: .leading) {
-                CapsuleProgressView(
-                    progress: 1,
-                    pageCount: formulaManager.formulaPageCount)
-                narratorView
-                virtuesView
-                rulesView
-                Spacer(minLength: 100)
-                nextButton
-
+                capsule
+                
+                switch currentPage {
+                case 1:
+                     formulaPageOne
+                case 2:
+                     formulaPageTwo
+                default:
+                     formulaPageThree
+                }
+                    Spacer()
+                
+                HStack {
+                    if currentPage != 1 {
+                        previousButton
+                    }
+                    Spacer()
+                    if currentPage != 3 {
+                        nextButton
+                    }
+                }
             }
+        
+    }
+    
+    var capsule: some View {
+        CapsuleProgressView(
+            progress: currentPage,
+            pageCount: formulaManager.formulaPageCount)
+        .frame(height: 40)
+        
+    }
+    
+    var formulaPageOne: some View {
+        VStack(alignment: .leading) {
+            narratorView
+            virtuesView
+            rulesView
         }
-//        .sheet(isPresented: $showsSpotify) {
-//            SpotifyView()
-//        }
+    }
+    
+    var formulaPageTwo: some View {
+        SpotifyView()
+    }
+    
+    var formulaPageThree: some View {
+        FormulaImagesView()
     }
     
     func doneTapped() {
@@ -62,12 +96,19 @@ struct FormulaBuilderView: View {
     var nextButton: some View {
         HStack {
             Spacer()
-            NavigationLink {
-                SpotifyView()
-                    .padding()
+            Button {
+                currentPage += 1
             } label: {
                 Text("Next")
             }
+        }
+    }
+    
+    var previousButton: some View {
+        Button {
+            currentPage -= 1
+        } label: {
+            Text("Previous")
         }
     }
 }
