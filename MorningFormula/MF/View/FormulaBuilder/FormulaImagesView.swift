@@ -20,18 +20,9 @@ struct FormulaImagesView: View {
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .leading) {
-                CapsuleProgressView(
-                    progress: 3,
-                    pageCount: formulaManager.formulaPageCount)
                 titleView
                 subtitleView
                 imagesList(geo)
-                Spacer()
-                HStack {
-                    previousButton
-                    Spacer()
-                    nextButton
-                }
                 
             }
         }
@@ -98,23 +89,7 @@ struct FormulaImagesView: View {
             GridItem(.fixed(size))
         ]
     }
-    
-    var nextButton: some View {
-        NavigationLink {
-            FormulaBuilderView()
-                .padding()
-        } label: {
-            Text("Next")
-        }
-    }
-    
-    var previousButton: some View {
-        Button {                
-            presentationMode.wrappedValue.dismiss()
-        } label: {
-            Text("Previous")
-        }
-    }
+
 }
 
 struct FormulaImagesView_Previews: PreviewProvider {
