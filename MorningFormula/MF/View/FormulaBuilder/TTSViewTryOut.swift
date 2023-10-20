@@ -79,6 +79,8 @@ class TTSManager: ObservableObject {
     }
 }
 
+
+
 struct TTSViewTryOut: View {
     let synthesizer = AVSpeechSynthesizer()
     let utteranceOne = AVSpeechUtterance(string: "I'm sick and tired")
@@ -98,6 +100,8 @@ struct TTSViewTryOut: View {
         }
 
     }
+    
+    
     
     func printVoices() {
         let voices = AVSpeechSynthesisVoice.speechVoices()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Principle: Identifiable {
+struct Principle: Identifiable, Codable {
     
     var id = UUID().uuidString
     var text: String

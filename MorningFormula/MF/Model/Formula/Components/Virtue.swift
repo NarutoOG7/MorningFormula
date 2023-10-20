@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Virtue: Identifiable {
+struct Virtue: Identifiable, Codable {
     
     var id = UUID().uuidString
     var text: String

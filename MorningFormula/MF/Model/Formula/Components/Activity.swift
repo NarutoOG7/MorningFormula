@@ -7,16 +7,21 @@
 
 import SwiftUI
 
-struct Activity: Identifiable {
+struct Activity: Identifiable, Codable {
     
     var id = UUID().uuidString
     var title: String
-    var time: TimeInterval
+    var startTime: Date
+    var endTime: Date
     var weight: ActivityWeight
-    var color: Color
+    var color: CodableColor
     var repetition: TaskRepetion
     
-    enum ActivityWeight: Int {
+    var time: TimeInterval {
+        endTime.timeIntervalSince(startTime)
+    }
+    
+    enum ActivityWeight: Int, Codable {
         case one = 1,
              two = 2,
              three = 3,
@@ -25,10 +30,10 @@ struct Activity: Identifiable {
     }
     
     static let examples = [
-        Activity(title: "Workout", time: Date().timeIntervalSince1970, weight: .three, color: .red, repetition: .daily),
-        Activity(title: "Attend Meeting", time: Date().timeIntervalSince1970, weight: .three, color: .orange, repetition: .weekly),
-        Activity(title: "Buy Fruit", time: Date().timeIntervalSince1970, weight: .three, color: .yellow, repetition: .weekly),
-        Activity(title: "Code", time: Date().timeIntervalSince1970, weight: .three, color: .blue, repetition: .daily)
+        Activity(title: "Workout", startTime: Date(), endTime: Date(timeIntervalSinceNow: 100), weight: .three, color: .init(.red), repetition: .daily),
+        Activity(title: "Attend Meeting", startTime: Date(), endTime: Date(timeIntervalSinceNow: 1000), weight: .three, color: .init(.blue), repetition: .weekly),
+        Activity(title: "Buy Fruit", startTime: Date(), endTime: Date(timeIntervalSinceNow: 10000), weight: .three, color: .init(.yellow), repetition: .weekly),
+        Activity(title: "Code", startTime: Date(), endTime: Date(timeIntervalSinceNow: 100000), weight: .three, color: .init(.green), repetition: .daily)
     ]
     
 }

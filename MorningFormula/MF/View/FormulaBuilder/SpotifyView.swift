@@ -37,25 +37,17 @@ struct SpotifyView: View {
                 submissions: $formulaManager.favoriteSongTitles,
                 autoFillOptions: $spotifyManager.songTitlesForInputGroup)
 
-            accessCodeView
             Spacer(minLength: 100)
 
 
         }
         .navigationBarBackButtonHidden()
-    }
-    
-    var accessCodeView: some View {
-            getAccessCodeButton
-    }
-    
-    var getAccessCodeButton: some View {
-        Button {
+        
+        .task {
             spotifyManager.getAccessCodeTapped()
-        } label: {
-            Text("Spotify Token")
         }
     }
+
 
 }
 

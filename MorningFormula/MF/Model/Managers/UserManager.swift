@@ -13,6 +13,7 @@ class UserManager: ObservableObject {
     @Published var signedIn = UserDefaults.standard.bool(forKey: K.UserDefaults.signedIn.rawValue)
     @Published var finishedOnboarding = UserDefaults.standard.bool(forKey: K.UserDefaults.finishedOnboarding.rawValue)
     @Published var userID = UserDefaults.standard.string(forKey: K.UserDefaults.userID.rawValue)
+    @Published var userName = "Spencer"
     
     @ObservedObject var errorManager = ErrorManager.instance
     

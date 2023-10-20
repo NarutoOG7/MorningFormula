@@ -95,10 +95,11 @@ struct AddActivityView: View {
     
     private func newActivity() -> Activity {
         let activity = Activity(title: titleInput,
-                 time: timeInput.duration,
-                 weight: .three,
-                 color: selectedColor,
-                 repetition: TaskRepetion.daily.caseFromTag(selectedRepetitionIndex))
+                                startTime: timeInput.start,
+                                endTime: timeInput.end,
+                                weight: .three,
+                                color: CodableColor(UIColor(selectedColor)),
+                                repetition: TaskRepetion.daily.caseFromTag(selectedRepetitionIndex))
         print(activity.repetition.rawValue)
         return activity
     }
@@ -249,7 +250,7 @@ struct TaskRepetitionView: View {
 //    }
 }
 
-enum TaskRepetion: String, CaseIterable {
+enum TaskRepetion: String, CaseIterable, Codable {
     case once
     case daily
     case weekly

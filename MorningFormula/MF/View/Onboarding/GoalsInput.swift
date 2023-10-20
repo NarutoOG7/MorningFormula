@@ -66,7 +66,7 @@ struct InputGroupView: View {
     @State var input = ""
     
     @State private var lastDeleted: String?
-    
+        
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             title
@@ -268,15 +268,15 @@ struct GoalsInput: View {
     
     private func goalCell(_ goal: Goal) -> some View {
         NavigationLink {
-            AddGoalView(titleInput: goal.title, goalDate: goal.goalDate, goalPriority: goal.priority.rawValue, selectedColor: goal.color)
+            AddGoalView(titleInput: goal.title, goalDate: goal.goalDate, goalPriority: goal.priority.rawValue, selectedColor: goal.color.color())
         } label: {
             HStack {
                 Text(goal.title)
-                    .foregroundColor(goal.color)
+                    .foregroundColor(goal.color.color())
             }
             .padding(.horizontal)
             .padding(.vertical, 7)
-            .background(ListItemBackground(colors: [goal.color]))
+            .background(ListItemBackground(colors: [goal.color.color()]))
         }
     }
     

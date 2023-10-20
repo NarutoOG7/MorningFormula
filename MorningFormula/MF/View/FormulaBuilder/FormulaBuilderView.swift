@@ -10,8 +10,12 @@ import SwiftUI
 class FormulaManager: ObservableObject {
     static let instance = FormulaManager()
     
+    @Published var descriptiveWords: [String] = []
+    @Published var goals: [Goal] = []
     @Published var selectedNarrator = ""
-    @Published var virtueStrings: [String] = []
+    @Published var virtues: [String] = []
+    @Published var quotes: [Quote] = []
+    @Published var principles: [Principle] = []
     @Published var showsSpotify = true
     @Published var favoriteSongTitles: [String] = []
     
@@ -25,6 +29,19 @@ class FormulaManager: ObservableObject {
     @Published var images: [UIImage] = []
     
     let formulaPageCount = 3
+    
+    @ObservedObject var userStore = UserManager.instance
+    
+    func formula() -> Formula {
+        Formula(userID: userStore.userID ?? "",
+                descriptiveWords: descriptiveWords,
+                season: .watering,
+                goals: goals,
+                virtues: virtues,
+                qutoes: quotes,
+                principles: principles,
+                rules: rules)
+    }
     
 }
 
@@ -58,8 +75,11 @@ struct FormulaBuilderView: View {
                     Spacer()
                     if currentPage != 3 {
                         nextButton
+                    } else {
+                        saveButton
                     }
                 }
+                
             }
         
     }
@@ -90,7 +110,6 @@ struct FormulaBuilderView: View {
     
     func doneTapped() {
         /// Move everything to a VM... save Formula model to Firebase
-        convertStringsToVirtues()
     }
     
     var nextButton: some View {
@@ -111,6 +130,14 @@ struct FormulaBuilderView: View {
             Text("Previous")
         }
     }
+    
+    var saveButton: some View {
+        Button(action: {
+            FirebaseManager.instance.saveFormulaTapped(Formula.example)
+        }, label: {
+            Text("Save")
+        })
+    }
 }
 
 struct FormulaBuilderView_Previews: PreviewProvider {
@@ -128,18 +155,20 @@ extension FormulaBuilderView {
             Text("Who would you like to narrate your Morning Formula?")
                 .font(.headline)
                 .foregroundColor(.gray)
-            narratorsList
+            AVNarratorView()
 
         }
     }
-    
-    private var narratorsList: some View {
-        Picker("", selection: $formulaManager.selectedNarrator) {
-            ForEach(Voice.examples) { voice in
-                Text(voice.name)
-                
-            }
+}
+
+extension Binding<[Virtue]> {
+    func virtueStrings() -> Binding<[String]> {
+        var returnables: Binding<[String]> = .constant([])
+        let _ = self.map { bindVirtue in
+            returnables.wrappedValue.append(bindVirtue.text.wrappedValue)
         }
+        return returnables
+
     }
 }
 
@@ -147,22 +176,22 @@ extension FormulaBuilderView {
 extension FormulaBuilderView {
     
     var virtuesView: some View {
-        InputGroupView(inputGroup: .virtues, submissions: $formulaManager.virtueStrings)
+        InputGroupView(inputGroup: .virtues, submissions: $formulaManager.virtues)
     }
     
-    func convertStringsToVirtues() {
-
-        var virtuesReturnable: [Virtue] = []
-        for string in formulaManager.virtueStrings {
-            let virtue = Virtue(text: string)
-            let virtuesDoesntContainNewVirtue = !virtuesReturnable.contains(where: { $0.text == string })
-            if virtuesDoesntContainNewVirtue {
-                virtuesReturnable.append(virtue)
-            }
-        }
-        // Save virtues to formula...
-        // Save formula to firebase
-    }
+//    func convertStringsToVirtues() {
+//
+//        var virtuesReturnable: [Virtue] = []
+//        for string in formulaManager.virtues {
+//            let virtue = Virtue(text: string)
+//            let virtuesDoesntContainNewVirtue = !virtuesReturnable.contains(where: { $0.text == string })
+//            if virtuesDoesntContainNewVirtue {
+//                virtuesReturnable.append(virtue)
+//            }
+//        }
+//        // Save virtues to formula...
+//        // Save formula to firebase
+//    }
 }
 
 //MARK: - Rules

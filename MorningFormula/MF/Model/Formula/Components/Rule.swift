@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Rule: Identifiable {
+struct Rule: Identifiable, Codable {
     
     var id = UUID().uuidString
     var text: String

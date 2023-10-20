@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum Season {
+enum Season: Codable {
     case cultivating, planting, watering, harvesting
 }

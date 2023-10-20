@@ -104,7 +104,7 @@ struct AddGoalView: View {
                 }
                 .padding(.horizontal)
                 .padding(.vertical, 7)
-                .background(ListItemBackground(colors: [activity.color]))
+                .background(ListItemBackground(colors: [activity.color.color()]))
             }
         }
         .listStyle(.plain)
