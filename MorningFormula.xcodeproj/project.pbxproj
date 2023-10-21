@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92DF1412AE34D6B002AB002 /* MorningFormulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DF1402AE34D6B002AB002 /* MorningFormulaTests.swift */; };
+		C92DF1482AE34DBB002AB002 /* SpotifyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DF1472AE34DBB002AB002 /* SpotifyManagerTests.swift */; };
 		C92E3F812A52417C00E90371 /* MorningFormulaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E3F802A52417C00E90371 /* MorningFormulaApp.swift */; };
 		C92E3F832A52417C00E90371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E3F822A52417C00E90371 /* ContentView.swift */; };
 		C92E3F852A52417D00E90371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C92E3F842A52417D00E90371 /* Assets.xcassets */; };
@@ -109,7 +111,20 @@
 		C9F225CD2A55A3680074AE89 /* GoalsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F225CC2A55A3680074AE89 /* GoalsInput.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C92DF1422AE34D6B002AB002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C92E3F752A52417C00E90371 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C92E3F7C2A52417C00E90371;
+			remoteInfo = MorningFormula;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C92DF13E2AE34D6B002AB002 /* MorningFormulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorningFormulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92DF1402AE34D6B002AB002 /* MorningFormulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningFormulaTests.swift; sourceTree = "<group>"; };
+		C92DF1472AE34DBB002AB002 /* SpotifyManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyManagerTests.swift; sourceTree = "<group>"; };
 		C92E3F7D2A52417C00E90371 /* MorningFormula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorningFormula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92E3F802A52417C00E90371 /* MorningFormulaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningFormulaApp.swift; sourceTree = "<group>"; };
 		C92E3F822A52417C00E90371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -184,6 +199,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C92DF13B2AE34D6B002AB002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C92E3F7A2A52417C00E90371 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,11 +246,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C92DF13F2AE34D6B002AB002 /* MorningFormulaTests */ = {
+			isa = PBXGroup;
+			children = (
+				C92DF1402AE34D6B002AB002 /* MorningFormulaTests.swift */,
+				C92DF1472AE34DBB002AB002 /* SpotifyManagerTests.swift */,
+			);
+			path = MorningFormulaTests;
+			sourceTree = "<group>";
+		};
 		C92E3F742A52417C00E90371 = {
 			isa = PBXGroup;
 			children = (
 				C97F25142AC7C9DA00D04C0A /* GoogleService-Info.plist */,
 				C92E3F7F2A52417C00E90371 /* MorningFormula */,
+				C92DF13F2AE34D6B002AB002 /* MorningFormulaTests */,
 				C92E3F7E2A52417C00E90371 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -237,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				C92E3F7D2A52417C00E90371 /* MorningFormula.app */,
+				C92DF13E2AE34D6B002AB002 /* MorningFormulaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -472,6 +505,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C92DF13D2AE34D6B002AB002 /* MorningFormulaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92DF1462AE34D6C002AB002 /* Build configuration list for PBXNativeTarget "MorningFormulaTests" */;
+			buildPhases = (
+				C92DF13A2AE34D6B002AB002 /* Sources */,
+				C92DF13B2AE34D6B002AB002 /* Frameworks */,
+				C92DF13C2AE34D6B002AB002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C92DF1432AE34D6B002AB002 /* PBXTargetDependency */,
+			);
+			name = MorningFormulaTests;
+			productName = MorningFormulaTests;
+			productReference = C92DF13E2AE34D6B002AB002 /* MorningFormulaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C92E3F7C2A52417C00E90371 /* MorningFormula */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C92E3F8B2A52417D00E90371 /* Build configuration list for PBXNativeTarget "MorningFormula" */;
@@ -528,9 +579,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					C92DF13D2AE34D6B002AB002 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = C92E3F7C2A52417C00E90371;
+					};
 					C92E3F7C2A52417C00E90371 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -560,11 +615,19 @@
 			projectRoot = "";
 			targets = (
 				C92E3F7C2A52417C00E90371 /* MorningFormula */,
+				C92DF13D2AE34D6B002AB002 /* MorningFormulaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C92DF13C2AE34D6B002AB002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C92E3F7B2A52417C00E90371 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +641,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C92DF13A2AE34D6B002AB002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92DF1482AE34DBB002AB002 /* SpotifyManagerTests.swift in Sources */,
+				C92DF1412AE34D6B002AB002 /* MorningFormulaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C92E3F792A52417C00E90371 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,7 +726,62 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C92DF1432AE34D6B002AB002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C92E3F7C2A52417C00E90371 /* MorningFormula */;
+			targetProxy = C92DF1422AE34D6B002AB002 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C92DF1442AE34D6C002AB002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4449HJNAM;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Konoha7.MorningFormulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningFormula.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningFormula";
+			};
+			name = Debug;
+		};
+		C92DF1452AE34D6C002AB002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4449HJNAM;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Konoha7.MorningFormulaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorningFormula.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MorningFormula";
+			};
+			name = Release;
+		};
 		C92E3F892A52417D00E90371 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -832,6 +959,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C92DF1462AE34D6C002AB002 /* Build configuration list for PBXNativeTarget "MorningFormulaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92DF1442AE34D6C002AB002 /* Debug */,
+				C92DF1452AE34D6C002AB002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C92E3F782A52417C00E90371 /* Build configuration list for PBXProject "MorningFormula" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
