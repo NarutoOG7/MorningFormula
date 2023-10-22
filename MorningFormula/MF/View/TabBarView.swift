@@ -24,7 +24,7 @@ struct TabBarView: View {
 
     
     private var formulaView: some View {
-        FormulaBuilderView()
+        FormulaView()
             .padding()
             .tabItem {
                 Text("Formula")

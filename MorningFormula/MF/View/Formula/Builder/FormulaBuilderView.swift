@@ -28,17 +28,19 @@ class FormulaManager: ObservableObject {
     }
     @Published var images: [UIImage] = []
     
+    @Published var formula: Formula?
+    
     let formulaPageCount = 3
     
     @ObservedObject var userStore = UserManager.instance
     
-    func formula() -> Formula {
+    func formulaFromFields() -> Formula {
         Formula(userID: userStore.userID ?? "",
                 descriptiveWords: descriptiveWords,
                 season: .watering,
                 goals: goals,
                 virtues: virtues,
-                qutoes: quotes,
+                quotes: quotes,
                 principles: principles,
                 rules: rules)
     }
@@ -48,15 +50,18 @@ class FormulaManager: ObservableObject {
 
 struct FormulaBuilderView: View {
     
-    @ObservedObject var formulaManager = FormulaManager.instance
 
     @State private var ruleInput = ""
-    
     @State var currentPage = 1
 
+    @ObservedObject var formulaManager = FormulaManager.instance
+    @ObservedObject var viewModel = FormulaViewViewModel.instance
     var body: some View {
             VStack(alignment: .leading) {
-                capsule
+                HStack {
+                    cancelButton
+                    capsule
+                }
                 
                 switch currentPage {
                 case 1:
@@ -89,6 +94,7 @@ struct FormulaBuilderView: View {
             progress: currentPage,
             pageCount: formulaManager.formulaPageCount)
         .frame(height: 40)
+        .padding(.top)
         
     }
     
@@ -132,11 +138,27 @@ struct FormulaBuilderView: View {
     }
     
     var saveButton: some View {
-        Button(action: {
-            FirebaseManager.instance.saveFormulaTapped(Formula.example)
-        }, label: {
+        Button {
+//            let formula = formulaManager.formulaFromFields()
+            let formula = Formula.example
+            formulaManager.formula = formula
+            FirebaseManager.instance.saveFormulaTapped(formula)
+            viewModel.showBuilder = false
+        } label: {
             Text("Save")
-        })
+        }
+    }
+    
+    private var cancelButton: some View {
+        Button {
+            viewModel.showBuilder = false
+        } label: {
+            Image(systemName: "x.circle")
+                .font(.title)
+                .foregroundStyle(.black.opacity(0.6))
+        }
+        .padding(.bottom)
+
     }
 }
 

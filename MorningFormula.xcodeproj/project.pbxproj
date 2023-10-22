@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C913374E2AE4869700DA2D12 /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913374D2AE4869700DA2D12 /* ChatServices.swift */; };
+		C91337502AE4AB9500DA2D12 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913374F2AE4AB9500DA2D12 /* ChatView.swift */; };
+		C91337532AE4ADF400DA2D12 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91337522AE4ADF400DA2D12 /* FormulaView.swift */; };
 		C92DF1412AE34D6B002AB002 /* MorningFormulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DF1402AE34D6B002AB002 /* MorningFormulaTests.swift */; };
 		C92DF1482AE34DBB002AB002 /* SpotifyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DF1472AE34DBB002AB002 /* SpotifyManagerTests.swift */; };
 		C92E3F812A52417C00E90371 /* MorningFormulaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E3F802A52417C00E90371 /* MorningFormulaApp.swift */; };
@@ -122,6 +125,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C913374D2AE4869700DA2D12 /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
+		C913374F2AE4AB9500DA2D12 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		C91337522AE4ADF400DA2D12 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
 		C92DF13E2AE34D6B002AB002 /* MorningFormulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorningFormulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92DF1402AE34D6B002AB002 /* MorningFormulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningFormulaTests.swift; sourceTree = "<group>"; };
 		C92DF1472AE34DBB002AB002 /* SpotifyManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyManagerTests.swift; sourceTree = "<group>"; };
@@ -246,6 +252,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91337512AE4ADE200DA2D12 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				C9540D0F2AC526E60067C6DE /* FormulaBuilderView.swift */,
+				C9540D112AC74BB30067C6DE /* TTSViewTryOut.swift */,
+				C97F253F2ACCDF4200D04C0A /* SpotifyView.swift */,
+				C97F255B2AD6439C00D04C0A /* FormulaImagesView.swift */,
+				C97F25612AD7A16A00D04C0A /* AVNarratorView.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		C92DF13F2AE34D6B002AB002 /* MorningFormulaTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +358,7 @@
 				C97F25442AD0EEF800D04C0A /* SpotifyManager.swift */,
 				C97F25362AC80AF700D04C0A /* UserDefaultsManager.swift */,
 				C97F25322AC8060700D04C0A /* UserManager.swift */,
+				C913374D2AE4869700DA2D12 /* ChatServices.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -423,16 +442,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		C97F25502AD0EFE200D04C0A /* FormulaBuilder */ = {
+		C97F25502AD0EFE200D04C0A /* Formula */ = {
 			isa = PBXGroup;
 			children = (
-				C9540D0F2AC526E60067C6DE /* FormulaBuilderView.swift */,
-				C9540D112AC74BB30067C6DE /* TTSViewTryOut.swift */,
-				C97F253F2ACCDF4200D04C0A /* SpotifyView.swift */,
-				C97F255B2AD6439C00D04C0A /* FormulaImagesView.swift */,
-				C97F25612AD7A16A00D04C0A /* AVNarratorView.swift */,
+				C91337512AE4ADE200DA2D12 /* Builder */,
+				C913374F2AE4AB9500DA2D12 /* ChatView.swift */,
+				C91337522AE4ADF400DA2D12 /* FormulaView.swift */,
 			);
-			path = FormulaBuilder;
+			path = Formula;
 			sourceTree = "<group>";
 		};
 		C9F225C72A550BDA0074AE89 /* ViewModel */ = {
@@ -453,7 +470,7 @@
 				C93781222AA39E0100EF490C /* Calendar */,
 				C9F225C92A550BF50074AE89 /* Onboarding */,
 				C97F254F2AD0EFD600D04C0A /* Home */,
-				C97F25502AD0EFE200D04C0A /* FormulaBuilder */,
+				C97F25502AD0EFE200D04C0A /* Formula */,
 				C97F255D2AD6543800D04C0A /* CapsuleProgressView.swift */,
 			);
 			path = View;
@@ -667,6 +684,7 @@
 				C97F25542AD2770C00D04C0A /* SpotifyAlbum.swift in Sources */,
 				C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */,
 				C9A0865C2ABBE1E600C2CC14 /* Goal.swift in Sources */,
+				C913374E2AE4869700DA2D12 /* ChatServices.swift in Sources */,
 				C9540D122AC74BB30067C6DE /* TTSViewTryOut.swift in Sources */,
 				C92E3F812A52417C00E90371 /* MorningFormulaApp.swift in Sources */,
 				C9540CF22AC201570067C6DE /* AddActivityView.swift in Sources */,
@@ -678,6 +696,7 @@
 				C97F25262AC7CE1500D04C0A /* FMAuthentication.swift in Sources */,
 				C97F253C2AC934A200D04C0A /* LogInView.swift in Sources */,
 				C9A0861A2AA76D1400C2CC14 /* PlannerView.swift in Sources */,
+				C91337502AE4AB9500DA2D12 /* ChatView.swift in Sources */,
 				C97F25492AD0EF2600D04C0A /* SpotifyItem.swift in Sources */,
 				C97F252B2AC7E43400D04C0A /* Formula.swift in Sources */,
 				C97F25292AC7E13400D04C0A /* FirebaseUser.swift in Sources */,
@@ -715,6 +734,7 @@
 				C9F225CD2A55A3680074AE89 /* GoalsInput.swift in Sources */,
 				C9A086262AAC2EFA00C2CC14 /* CalendarWeekCarousel.swift in Sources */,
 				C9A086202AA966A800C2CC14 /* TaskWeekView.swift in Sources */,
+				C91337532AE4ADF400DA2D12 /* FormulaView.swift in Sources */,
 				C97F25452AD0EEF800D04C0A /* SpotifyManager.swift in Sources */,
 				C9A086492AB177FD00C2CC14 /* DayCardView.swift in Sources */,
 				C97F255A2AD4FEC200D04C0A /* AnyInputGroupView.swift in Sources */,
