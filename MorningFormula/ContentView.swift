@@ -17,27 +17,27 @@ struct ContentView: View {
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var userDefaultsManager: UserDefaultsManager
     
-//    var body: some View {
-//        FormulaBuilderView().padding()
-//    }
-    
     var body: some View {
-
-        if userManager.signedIn {
-            if userManager.finishedOnboarding {
-                NavigationStack {
-                    TabBarView()
-                }
-
-            } else {
-                NavigationStack {
-                    ProfileOnboardingView()
-                }
-            }
-        } else {
-            AuthenticationView()
-        }
+        VideoPlayerView()
     }
+    
+//    var body: some View {
+//
+//        if userManager.signedIn {
+//            if userManager.finishedOnboarding {
+//                NavigationStack {
+//                    TabBarView()
+//                }
+//
+//            } else {
+//                NavigationStack {
+//                    ProfileOnboardingView()
+//                }
+//            }
+//        } else {
+//            AuthenticationView()
+//        }
+//    }
     
 
 

@@ -25,6 +25,7 @@ struct FormulaView: View {
             if let formula = formulaManager.formula {
                 subTitle
                 ChatView(formula: formula)
+                VideoPlayerView()
             } else {
                 noFormulaSubtitle
                 addFormulaButton

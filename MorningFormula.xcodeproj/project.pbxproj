@@ -60,6 +60,10 @@
 		C97F25602AD79EC300D04C0A /* FMFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F255F2AD79EC300D04C0A /* FMFormula.swift */; };
 		C97F25622AD7A16A00D04C0A /* AVNarratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25612AD7A16A00D04C0A /* AVNarratorView.swift */; };
 		C97F25642AD89AC400D04C0A /* CodableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25632AD89AC400D04C0A /* CodableColor.swift */; };
+		C98B85F42AE6039900D2FDEA /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B85F32AE6039900D2FDEA /* VideoPlayerView.swift */; };
+		C98B85F62AE6423100D2FDEA /* VideoSample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C98B85F52AE6423100D2FDEA /* VideoSample.mp4 */; };
+		C9913D502AE6BA990065E015 /* UpdatedVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9913D4F2AE6BA980065E015 /* UpdatedVideoView.swift */; };
+		C9913D522AE774700065E015 /* hold-on-to-your-butts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9913D512AE774700065E015 /* hold-on-to-your-butts.mp3 */; };
 		C99EEC8C2ADA4C2100F56FF9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C99EEC8B2ADA4C2100F56FF9 /* FirebaseAnalytics */; };
 		C99EEC8E2ADA4C2100F56FF9 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = C99EEC8D2ADA4C2100F56FF9 /* FirebaseAnalyticsOnDeviceConversion */; };
 		C99EEC902ADA4C2100F56FF9 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C99EEC8F2ADA4C2100F56FF9 /* FirebaseAnalyticsSwift */; };
@@ -81,7 +85,6 @@
 		C99EECB02ADA4C2100F56FF9 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = C99EECAF2ADA4C2100F56FF9 /* FirebaseInAppMessagingSwift-Beta */; };
 		C99EECB22ADA4C2100F56FF9 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = C99EECB12ADA4C2100F56FF9 /* FirebaseInstallations */; };
 		C99EECB42ADA4C2100F56FF9 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = C99EECB32ADA4C2100F56FF9 /* FirebaseMLModelDownloader */; };
-		C99EECB62ADA4C2100F56FF9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C99EECB52ADA4C2100F56FF9 /* FirebaseMessaging */; };
 		C99EECB82ADA4C2100F56FF9 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = C99EECB72ADA4C2100F56FF9 /* FirebasePerformance */; };
 		C99EECBA2ADA4C2100F56FF9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = C99EECB92ADA4C2100F56FF9 /* FirebaseRemoteConfig */; };
 		C99EECBC2ADA4C2100F56FF9 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C99EECBB2ADA4C2100F56FF9 /* FirebaseRemoteConfigSwift */; };
@@ -179,6 +182,10 @@
 		C97F255F2AD79EC300D04C0A /* FMFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMFormula.swift; sourceTree = "<group>"; };
 		C97F25612AD7A16A00D04C0A /* AVNarratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVNarratorView.swift; sourceTree = "<group>"; };
 		C97F25632AD89AC400D04C0A /* CodableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableColor.swift; sourceTree = "<group>"; };
+		C98B85F32AE6039900D2FDEA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		C98B85F52AE6423100D2FDEA /* VideoSample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = VideoSample.mp4; sourceTree = "<group>"; };
+		C9913D4F2AE6BA980065E015 /* UpdatedVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedVideoView.swift; sourceTree = "<group>"; };
+		C9913D512AE774700065E015 /* hold-on-to-your-butts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hold-on-to-your-butts.mp3"; sourceTree = "<group>"; };
 		C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C9A086112AA40BC000C2CC14 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		C9A086132AA42AE500C2CC14 /* PlaceholderExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderExt.swift; sourceTree = "<group>"; };
@@ -223,7 +230,6 @@
 				C99EEC942ADA4C2100F56FF9 /* FirebaseAppCheck in Frameworks */,
 				C99EECAC2ADA4C2100F56FF9 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				C99EECB22ADA4C2100F56FF9 /* FirebaseInstallations in Frameworks */,
-				C99EECB62ADA4C2100F56FF9 /* FirebaseMessaging in Frameworks */,
 				C99EEC982ADA4C2100F56FF9 /* FirebaseAuth in Frameworks */,
 				C99EECBA2ADA4C2100F56FF9 /* FirebaseRemoteConfig in Frameworks */,
 				C99EEC902ADA4C2100F56FF9 /* FirebaseAnalyticsSwift in Frameworks */,
@@ -299,6 +305,8 @@
 				C92E3F802A52417C00E90371 /* MorningFormulaApp.swift */,
 				C97F25222AC7CC6C00D04C0A /* AppDelegate.swift */,
 				C92E3F822A52417C00E90371 /* ContentView.swift */,
+				C98B85F52AE6423100D2FDEA /* VideoSample.mp4 */,
+				C9913D512AE774700065E015 /* hold-on-to-your-butts.mp3 */,
 				C92E3F862A52417D00E90371 /* Preview Content */,
 				C92E3F842A52417D00E90371 /* Assets.xcassets */,
 			);
@@ -448,6 +456,8 @@
 				C91337512AE4ADE200DA2D12 /* Builder */,
 				C913374F2AE4AB9500DA2D12 /* ChatView.swift */,
 				C91337522AE4ADF400DA2D12 /* FormulaView.swift */,
+				C98B85F32AE6039900D2FDEA /* VideoPlayerView.swift */,
+				C9913D4F2AE6BA980065E015 /* UpdatedVideoView.swift */,
 			);
 			path = Formula;
 			sourceTree = "<group>";
@@ -578,7 +588,6 @@
 				C99EECAF2ADA4C2100F56FF9 /* FirebaseInAppMessagingSwift-Beta */,
 				C99EECB12ADA4C2100F56FF9 /* FirebaseInstallations */,
 				C99EECB32ADA4C2100F56FF9 /* FirebaseMLModelDownloader */,
-				C99EECB52ADA4C2100F56FF9 /* FirebaseMessaging */,
 				C99EECB72ADA4C2100F56FF9 /* FirebasePerformance */,
 				C99EECB92ADA4C2100F56FF9 /* FirebaseRemoteConfig */,
 				C99EECBB2ADA4C2100F56FF9 /* FirebaseRemoteConfigSwift */,
@@ -652,6 +661,8 @@
 				C92E3F882A52417D00E90371 /* Preview Assets.xcassets in Resources */,
 				C92E3F852A52417D00E90371 /* Assets.xcassets in Resources */,
 				C97F25152AC7C9DA00D04C0A /* GoogleService-Info.plist in Resources */,
+				C98B85F62AE6423100D2FDEA /* VideoSample.mp4 in Resources */,
+				C9913D522AE774700065E015 /* hold-on-to-your-butts.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +732,7 @@
 				C9A086372AAEB4F400C2CC14 /* SwiftuiFSCalendar.swift in Sources */,
 				C9F225C62A550BCB0074AE89 /* ProfileOnboardingVM.swift in Sources */,
 				C9540D052AC273BB0067C6DE /* Home.swift in Sources */,
+				C9913D502AE6BA990065E015 /* UpdatedVideoView.swift in Sources */,
 				C97F252F2AC7EFEE00D04C0A /* SignUpView.swift in Sources */,
 				C9540CF02ABD01510067C6DE /* Onboarding.swift in Sources */,
 				C97F255E2AD6543800D04C0A /* CapsuleProgressView.swift in Sources */,
@@ -728,6 +740,7 @@
 				C9540D072AC520230067C6DE /* Quote.swift in Sources */,
 				C9540D102AC526E60067C6DE /* FormulaBuilderView.swift in Sources */,
 				C9540D092AC521300067C6DE /* Principle.swift in Sources */,
+				C98B85F42AE6039900D2FDEA /* VideoPlayerView.swift in Sources */,
 				C97F25312AC8053900D04C0A /* ErrorManager.swift in Sources */,
 				C937811E2AA3901300EF490C /* RuleOfThirds.swift in Sources */,
 				C97F255C2AD6439C00D04C0A /* FormulaImagesView.swift in Sources */,
@@ -1185,11 +1198,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C99EEC8A2ADA4C2100F56FF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMLModelDownloader;
-		};
-		C99EECB52ADA4C2100F56FF9 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C99EEC8A2ADA4C2100F56FF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
 		};
 		C99EECB72ADA4C2100F56FF9 /* FirebasePerformance */ = {
 			isa = XCSwiftPackageProductDependency;
