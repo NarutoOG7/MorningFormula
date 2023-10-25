@@ -43,6 +43,21 @@ class ChatManager: ObservableObject {
         }
     }
     
+    func getChatResponseFromFormula(_ formula: Formula, withCompletion completion: @escaping(Formula) -> Void) {
+        self.chatService.getPersonalSummaryFromFormula(formula) { response, error in
+            if let response = response {
+                DispatchQueue.main.async {
+                    let responseComponents = self.separateResponse(response)
+                    let introduction = responseComponents.0
+                    let conclusion = responseComponents.1
+                    var newFormula = formula
+                    newFormula.chatResponse = introduction
+                    completion(newFormula)
+                }
+            }
+        }
+    }
+    
     func separateResponse(_ response: String) -> (String,String) {
         print(response)
         if let introRange = response.range(of: "Introduction:\\n"),

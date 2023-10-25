@@ -15,11 +15,7 @@ extension FirebaseManager {
 //                self.errorManager.setError(error.localizedDescription)
 //            }
 //        }
-        self.updateFormula(formula) { status, error in
-            if let error = error {
-                self.errorManager.setError(error.localizedDescription)
-            }
-        }
+        self.updateFormula(formula) 
     }
     
     func addFormula(_ formula: Formula, wasSuccessful status: @escaping(Bool, Error?) -> Void) {
@@ -38,19 +34,19 @@ extension FirebaseManager {
         }
     }
     
-    func updateFormula(_ formula: Formula, wasSuccessful status: @escaping(Bool, Error?) -> Void) {
+    func updateFormula(_ formula: Formula) {
         guard let db = db else {
-            status(false, NSError(domain: "Firebase Manager: Error Updating Formula", code: 1))
+//            status(false, NSError(domain: "Firebase Manager: Error Updating Formula", code: 1))
             return
         }
         let docRef = db.collection("Formulas").document(formula.id)
             do {
                 let data = try JSONEncoder().encode(formula)
                 try docRef.setData(from: formula)
-                status(true, nil)
+//                status(true, nil)
             } catch {
                 print(error)
-                status(false, error)
+//                status(/*false*/, error)
             }
         }
 }

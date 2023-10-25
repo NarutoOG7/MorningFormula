@@ -33,6 +33,9 @@ class FormulaManager: ObservableObject {
     let formulaPageCount = 3
     
     @ObservedObject var userStore = UserManager.instance
+    @ObservedObject var chatManager = ChatManager.instance
+    let videoManager = VideoManager.instance
+    let firebaseManager = FirebaseManager.instance
     
     func formulaFromFields() -> Formula {
         Formula(userID: userStore.userID ?? "",
@@ -42,9 +45,34 @@ class FormulaManager: ObservableObject {
                 virtues: virtues,
                 quotes: quotes,
                 principles: principles,
-                rules: rules)
+                rules: rules,
+                imagesWithDuration: formulaImages(),
+                narratorID: selectedNarrator,
+                chatResponse: "")
     }
     
+    func formulaImages() -> [FormulaImage : Int] {
+        var returnables: [FormulaImage : Int] = [:]
+        for image in self.images {
+            let formulaImage = FormulaImage(photo: image)
+            returnables[formulaImage] = 3
+        }
+        return returnables
+    }
+    
+    func buildFormulaVideo(geo: GeometryProxy, frameRate: Int, withCompletion completion: @escaping(URL?) -> Void) {
+        if let formula = formula {
+            chatManager.getChatResponseFromFormula(formula) { newFormula in
+                self.videoManager.formulate(formula: newFormula, geo, frameRate: frameRate) { formulaURL in
+                    var newestFormula = newFormula
+                    newestFormula.formulaURL = formulaURL
+                    self.firebaseManager.updateFormula(newestFormula)
+                    
+                    completion(formulaURL)
+                }
+            }
+        }
+    }
 }
 
 
@@ -139,9 +167,9 @@ struct FormulaBuilderView: View {
     
     var saveButton: some View {
         Button {
-//            let formula = formulaManager.formulaFromFields()
-            let formula = Formula.example
+            let formula = formulaManager.formulaFromFields()
             formulaManager.formula = formula
+            /// Get CHAT GPT response and add to formula 
             FirebaseManager.instance.saveFormulaTapped(formula)
             viewModel.showBuilder = false
         } label: {

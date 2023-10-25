@@ -70,6 +70,7 @@ extension URL {
 struct VideoPlayerView: View {
         
     @State var url: URL? = nil
+    @ObservedObject var formulaManager = FormulaManager.instance
     
     var body: some View {
         GeometryReader { geo in
@@ -88,19 +89,13 @@ struct VideoPlayerView: View {
                     
                 }
                 .onAppear {
-                    VideoManager.instance.buildMovie(geo, imagesWithDuration: [
-                        (UIImage(named: "SampleOne")!, 13),
-                        (UIImage(named: "SampleTwo")!, 13),
-                        (UIImage(named: "SampleThree")!, 14)
-                    ], outputFileName: "example", totalDuration: 30, frameRate: 1) { url in
-                        self.url = url
-                        print(url?.fileSize())
-                    }
+//                    if let formula = formulaManager.formula {
+                    VideoManager.instance.formulate(formula: Formula.example, geo, frameRate: 1) { url in
+                            self.url = url
+                        }
+//                    }
                 }
-                
-                //            if let videoURL = VideoBuilderManager.instance.buildVideo() {
-                //        if let videoURL = Bundle.main.url(forResource: "VideoSample", withExtension: "mp4") {
-                //            if let videoURL = VideoManager.instance.createPixelBuffer(image: UIImage(named: "SampleTwo")) {
+ 
                 if let videoURL = url {
                     let _ = print(videoURL)
                     let player = AVPlayer(url: videoURL)

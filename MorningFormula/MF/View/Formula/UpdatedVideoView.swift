@@ -14,6 +14,15 @@ class VideoManager {
     let speechSynthesizer = AVSpeechSynthesizer()
     let speechUtterance = AVSpeechUtterance(string: "I'm sick and tired of all of these goddamn snakes on this motherfucking plane! - Samuel Jackson")
 
+    var recordingPath:  URL {
+        let soundName = "Brianna.caf"
+         // I've tried numerous file extensions.  .caf was in an answer somewhere else.  I would think it would be
+         // .pcm, but that doesn't work either.
+         
+         // Local Directory
+         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+         return paths[0].appendingPathComponent(soundName)
+     }
  
     func getMovieURL(image: UIImage?) -> URL? {
         guard let uiKitImage = image,
@@ -98,12 +107,13 @@ class VideoManager {
  
   
     
-    func createVideoFromImages(_ geo: GeometryProxy, imagesWithDuration: [(UIImage , Int)], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
+    func createVideoFromImages(_ geo: GeometryProxy, imagesWithDuration: [FormulaImage : Int], outputFileName: String, frameRate: Int, completion: @escaping (URL?) -> Void) {
         
         var pixelBuffersWithDuration: [(CVPixelBuffer , Int)] = []
         
         for image in imagesWithDuration {
-            guard let staticImage = CIImage(image: image.0) else {
+            guard let uiImage = image.key.image(),
+                  let staticImage = CIImage(image: uiImage) else {
                 completion(nil)
                 return
             }
@@ -177,18 +187,18 @@ class VideoManager {
             }
         }
     
-    func createMovie(_ geo: GeometryProxy, imagesWithDuration: [(UIImage, Int)], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
+    func createMovie(_ geo: GeometryProxy, imagesWithDuration: [FormulaImage : Int], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
           let dispatchGroup = DispatchGroup()
 
         var url: URL?
           dispatchGroup.enter()
-          createVideoFromImages(geo, imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, totalDuration: totalDuration, frameRate: frameRate) { videoURL in
+          createVideoFromImages(geo, imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, frameRate: frameRate) { videoURL in
               if let videoURL = videoURL {
                   // Your TTS text
                   let ttsText = "Hello, this is a TTS audio example."
 
                   // Call the createTTSAsset function to generate TTS audio
-                  self.createTTSAsset(text: ttsText) { audioURL in
+                  self.saveTTSAudio(formula: Formula.example) { audioURL in
                       if let audioURL = audioURL {
                           print("TTS audio was successfully generated and saved at: \(audioURL)")
 
@@ -267,7 +277,8 @@ class VideoManager {
 
         // Set the output file URL
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-         let outputURL = documentsDirectory.appendingPathComponent("EXAMPLESAMPLE.mov") // Output filename with .mov extension
+        let timestamp = Int(Date().timeIntervalSince1970)
+         let outputURL = documentsDirectory.appendingPathComponent("Example\(timestamp).mov") // Output filename with .mov extension
         exportSession.outputURL = outputURL
 
         // Set the output file type
@@ -291,212 +302,15 @@ class VideoManager {
             }
         }
     }
-    
-    
-    func createTTSAsset(text: String, completion: @escaping (URL?) -> Void) {
-        // Initialize the speech synthesizer
 
-        let audioEngine = AVAudioEngine()
-        let audioPlayerNode = AVAudioPlayerNode()
-        let audioMixer = audioEngine.mainMixerNode
-         audioEngine.attach(audioPlayerNode)
-
-        do {
-            try audioEngine.start()
-            print("Audio engine started")
-        } catch {
-            print("Error starting the audio engine: \(error.localizedDescription)")
-            completion(nil)
-            return
-        }
-
-        audioEngine.connect(audioPlayerNode, to: audioMixer, format: audioPlayerNode.outputFormat(forBus: 0))
-
-        // Create an audio file URL to save the TTS output
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let audioFileURL = documentsDirectory.appendingPathComponent("tts_audio.wav")
-
-        // Prepare an AVAudioFile for writing audio to the file
-        let audioFormat = AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 1)
-        guard let audioFile = try? AVAudioFile(forWriting: audioFileURL, settings: audioFormat?.settings ?? [:]) else {
-            print("Error creating AVAudioFile")
-            completion(nil)
-            return
-        }
-
-        // Set up the speech synthesis completion handler to record audio
-        completion(audioFile.url)
-        speechSynthesizer.write(speechUtterance) { buffer in
-            if let pcmBuffer = buffer as? AVAudioPCMBuffer {
-                do {
-                    try audioFile.write(from: pcmBuffer)
-                    print("Wrote audio buffer to file")
-                } catch {
-                    print("Error writing audio to file: \(error.localizedDescription)")
-                    completion(nil)
-                    return
-                }
-            } else if buffer == nil {
-                // Speech synthesis is complete
-                completion(audioFileURL)
-                print("TTS synthesis complete")
-            }
-        }
-    }
-
-
-//    func addAudioFileToVideoURL(videoURL: URL, audioURL: URL, completion: @escaping (URL?) -> Void) {
-//        let videoAsset = AVURLAsset(url: videoURL)
-//        let audioAsset = AVURLAsset(url: audioURL)
-//        
-//        // Create a mutable composition to hold the video and audio tracks
-//        let composition = AVMutableComposition()
-//        
-//        // Add video and audio tracks to the composition
-//        if let videoAssetTrack = videoAsset.tracks(withMediaType: .video).first,
-//            let audioAssetTrack = audioAsset.tracks(withMediaType: .audio).first {
-//            let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
-//            let audioTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
-//            
-//            do {
-//                try videoTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: videoAsset.duration), of: videoAssetTrack, at: CMTime.zero)
-//                try audioTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: audioAsset.duration), of: audioAssetTrack, at: CMTime.zero)
-//            } catch {
-//                print("Error inserting video and audio tracks: \(error.localizedDescription)")
-//                completion(nil)
-//                return
-//            }
-//        }
-//        
-//        // Export the final video with merged audio
-//        let exportSession = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality)
-//        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-//        let outputURL = documentsDirectory.appendingPathComponent("output_video.mov")
-//        
-//        // Configure the export session
-//        exportSession?.outputURL = outputURL
-//        exportSession?.outputFileType = .mov
-//        
-//        exportSession?.exportAsynchronously {
-//            switch exportSession?.status {
-//            case .completed:
-//                print("Video with audio was successfully created and saved.")
-//                completion(outputURL)
-//            case .failed:
-//                print("Error exporting the video with audio: \(exportSession?.error?.localizedDescription ?? "Unknown error")")
-//                completion(nil)
-//            case .cancelled:
-//                print("Video export was canceled.")
-//                completion(nil)
-//            default:
-//                print("Video export session completed with an unexpected status.")
-//                completion(nil)
-//            }
-//        }
-//        completion(outputURL)
-//    }
-    func addAudioFileToVideoURL(videoURL: URL, audioURL: URL, completion: @escaping (URL?) -> Void) {
-        let videoAsset = AVURLAsset(url: videoURL)
+    func buildMovie(_ geo: GeometryProxy, imagesWithDuration: [FormulaImage : Int], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
         
-        do {
-            // Load the audio asset and verify it
-            let audioAsset = try AVURLAsset(url: audioURL, options: nil)
-            
-            // Verify that the assets can be loaded
-            guard let videoAssetTrack = videoAsset.tracks(withMediaType: .video).first,
-                  let audioAssetTrack = audioAsset.tracks(withMediaType: .audio).first else {
-                print("Video or audio asset tracks not found.")
-                completion(nil)
-                return
-            }
-            
-            // Create a mutable composition
-            let composition = AVMutableComposition()
-            
-            // Add video and audio tracks to the composition
-            let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
-            let audioTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
-            
-            // Check if audio duration matches video duration
-//            if CMTimeCompare(audioAsset.duration, videoAsset.duration) != 0 {
-//                print("Audio and video durations do not match.")
-//                completion(nil)
-//                return
-//            }
-            
-            do {
-                // Insert video and audio tracks
-                try videoTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: videoAsset.duration), of: videoAssetTrack, at: CMTime.zero)
-                try audioTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: videoAsset.duration), of: audioAssetTrack, at: CMTime.zero)
-            } catch {
-                print("Error inserting video and audio tracks: \(error.localizedDescription)")
-                completion(nil)
-                return
-            }
-            
-            // Create an export session
-            guard let exportSession = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality) else {
-                print("Error creating export session")
-                completion(nil)
-                return
-            }
-            
-            // Set the output file URL
-            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            let outputURL = documentsDirectory.appendingPathComponent("output_video.mov")
-            exportSession.outputURL = outputURL
-            
-            // Set the output file type
-            exportSession.outputFileType = .mov
-            
-            // Export the video with audio
-            exportSession.exportAsynchronously {
-                switch exportSession.status {
-                case .completed:
-                    print("Video with audio was successfully created and saved at: \(outputURL)")
-                    completion(outputURL)
-                case .failed:
-                    print("Error exporting the video with audio: \(exportSession.error?.localizedDescription ?? "Unknown error")")
-                    completion(nil)
-                case .cancelled:
-                    print("Video export was canceled.")
-                    completion(nil)
-                default:
-                    print("Video export session completed with an unexpected status.")
-                    completion(nil)
-                }
-            }
-            completion(outputURL)
-        } catch {
-            print("Error loading the audio asset: \(error.localizedDescription)")
-            completion(nil)
-        }
-    }
-
-
-    func buildMoveWithAudioFile(_ geo: GeometryProxy, imagesWithDuration: [(UIImage, Int)], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
-        
-        createVideoFromImages(geo, imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, totalDuration: totalDuration, frameRate: frameRate) { videoURL in
-            if let videoURL = videoURL {
-                if let audioURL = Bundle.main.url(forResource: "hold-on-to-your-butts", withExtension: "mp3") {
-                    self.addAudioFileToVideoURL(videoURL: videoURL, audioURL: audioURL) { finalURL in
-                        if let finalURL = finalURL {
-                            completion(finalURL)
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    func buildMovie(_ geo: GeometryProxy, imagesWithDuration: [(UIImage, Int)], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
-        
-        self.createTTSAsset(text: "Hold on to your butts") { audioURL in
+        self.saveTTSAudio(formula: Formula.example) { audioURL in
             if let audioURL = audioURL {
                 print(audioURL)
-                self.createVideoFromImages(geo, imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, totalDuration: totalDuration, frameRate: frameRate) { videoURL in
+                self.createVideoFromImages(geo, imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, frameRate: frameRate) { videoURL in
                     if let videoURL = videoURL {
-                        self.addAudioFileToVideoURL(videoURL: videoURL, audioURL: audioURL) { finalURL in
+                        self.addAudioToVideoURL(videoURL: videoURL, audioURL: audioURL) { finalURL in
                             if let finalURL = finalURL {
                                 completion(finalURL)
                             }
@@ -506,60 +320,60 @@ class VideoManager {
             }
         }
     }
-
-    
-    func basicTTSAsset(text: String, completion: @escaping (URL?) -> Void) {
-        // Initialize the speech synthesizer
-        let speechUtterance = AVSpeechUtterance(string: text)
-
-        // Create an audio file URL to save the TTS output
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let audioFileURL = documentsDirectory.appendingPathComponent("tts_audio.wav")
-
-        // Prepare an AVAudioFile for writing audio to the file
-        let audioFormat = AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 1)
         
-        guard let audioFile = try? AVAudioFile(forWriting: audioFileURL, settings: audioFormat?.settings ?? [:]) else {
-            print("Error creating AVAudioFile")
-            completion(nil)
-            return
-        }
-
-        // Set up the speech synthesis completion handler to record audio
-        speechSynthesizer.write(speechUtterance) { buffer in
-            if let pcmBuffer = buffer as? AVAudioPCMBuffer {
-                do {
-                    try audioFile.write(from: pcmBuffer)
-                } catch {
-                    print("Error writing audio to file: \(error.localizedDescription)")
-                    completion(nil)
-                    return
-                }
-            } else if buffer == nil {
-                // Speech synthesis is complete
-                completion(audioFileURL)
-            }
-        }
-    }
+    private func saveTTSAudio(formula: Formula, completion: @escaping(URL?) -> Void) {
+         
+        let utterance = AVSpeechUtterance(string: formula.chatResponse)
+        utterance.voice = AVSpeechSynthesisVoice(identifier: formula.narratorID)
+         utterance.rate = 0.50
+         
+         // Only create new file handle if `output` is nil.
+         var output: AVAudioFile?
+         
+         speechSynthesizer.write(utterance) { [self] (buffer: AVAudioBuffer) in
+             guard let pcmBuffer = buffer as? AVAudioPCMBuffer else {
+                 fatalError("unknown buffer type: \(buffer)")
+             }
+             if pcmBuffer.frameLength == 0 {
+                 // Done
+                 debugPrint("Done")
+                 completion(recordingPath)
+             } else {
+                 // append buffer to file
+                 do{
+                     if output == nil {
+                         try  output = AVAudioFile(
+                             forWriting: recordingPath,
+                             settings: pcmBuffer.format.settings,
+                             commonFormat: pcmBuffer.format.commonFormat,
+                             interleaved: false)
+                     }
+                     try output?.write(from: pcmBuffer)
+                 }catch {
+                     print(error.localizedDescription)
+                 }
+             }
+         }
+     }
     
-    func urlForTTS(completion: @escaping(URL?) -> Void) {
-        let ttsText = "Hello, this is a TTS audio example."
-        basicTTSAsset(text: ttsText) { audioURL in
-            if let audioURL = audioURL {
-                print("TTS audio was successfully generated and saved at: \(audioURL)")
-                // You can use the audioURL for other purposes.
-                completion(audioURL)
+    func formulate(formula: Formula, _ geo: GeometryProxy, frameRate: Int, withCompletion completion: @escaping(URL?) -> Void) {
+        createVideoFromImages(geo, imagesWithDuration: formula.imagesWithDuration, outputFileName: formula.id, frameRate: frameRate) { videoURL in
+            if let videoURL = videoURL {
+                self.saveTTSAudio(formula: formula) { audioURL in
+                    if let audioURL = audioURL {
+                        self.addAudioToVideoURL(videoURL: videoURL, audioURL: audioURL) { finalURL in
+                            completion(finalURL)
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-struct UpdatedVideoView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    UpdatedVideoView()
-}
+/*
+ 1. Build Formula
+ 2. Get ChatGPT Response
+ 3. Build Video from images and chatGPT response TTS
+ 4. Play Video
+ */

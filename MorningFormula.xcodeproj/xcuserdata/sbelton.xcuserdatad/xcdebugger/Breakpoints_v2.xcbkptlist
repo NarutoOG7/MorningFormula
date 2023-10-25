@@ -62,10 +62,42 @@
             filePath = "MorningFormula/MF/Model/Managers/FirebaseManager/FMFormula.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "addFormula(_:wasSuccessful:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EEA0673D-0144-4619-90FB-0EBABBD5FE78 - 14ab969c2c18823f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.FirebaseManager.addFormula(_: MorningFormula.Formula, wasSuccessful: (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/FirebaseManager/FMFormula.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "988">
+               </Location>
+               <Location
+                  uuid = "EEA0673D-0144-4619-90FB-0EBABBD5FE78 - 14ab969c2c18823f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.FirebaseManager.addFormula(_: MorningFormula.Formula, wasSuccessful: (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/FirebaseManager/FMFormula.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "460">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,57 +126,10 @@
             filePath = "MorningFormula/MF/Model/Managers/ChatServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "separateResponse(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D0A911FA-0CF7-46F8-B425-98166D27A4A3 - c6b83cec8c20c7a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.ChatManager.separateResponse(Swift.String) -&gt; (Swift.String, Swift.String)"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/ChatServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "1464">
-               </Location>
-               <Location
-                  uuid = "D0A911FA-0CF7-46F8-B425-98166D27A4A3 - c6b83cec8c20c7a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.ChatManager.separateResponse(Swift.String) -&gt; (Swift.String, Swift.String)"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/ChatServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "2860">
-               </Location>
-               <Location
-                  uuid = "D0A911FA-0CF7-46F8-B425-98166D27A4A3 - c6b83cec8c20c7a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.ChatManager.separateResponse(Swift.String) -&gt; (Swift.String, Swift.String)"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/ChatServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "2920">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -189,8 +174,8 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "buildVideo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -205,13 +190,13 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "writeVideo(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7C350C3F-99E6-4539-BFB9-F063D3E19DCC - d75256afe7707e42"
+                  uuid = "7C350C3F-99E6-4539-BFB9-F063D3E19DCC - d75256afe770791c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -221,12 +206,12 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "576">
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "428">
                </Location>
                <Location
-                  uuid = "7C350C3F-99E6-4539-BFB9-F063D3E19DCC - d75256afe7707e63"
+                  uuid = "7C350C3F-99E6-4539-BFB9-F063D3E19DCC - d75256afe770791c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -236,8 +221,8 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
                   offsetFromSymbolStart = "868">
                </Location>
             </Locations>
@@ -253,13 +238,13 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "addImages(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2515EBEF-1A64-4AAD-BA4D-893838137A85 - 6bb6e189e2fe9fb8"
+                  uuid = "2515EBEF-1A64-4AAD-BA4D-893838137A85 - 6bb6e189e2fe9f72"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -269,12 +254,12 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "1336">
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "364">
                </Location>
                <Location
-                  uuid = "2515EBEF-1A64-4AAD-BA4D-893838137A85 - 6bb6e189e2fe9fb8"
+                  uuid = "2515EBEF-1A64-4AAD-BA4D-893838137A85 - 6bb6e189e2fe9f72"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -284,23 +269,8 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "1468">
-               </Location>
-               <Location
-                  uuid = "2515EBEF-1A64-4AAD-BA4D-893838137A85 - 6bb6e189e2fe9f97"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoBuilderManager.addImages(__C.AVAssetWriterInput) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "190"
-                  endingLineNumber = "190"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
                   offsetFromSymbolStart = "1604">
                </Location>
             </Locations>
@@ -316,28 +286,43 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "CMSampleBufferCreateForImage(_:presentationTime:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0D37E5BF-8365-4D0D-AFC1-73C81C0A82D7 - 53cafe8fdff3c8e2"
+                  uuid = "0D37E5BF-8365-4D0D-AFC1-73C81C0A82D7 - 3f476c66becc61cb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoBuilderManager.CMSampleBufferCreateForImage(_: __C.UIImage, presentationTime: __C.CMTime) -&gt; Swift.Optional&lt;__C.CMSampleBufferRef&gt;"
+                  symbolName = "MorningFormula.VideoBuilderManager.finishWriting(__C.AVAssetWriter) -&gt; ()"
                   moduleName = "MorningFormula"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212"
-                  offsetFromSymbolStart = "308">
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
-                  uuid = "0D37E5BF-8365-4D0D-AFC1-73C81C0A82D7 - 53cafe8fdff3c824"
+                  uuid = "0D37E5BF-8365-4D0D-AFC1-73C81C0A82D7 - cc44339c2fb2596"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in MorningFormula.VideoBuilderManager.finishWriting(__C.AVAssetWriter) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "0D37E5BF-8365-4D0D-AFC1-73C81C0A82D7 - 53cafe8fdff3c9c9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -347,8 +332,8 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "210"
-                  endingLineNumber = "210"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
                   offsetFromSymbolStart = "1944">
                </Location>
             </Locations>
@@ -364,13 +349,13 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "CMSampleBufferCreateForImage(_:presentationTime:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "FAA1EFBC-13DC-4F16-A1CE-E635B9C9B501 - 53cafe8fdff3ca77"
+                  uuid = "FAA1EFBC-13DC-4F16-A1CE-E635B9C9B501 - 53cafe8fdff3cb1c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -380,12 +365,12 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "223"
-                  endingLineNumber = "223"
-                  offsetFromSymbolStart = "608">
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
+                  offsetFromSymbolStart = "2068">
                </Location>
                <Location
-                  uuid = "FAA1EFBC-13DC-4F16-A1CE-E635B9C9B501 - 53cafe8fdff3ca77"
+                  uuid = "FAA1EFBC-13DC-4F16-A1CE-E635B9C9B501 - 53cafe8fdff3cb1c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -395,8 +380,8 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "223"
-                  endingLineNumber = "223"
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
                   offsetFromSymbolStart = "788">
                </Location>
             </Locations>
@@ -412,13 +397,13 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "CMSampleBufferCreateForImage(_:presentationTime:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0AC1AD49-06CE-4F16-A189-5110C06877E9 - 53cafe8fdff3cf1d"
+                  uuid = "0AC1AD49-06CE-4F16-A189-5110C06877E9 - 53cafe8fdff3ccc2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -428,12 +413,12 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "249"
-                  endingLineNumber = "249"
-                  offsetFromSymbolStart = "1716">
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "1328">
                </Location>
                <Location
-                  uuid = "0AC1AD49-06CE-4F16-A189-5110C06877E9 - 53cafe8fdff3cf1d"
+                  uuid = "0AC1AD49-06CE-4F16-A189-5110C06877E9 - 53cafe8fdff3ccc2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -443,8 +428,23 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "249"
-                  endingLineNumber = "249"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "1392">
+               </Location>
+               <Location
+                  uuid = "0AC1AD49-06CE-4F16-A189-5110C06877E9 - 53cafe8fdff3ccc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.VideoBuilderManager.CMSampleBufferCreateForImage(_: __C.UIImage, presentationTime: __C.CMTime) -&gt; Swift.Optional&lt;__C.CMSampleBufferRef&gt;"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
                   offsetFromSymbolStart = "1844">
                </Location>
             </Locations>
@@ -460,8 +460,8 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -476,8 +476,8 @@
             filePath = "MorningFormula/MF/View/Formula/VideoPlayerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "CMSampleBufferCreateForImage(_:presentationTime:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -492,8 +492,8 @@
             filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "getMovieURL(image:)"
             landmarkType = "7">
             <Locations>
@@ -527,6 +527,21 @@
                   endingLineNumber = "84"
                   offsetFromSymbolStart = "3996">
                </Location>
+               <Location
+                  uuid = "BF6BE56B-7480-428F-9A7A-B0B0965CD935 - a39caa217598045c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.VideoManager.getMovieURL(image: Swift.Optional&lt;__C.UIImage&gt;) -&gt; Swift.Optional&lt;Foundation.URL&gt;"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "3996">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -540,8 +555,8 @@
             filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "getMovieURL(image:)"
             landmarkType = "7">
             <Locations>
@@ -575,6 +590,21 @@
                   endingLineNumber = "82"
                   offsetFromSymbolStart = "188">
                </Location>
+               <Location
+                  uuid = "2BDC6307-92AC-4235-BC0C-FBF77EDCC479 - 633575af6509afab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in MorningFormula.VideoManager.getMovieURL(image: Swift.Optional&lt;__C.UIImage&gt;) -&gt; Swift.Optional&lt;Foundation.URL&gt;"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "188">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -588,13 +618,13 @@
             filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "createMovie(_:imagesWithDuration:outputFileName:totalDuration:frameRate:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "80B1E33D-76E2-4AD1-9CEE-990D9961E987 - 2120c796361f988a"
+                  uuid = "80B1E33D-76E2-4AD1-9CEE-990D9961E987 - 2120c796361f99f2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -604,658 +634,41 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "194"
-                  endingLineNumber = "194"
-                  offsetFromSymbolStart = "1236">
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
+                  offsetFromSymbolStart = "828">
                </Location>
                <Location
-                  uuid = "80B1E33D-76E2-4AD1-9CEE-990D9961E987 - 2120c796361f984c"
+                  uuid = "80B1E33D-76E2-4AD1-9CEE-990D9961E987 - 1deb3169b4896b5e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.createMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.createMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Dictionary&lt;MorningFormula.FormulaImage, Swift.Int&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MorningFormula"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "192"
-                  endingLineNumber = "192"
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
                   offsetFromSymbolStart = "396">
                </Location>
                <Location
-                  uuid = "80B1E33D-76E2-4AD1-9CEE-990D9961E987 - 2120c796361f984c"
+                  uuid = "80B1E33D-76E2-4AD1-9CEE-990D9961E987 - 1deb3169b4896b5e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.createMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.createMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Dictionary&lt;MorningFormula.FormulaImage, Swift.Int&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MorningFormula"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "192"
-                  endingLineNumber = "192"
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
                   offsetFromSymbolStart = "752">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "546271ED-C4AA-4A99-A49B-A5E2CA4C4A32"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
-            landmarkName = "VideoManager"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "546271ED-C4AA-4A99-A49B-A5E2CA4C4A32 - 7eef726c4759c673"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "368"
-                  endingLineNumber = "368"
-                  offsetFromSymbolStart = "4176">
-               </Location>
-               <Location
-                  uuid = "546271ED-C4AA-4A99-A49B-A5E2CA4C4A32 - 7eef726c4759c673"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "368"
-                  endingLineNumber = "368"
-                  offsetFromSymbolStart = "3668">
-               </Location>
-               <Location
-                  uuid = "546271ED-C4AA-4A99-A49B-A5E2CA4C4A32 - 7eef726c4759c790"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "365"
-                  endingLineNumber = "365"
-                  offsetFromSymbolStart = "3668">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "128BC3C6-8C66-4226-9B6F-E436E9A24E61"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "484"
-            endingLineNumber = "484"
-            landmarkName = "buildMoveWithAudioFile(_:imagesWithDuration:outputFileName:totalDuration:frameRate:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "128BC3C6-8C66-4226-9B6F-E436E9A24E61 - 33396484a13bbc54"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMoveWithAudioFile(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "484"
-                  endingLineNumber = "484"
-                  offsetFromSymbolStart = "484">
-               </Location>
-               <Location
-                  uuid = "128BC3C6-8C66-4226-9B6F-E436E9A24E61 - 33396484a13bbc54"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMoveWithAudioFile(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "484"
-                  endingLineNumber = "484"
-                  offsetFromSymbolStart = "408">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ED417576-7354-4918-BC9A-347282D77378"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
-            landmarkName = "VideoManager"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "ED417576-7354-4918-BC9A-347282D77378 - 599949cd28def7ec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "386"
-                  endingLineNumber = "386"
-                  offsetFromSymbolStart = "2044">
-               </Location>
-               <Location
-                  uuid = "ED417576-7354-4918-BC9A-347282D77378 - 599949cd28def7ec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "386"
-                  endingLineNumber = "386"
-                  offsetFromSymbolStart = "908">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CAF07466-36C2-4C0F-82C5-707BE516D86D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "549"
-            endingLineNumber = "549"
-            landmarkName = "urlForTTS(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CAF07466-36C2-4C0F-82C5-707BE516D86D - fb0e45da53a2f1e2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.urlForTTS(completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "550"
-                  endingLineNumber = "550"
-                  offsetFromSymbolStart = "796">
-               </Location>
-               <Location
-                  uuid = "CAF07466-36C2-4C0F-82C5-707BE516D86D - fb0e45da53a2f1c3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.urlForTTS(completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "549"
-                  endingLineNumber = "549"
-                  offsetFromSymbolStart = "480">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "31584C01-F501-4BDF-9DCD-8D2D019E310E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
-            landmarkName = "buildMovie(_:imagesWithDuration:outputFileName:totalDuration:frameRate:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "31584C01-F501-4BDF-9DCD-8D2D019E310E - c29ca0e3c25788c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "501"
-                  endingLineNumber = "501"
-                  offsetFromSymbolStart = "484">
-               </Location>
-               <Location
-                  uuid = "31584C01-F501-4BDF-9DCD-8D2D019E310E - c29ca0e3c25788c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "501"
-                  endingLineNumber = "501"
-                  offsetFromSymbolStart = "408">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ECD6A19A-31CB-4F61-A890-5BA269CE5362"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "380"
-            endingLineNumber = "380"
-            landmarkName = "VideoManager"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "ECD6A19A-31CB-4F61-A890-5BA269CE5362 - 599949cd28def626"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "380"
-                  endingLineNumber = "380"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  uuid = "ECD6A19A-31CB-4F61-A890-5BA269CE5362 - 7eef726c4759c9ef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "380"
-                  endingLineNumber = "380"
-                  offsetFromSymbolStart = "3036">
-               </Location>
-               <Location
-                  uuid = "ECD6A19A-31CB-4F61-A890-5BA269CE5362 - 599949cd28def626"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "380"
-                  endingLineNumber = "380"
-                  offsetFromSymbolStart = "204">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1DF9A5F6-B1F2-4E8F-B048-64ED7605AD4E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "498"
-            endingLineNumber = "498"
-            landmarkName = "buildMovie(_:imagesWithDuration:outputFileName:totalDuration:frameRate:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1DF9A5F6-B1F2-4E8F-B048-64ED7605AD4E - 68b14589c54a3ad1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "498"
-                  endingLineNumber = "498"
-                  offsetFromSymbolStart = "464">
-               </Location>
-               <Location
-                  uuid = "1DF9A5F6-B1F2-4E8F-B048-64ED7605AD4E - c29ca0e3c257877d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "498"
-                  endingLineNumber = "498"
-                  offsetFromSymbolStart = "296">
-               </Location>
-               <Location
-                  uuid = "1DF9A5F6-B1F2-4E8F-B048-64ED7605AD4E - 68b14589c54a3ad1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "498"
-                  endingLineNumber = "498"
-                  offsetFromSymbolStart = "292">
-               </Location>
-               <Location
-                  uuid = "1DF9A5F6-B1F2-4E8F-B048-64ED7605AD4E - 68b14589c54a3ad1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "498"
-                  endingLineNumber = "498"
-                  offsetFromSymbolStart = "384">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D8E111FF-F6F2-4E8A-9237-8ECAB6FCE639"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
-            landmarkName = "VideoManager"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B5F1D89A-10CC-48FE-95C7-19B6C207DEE6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "429"
-            endingLineNumber = "429"
-            landmarkName = "addAudioFileToVideoURL(videoURL:audioURL:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B5F1D89A-10CC-48FE-95C7-19B6C207DEE6 - 7eef726c4759ce50"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "429"
-                  endingLineNumber = "429"
-                  offsetFromSymbolStart = "2436">
-               </Location>
-               <Location
-                  uuid = "B5F1D89A-10CC-48FE-95C7-19B6C207DEE6 - 7eef726c4759ce50"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MorningFormula.VideoManager.addAudioFileToVideoURL(videoURL: Foundation.URL, audioURL: Foundation.URL, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "429"
-                  endingLineNumber = "429"
-                  offsetFromSymbolStart = "1352">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "57611619-95E8-4519-A1B5-F5840F807BB6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
-            landmarkName = "buildMoveWithAudioFile(_:imagesWithDuration:outputFileName:totalDuration:frameRate:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "57611619-95E8-4519-A1B5-F5840F807BB6 - fc2b3c3310d3be95"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMoveWithAudioFile(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "481"
-                  endingLineNumber = "481"
-                  offsetFromSymbolStart = "1108">
-               </Location>
-               <Location
-                  uuid = "57611619-95E8-4519-A1B5-F5840F807BB6 - 33396484a13bbff7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMoveWithAudioFile(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "481"
-                  endingLineNumber = "481"
-                  offsetFromSymbolStart = "296">
-               </Location>
-               <Location
-                  uuid = "57611619-95E8-4519-A1B5-F5840F807BB6 - fc2b3c3310d3be95"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMoveWithAudioFile(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "481"
-                  endingLineNumber = "481"
-                  offsetFromSymbolStart = "552">
-               </Location>
-               <Location
-                  uuid = "57611619-95E8-4519-A1B5-F5840F807BB6 - fc2b3c3310d3be95"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMoveWithAudioFile(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "481"
-                  endingLineNumber = "481"
-                  offsetFromSymbolStart = "1024">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "397AD531-80EC-4D62-93F6-8694F80C9058"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "500"
-            endingLineNumber = "500"
-            landmarkName = "buildMovie(_:imagesWithDuration:outputFileName:totalDuration:frameRate:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "397AD531-80EC-4D62-93F6-8694F80C9058 - c29ca0e3c25788bf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "500"
-                  endingLineNumber = "500"
-                  offsetFromSymbolStart = "408">
-               </Location>
-               <Location
-                  uuid = "397AD531-80EC-4D62-93F6-8694F80C9058 - c29ca0e3c25788bf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "500"
-                  endingLineNumber = "500"
-                  offsetFromSymbolStart = "308">
-               </Location>
-               <Location
-                  uuid = "397AD531-80EC-4D62-93F6-8694F80C9058 - c29ca0e3c25788bf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in MorningFormula.VideoManager.buildMovie(_: SwiftUI.GeometryProxy, imagesWithDuration: Swift.Array&lt;(__C.UIImage, Swift.Int)&gt;, outputFileName: Swift.String, totalDuration: Swift.Double, frameRate: Swift.Int, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MorningFormula"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "500"
-                  endingLineNumber = "500"
-                  offsetFromSymbolStart = "396">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "36D0135F-04B4-4CA7-A972-68668741E0B6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "401"
-            endingLineNumber = "401"
-            landmarkName = "addAudioFileToVideoURL(videoURL:audioURL:completion:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
