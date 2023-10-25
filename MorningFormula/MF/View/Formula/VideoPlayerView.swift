@@ -71,6 +71,7 @@ struct VideoPlayerView: View {
         
     @State var url: URL? = nil
     @ObservedObject var formulaManager = FormulaManager.instance
+    @State var formula: Formula = .example
     
     var body: some View {
         GeometryReader { geo in
@@ -90,13 +91,18 @@ struct VideoPlayerView: View {
                 }
                 .onAppear {
 //                    if let formula = formulaManager.formula {
-                    VideoManager.instance.formulate(formula: Formula.example, geo, frameRate: 1) { url in
-                            self.url = url
-                        }
+//                    VideoManager.instance.formulate(formula: Formula.example, frameRate: 1) { url in
+//                            self.url = url
+//                        }
 //                    }
+                    
+                    FormulaManager.instance.buildFormulaVideo(frameRate: 1) { formula in
+                        self.formula = formula
+                    }
+                    
                 }
  
-                if let videoURL = url {
+                if let videoURL = formula.formulaURL {
                     let _ = print(videoURL)
                     let player = AVPlayer(url: videoURL)
                     VideoPlayer(player: player)

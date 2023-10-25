@@ -107,7 +107,7 @@ class VideoManager {
  
   
     
-    func createVideoFromImages(_ geo: GeometryProxy, imagesWithDuration: [FormulaImage : Int], outputFileName: String, frameRate: Int, completion: @escaping (URL?) -> Void) {
+    func createVideoFromImages(imagesWithDuration: [FormulaImage : Int], outputFileName: String, frameRate: Int, completion: @escaping (URL?) -> Void) {
         
         var pixelBuffersWithDuration: [(CVPixelBuffer , Int)] = []
         
@@ -187,12 +187,12 @@ class VideoManager {
             }
         }
     
-    func createMovie(_ geo: GeometryProxy, imagesWithDuration: [FormulaImage : Int], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
+    func createMovie(imagesWithDuration: [FormulaImage : Int], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
           let dispatchGroup = DispatchGroup()
 
         var url: URL?
           dispatchGroup.enter()
-          createVideoFromImages(geo, imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, frameRate: frameRate) { videoURL in
+          createVideoFromImages(imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, frameRate: frameRate) { videoURL in
               if let videoURL = videoURL {
                   // Your TTS text
                   let ttsText = "Hello, this is a TTS audio example."
@@ -303,12 +303,12 @@ class VideoManager {
         }
     }
 
-    func buildMovie(_ geo: GeometryProxy, imagesWithDuration: [FormulaImage : Int], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
+    func buildMovie(imagesWithDuration: [FormulaImage : Int], outputFileName: String, totalDuration: Double, frameRate: Int, completion: @escaping (URL?) -> Void) {
         
         self.saveTTSAudio(formula: Formula.example) { audioURL in
             if let audioURL = audioURL {
                 print(audioURL)
-                self.createVideoFromImages(geo, imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, frameRate: frameRate) { videoURL in
+                self.createVideoFromImages(imagesWithDuration: imagesWithDuration, outputFileName: outputFileName, frameRate: frameRate) { videoURL in
                     if let videoURL = videoURL {
                         self.addAudioToVideoURL(videoURL: videoURL, audioURL: audioURL) { finalURL in
                             if let finalURL = finalURL {
@@ -356,8 +356,8 @@ class VideoManager {
          }
      }
     
-    func formulate(formula: Formula, _ geo: GeometryProxy, frameRate: Int, withCompletion completion: @escaping(URL?) -> Void) {
-        createVideoFromImages(geo, imagesWithDuration: formula.imagesWithDuration, outputFileName: formula.id, frameRate: frameRate) { videoURL in
+    func formulate(formula: Formula, frameRate: Int, withCompletion completion: @escaping(URL?) -> Void) {
+        createVideoFromImages(imagesWithDuration: formula.imagesWithDuration, outputFileName: formula.id, frameRate: frameRate) { videoURL in
             if let videoURL = videoURL {
                 self.saveTTSAudio(formula: formula) { audioURL in
                     if let audioURL = audioURL {

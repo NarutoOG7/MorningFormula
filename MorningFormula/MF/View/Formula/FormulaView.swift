@@ -11,7 +11,9 @@ class FormulaViewViewModel: ObservableObject {
     static let instance = FormulaViewViewModel()
     
     @Published var showBuilder = false
+    @Published var showWaiting = false
 }
+
 
 struct FormulaView: View {
     
@@ -22,9 +24,10 @@ struct FormulaView: View {
     var body: some View {
         VStack {
             title
+            
             if let formula = formulaManager.formula {
                 subTitle
-                ChatView(formula: formula)
+            ChatView(formula: formula)
                 VideoPlayerView()
             } else {
                 noFormulaSubtitle
@@ -34,6 +37,11 @@ struct FormulaView: View {
         
         .fullScreenCover(isPresented: $viewModel.showBuilder, content: {
             FormulaBuilderView()
+                .padding()
+        })
+        
+        .fullScreenCover(isPresented: $viewModel.showWaiting, content: {
+            FormulaBuilderLoadingView()
                 .padding()
         })
     }

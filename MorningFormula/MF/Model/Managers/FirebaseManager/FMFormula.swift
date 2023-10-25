@@ -10,12 +10,11 @@ import SwiftUI
 extension FirebaseManager {
     
     func saveFormulaTapped(_ formula: Formula) {
-//        self.addFormula(formula) { status , error in
-//            if let error = error {
-//                self.errorManager.setError(error.localizedDescription)
-//            }
-//        }
-        self.updateFormula(formula) 
+        self.addFormula(formula) { status , error in
+            if let error = error {
+                self.errorManager.setError(error.localizedDescription)
+            }
+        }
     }
     
     func addFormula(_ formula: Formula, wasSuccessful status: @escaping(Bool, Error?) -> Void) {

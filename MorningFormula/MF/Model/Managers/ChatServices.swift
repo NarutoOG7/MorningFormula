@@ -58,21 +58,39 @@ class ChatManager: ObservableObject {
         }
     }
     
-    func separateResponse(_ response: String) -> (String,String) {
-        print(response)
-        if let introRange = response.range(of: "Introduction:\\n"),
-           let conclusionRange = response.range(of: "\\nConclusion:\\n") {
-            let introduction = response[introRange.upperBound..<conclusionRange.lowerBound]
-            let conclusion = response[conclusionRange.upperBound...]
-            
-            // Remove escape characters and \\n
-            let processedIntroduction = introduction.replacingOccurrences(of: "\\n", with: "\n").replacingOccurrences(of: "\\", with: "")
-            let processedConclusion = conclusion.replacingOccurrences(of: "\\n", with: "\n").replacingOccurrences(of: "\\", with: "")
-            
-            return (processedIntroduction , processedConclusion)
-            
+//    func separateResponse(_ response: String) -> (String,String) {
+//        print(response)
+//        if let introRange = response.range(of: "Introduction:\\n"),
+//           let conclusionRange = response.range(of: "\\nConclusion:\\n") {
+//            let introduction = response[introRange.upperBound..<conclusionRange.lowerBound]
+//            let conclusion = response[conclusionRange.upperBound...]
+//            
+//            // Remove escape characters and \\n
+//            let processedIntroduction = introduction.replacingOccurrences(of: "\\n", with: "\n").replacingOccurrences(of: "\\", with: "")
+//            let processedConclusion = conclusion.replacingOccurrences(of: "\\n", with: "\n").replacingOccurrences(of: "\\", with: "")
+//            
+//            return (processedIntroduction , processedConclusion)
+//            
+//        }
+//        return ("","")
+//    }
+    
+    func separateResponse(_ response: String) -> (String, String) {
+        let paragraphs = response.components(separatedBy: "\\n")
+        
+        // Make sure we have at least two paragraphs
+        guard paragraphs.count >= 2 else {
+            return ("", "")
         }
-        return ("","")
+        
+        let first = paragraphs[0].replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "\\", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+        let second = paragraphs[1].replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "\\", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+
+        print(first)
+        print("Second")
+        print(second)
+        // Assuming you want to return the first two paragraphs as a tuple
+        return (first, String(paragraphs[1]))
     }
 }
 
@@ -87,7 +105,7 @@ struct ChatGPTResponse: Codable {
     var bot: String
     
     enum CodingKeys: String, CodingKey {
-        case bot = "BOT"
+        case bot = "GPT"
     }
     
     static let example = ChatGPTResponse(bot: "Spencer is a dedicated individual who embodies the essence of a true believer. He's not only a fighter when it comes to pursuing his dreams but also a loving brother who values the support of his family. As a full-time iOS developer, he codes for two hours daily, crafting innovative and user-friendly applications. Spencer's unwavering commitment to his goals is inspiring, and he tirelessly submits job applications, knowing that his hard work will lead to career success. Outside of the tech world, he's equally focused on personal growth and health, hitting the gym four days a week for invigorating one-hour workouts. In all aspects of his life, Spencer exemplifies the tenacity and dedication that make dreams a reality.")
@@ -119,7 +137,7 @@ class ChatGPTAPIService: ChatGPTService {
     }
     
     func urlRequestFromFormula(_ formula: Formula) -> URLRequest? {
-        guard var baseURL = URLComponents(string: "https://open-ai21.p.rapidapi.com/conversationgpt35") else {
+        guard var baseURL = URLComponents(string: "https://open-ai21.p.rapidapi.com/conversationgpt") else {
             return nil
         }
         let key = "936ecadc60mshba73eeb67dc3a97p17f25ajsn35f57e6830e4"

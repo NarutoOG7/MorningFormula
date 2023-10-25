@@ -60,18 +60,20 @@ class FormulaManager: ObservableObject {
         return returnables
     }
     
-    func buildFormulaVideo(geo: GeometryProxy, frameRate: Int, withCompletion completion: @escaping(URL?) -> Void) {
-        if let formula = formula {
-            chatManager.getChatResponseFromFormula(formula) { newFormula in
-                self.videoManager.formulate(formula: newFormula, geo, frameRate: frameRate) { formulaURL in
+    func buildFormulaVideo(frameRate: Int, withCompletion completion: @escaping(Formula) -> Void) {
+//         let formula = formulaFromFields()
+        let formula = Formula.example
+        print(formula.chatResponse)
+        chatManager.getChatResponseFromFormula(formula) { newFormula in
+                print(newFormula.chatResponse)
+                self.videoManager.formulate(formula: newFormula, frameRate: frameRate) { formulaURL in
                     var newestFormula = newFormula
                     newestFormula.formulaURL = formulaURL
-                    self.firebaseManager.updateFormula(newestFormula)
-                    
-                    completion(formulaURL)
+                    self.firebaseManager.saveFormulaTapped(newestFormula)
+                    completion(newestFormula)
                 }
             }
-        }
+        
     }
 }
 
@@ -167,11 +169,12 @@ struct FormulaBuilderView: View {
     
     var saveButton: some View {
         Button {
-            let formula = formulaManager.formulaFromFields()
-            formulaManager.formula = formula
-            /// Get CHAT GPT response and add to formula 
-            FirebaseManager.instance.saveFormulaTapped(formula)
             viewModel.showBuilder = false
+            viewModel.showWaiting = true
+            formulaManager.buildFormulaVideo(frameRate: 1) { formula in
+                formulaManager.formula = formula
+                viewModel.showWaiting = false
+            }
         } label: {
             Text("Save")
         }
@@ -258,3 +261,10 @@ extension FormulaBuilderView {
     }
 }
 
+
+struct FormulaBuilderLoadingView: View {
+    
+    var body: some View {
+        Image(systemName: "testtube.2")
+    }
+}
