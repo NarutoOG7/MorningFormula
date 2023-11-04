@@ -46,6 +46,38 @@ struct Formula: Identifiable, Codable {
     }
 //    Using these virtues: \(virtues), using these quotes: \(quotes), using these principles: \(principles), using these rules: \(rules).
     
+    init(dict: [String:Any]) {
+        self.id = dict["id"] as? String ?? ""
+        self.userID = dict["id"] as? String ?? ""
+        self.descriptiveWords = dict["descriptiveWords"] as? [String] ?? []
+        self.season = .cultivating
+        self.goals = Goal.examples
+        self.virtues = []
+        self.quotes = Quote.examples
+        self.principles = Principle.examples
+        self.rules = Rule.examples
+        self.imagesWithDuration = [:]
+        self.narratorID = dict["id"] as? String ?? ""
+        self.chatResponse = dict["id"] as? String ?? ""
+        self.formulaURL = URL(string: dict["formulaURL"] as? String ?? "")
+    }
+    
+    init(id: String = UUID().uuidString, userID: String, descriptiveWords: [String], season: Season, goals: [Goal], virtues: [String], quotes: [Quote], principles: [Principle], rules: [Rule], imagesWithDuration: [FormulaImage : Int], narratorID: String, chatResponse: String, formulaURL: URL? = nil) {
+        self.id = id
+        self.userID = userID
+        self.descriptiveWords = descriptiveWords
+        self.season = season
+        self.goals = goals
+        self.virtues = virtues
+        self.quotes = quotes
+        self.principles = principles
+        self.rules = rules
+        self.imagesWithDuration = imagesWithDuration
+        self.narratorID = narratorID
+        self.chatResponse = chatResponse
+        self.formulaURL = formulaURL
+    }
+
     
     static let example = Formula(id: "Baller",
                                  userID: "USERID",

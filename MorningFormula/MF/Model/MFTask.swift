@@ -21,8 +21,10 @@ struct MFTask: Identifiable {
     }
 
     //MARK: - Duration
+    var intDuration: Int {
+        Int(timeInterval.rounded(.toNearestOrEven))
+    }
     var duration: String {
-        let intDuration = Int(timeInterval.rounded(.toNearestOrEven))
         return "\(intDuration)"
     }
     func durationAsLogicalString(duration: TimeInterval) -> String {

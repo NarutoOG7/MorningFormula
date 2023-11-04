@@ -324,12 +324,13 @@ class VideoManager {
     private func saveTTSAudio(formula: Formula, completion: @escaping(URL?) -> Void) {
          
         let utterance = AVSpeechUtterance(string: formula.chatResponse)
-        utterance.voice = AVSpeechSynthesisVoice(identifier: formula.narratorID)
+        utterance.voice = AVSpeechSynthesisVoice(identifier: "en-us")
          utterance.rate = 0.50
          
          // Only create new file handle if `output` is nil.
          var output: AVAudioFile?
          
+        
          speechSynthesizer.write(utterance) { [self] (buffer: AVAudioBuffer) in
              guard let pcmBuffer = buffer as? AVAudioPCMBuffer else {
                  fatalError("unknown buffer type: \(buffer)")
@@ -349,7 +350,7 @@ class VideoManager {
                              interleaved: false)
                      }
                      try output?.write(from: pcmBuffer)
-                 }catch {
+                 } catch {
                      print(error.localizedDescription)
                  }
              }

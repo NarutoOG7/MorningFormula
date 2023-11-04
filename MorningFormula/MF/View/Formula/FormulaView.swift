@@ -20,6 +20,8 @@ struct FormulaView: View {
     @ObservedObject var viewModel = FormulaViewViewModel.instance
     @ObservedObject var userStore = UserManager.instance
     @ObservedObject var formulaManager = FormulaManager.instance
+
+    let firebaseManager = FirebaseManager.instance
     
     var body: some View {
         VStack {
@@ -32,6 +34,12 @@ struct FormulaView: View {
             } else {
                 noFormulaSubtitle
                 addFormulaButton
+            }
+        }
+        
+        .task {
+            firebaseManager.getFormula { formula, error in
+                self.formulaManager.formula = formula
             }
         }
         

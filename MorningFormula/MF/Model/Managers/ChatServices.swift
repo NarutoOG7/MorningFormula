@@ -46,12 +46,13 @@ class ChatManager: ObservableObject {
     func getChatResponseFromFormula(_ formula: Formula, withCompletion completion: @escaping(Formula) -> Void) {
         self.chatService.getPersonalSummaryFromFormula(formula) { response, error in
             if let response = response {
+                print(response)
                 DispatchQueue.main.async {
-                    let responseComponents = self.separateResponse(response)
-                    let introduction = responseComponents.0
-                    let conclusion = responseComponents.1
+//                    let responseComponents = self.separateResponse(response)
+//                    let introduction = responseComponents.0
+//                    let conclusion = responseComponents.1
                     var newFormula = formula
-                    newFormula.chatResponse = introduction
+                    newFormula.chatResponse = response
                     completion(newFormula)
                 }
             }
@@ -105,7 +106,7 @@ struct ChatGPTResponse: Codable {
     var bot: String
     
     enum CodingKeys: String, CodingKey {
-        case bot = "GPT"
+        case bot = "MPT"
     }
     
     static let example = ChatGPTResponse(bot: "Spencer is a dedicated individual who embodies the essence of a true believer. He's not only a fighter when it comes to pursuing his dreams but also a loving brother who values the support of his family. As a full-time iOS developer, he codes for two hours daily, crafting innovative and user-friendly applications. Spencer's unwavering commitment to his goals is inspiring, and he tirelessly submits job applications, knowing that his hard work will lead to career success. Outside of the tech world, he's equally focused on personal growth and health, hitting the gym four days a week for invigorating one-hour workouts. In all aspects of his life, Spencer exemplifies the tenacity and dedication that make dreams a reality.")
@@ -137,7 +138,7 @@ class ChatGPTAPIService: ChatGPTService {
     }
     
     func urlRequestFromFormula(_ formula: Formula) -> URLRequest? {
-        guard var baseURL = URLComponents(string: "https://open-ai21.p.rapidapi.com/conversationgpt") else {
+        guard var baseURL = URLComponents(string: "https://open-ai21.p.rapidapi.com/chatmpt") else {
             return nil
         }
         let key = "936ecadc60mshba73eeb67dc3a97p17f25ajsn35f57e6830e4"
@@ -149,17 +150,20 @@ class ChatGPTAPIService: ChatGPTService {
             "X-RapidAPI-Host" : host
         ]
         
+        let parameters: [String:Any] = [
+            "message" : formula.summaryForChat
+        ]
 
-        let parameters: [String : Any] = [
-            "messages": [
-                [
-                    "role": "user",
-                    "content": formula.summaryForChat
-                ]
-            ],
-            "web_access": false,
-            "stream": false
-            ]
+//        let parameters: [String : Any] = [
+//            "messages": [
+//                [
+//                    "role": "user",
+//                    "content": formula.summaryForChat
+//                ]
+//            ],
+//            "web_access": false,
+//            "stream": false
+//            ]
         do {
         let postData = try JSONSerialization.data(withJSONObject: parameters, options: [])
         

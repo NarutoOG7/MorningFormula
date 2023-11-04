@@ -62,6 +62,10 @@
 		C97F25642AD89AC400D04C0A /* CodableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25632AD89AC400D04C0A /* CodableColor.swift */; };
 		C98B85F42AE6039900D2FDEA /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B85F32AE6039900D2FDEA /* VideoPlayerView.swift */; };
 		C98B85F62AE6423100D2FDEA /* VideoSample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C98B85F52AE6423100D2FDEA /* VideoSample.mp4 */; };
+		C990C97D2AEF54AD008FBE66 /* TimeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990C97C2AEF54AD008FBE66 /* TimeTrackerView.swift */; };
+		C990C97F2AEF5F00008FBE66 /* CircularTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990C97E2AEF5F00008FBE66 /* CircularTextView.swift */; };
+		C990C9812AF01889008FBE66 /* RoundedCapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990C9802AF01889008FBE66 /* RoundedCapsuleView.swift */; };
+		C990C9832AF02606008FBE66 /* CircleDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990C9822AF02606008FBE66 /* CircleDividerView.swift */; };
 		C9913D502AE6BA990065E015 /* UpdatedVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9913D4F2AE6BA980065E015 /* UpdatedVideoView.swift */; };
 		C9913D522AE774700065E015 /* hold-on-to-your-butts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9913D512AE774700065E015 /* hold-on-to-your-butts.mp3 */; };
 		C99EEC8C2ADA4C2100F56FF9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C99EEC8B2ADA4C2100F56FF9 /* FirebaseAnalytics */; };
@@ -184,6 +188,10 @@
 		C97F25632AD89AC400D04C0A /* CodableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableColor.swift; sourceTree = "<group>"; };
 		C98B85F32AE6039900D2FDEA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		C98B85F52AE6423100D2FDEA /* VideoSample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = VideoSample.mp4; sourceTree = "<group>"; };
+		C990C97C2AEF54AD008FBE66 /* TimeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerView.swift; sourceTree = "<group>"; };
+		C990C97E2AEF5F00008FBE66 /* CircularTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTextView.swift; sourceTree = "<group>"; };
+		C990C9802AF01889008FBE66 /* RoundedCapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCapsuleView.swift; sourceTree = "<group>"; };
+		C990C9822AF02606008FBE66 /* CircleDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDividerView.swift; sourceTree = "<group>"; };
 		C9913D4F2AE6BA980065E015 /* UpdatedVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedVideoView.swift; sourceTree = "<group>"; };
 		C9913D512AE774700065E015 /* hold-on-to-your-butts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hold-on-to-your-butts.mp3"; sourceTree = "<group>"; };
 		C9A0860F2AA3FC5C00C2CC14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -446,6 +454,10 @@
 			isa = PBXGroup;
 			children = (
 				C9540D042AC273BB0067C6DE /* Home.swift */,
+				C990C97C2AEF54AD008FBE66 /* TimeTrackerView.swift */,
+				C990C97E2AEF5F00008FBE66 /* CircularTextView.swift */,
+				C990C9802AF01889008FBE66 /* RoundedCapsuleView.swift */,
+				C990C9822AF02606008FBE66 /* CircleDividerView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -693,6 +705,7 @@
 				C9A086432AB1778F00C2CC14 /* CalendarEXT.swift in Sources */,
 				C9A086582ABBDF5400C2CC14 /* Activity.swift in Sources */,
 				C97F25542AD2770C00D04C0A /* SpotifyAlbum.swift in Sources */,
+				C990C9812AF01889008FBE66 /* RoundedCapsuleView.swift in Sources */,
 				C9A086102AA3FC5C00C2CC14 /* TabBarView.swift in Sources */,
 				C9A0865C2ABBE1E600C2CC14 /* Goal.swift in Sources */,
 				C913374E2AE4869700DA2D12 /* ChatServices.swift in Sources */,
@@ -709,6 +722,7 @@
 				C9A0861A2AA76D1400C2CC14 /* PlannerView.swift in Sources */,
 				C91337502AE4AB9500DA2D12 /* ChatView.swift in Sources */,
 				C97F25492AD0EF2600D04C0A /* SpotifyItem.swift in Sources */,
+				C990C97D2AEF54AD008FBE66 /* TimeTrackerView.swift in Sources */,
 				C97F252B2AC7E43400D04C0A /* Formula.swift in Sources */,
 				C97F25292AC7E13400D04C0A /* FirebaseUser.swift in Sources */,
 				C9F225C42A550BA30074AE89 /* GenderChoiceView.swift in Sources */,
@@ -746,6 +760,7 @@
 				C97F255C2AD6439C00D04C0A /* FormulaImagesView.swift in Sources */,
 				C9F225CD2A55A3680074AE89 /* GoalsInput.swift in Sources */,
 				C9A086262AAC2EFA00C2CC14 /* CalendarWeekCarousel.swift in Sources */,
+				C990C9832AF02606008FBE66 /* CircleDividerView.swift in Sources */,
 				C9A086202AA966A800C2CC14 /* TaskWeekView.swift in Sources */,
 				C91337532AE4ADF400DA2D12 /* FormulaView.swift in Sources */,
 				C97F25452AD0EEF800D04C0A /* SpotifyManager.swift in Sources */,
@@ -754,6 +769,7 @@
 				C97F25642AD89AC400D04C0A /* CodableColor.swift in Sources */,
 				C97F25332AC8060700D04C0A /* UserManager.swift in Sources */,
 				C97F25602AD79EC300D04C0A /* FMFormula.swift in Sources */,
+				C990C97F2AEF5F00008FBE66 /* CircularTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

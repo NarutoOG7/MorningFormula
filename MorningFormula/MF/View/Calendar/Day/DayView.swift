@@ -15,56 +15,53 @@ class DayVVM: ObservableObject {
 
 struct DayView: View {
     
+    let color: Color
+    
     @Binding var day: Date
     
-    @State var isShowingAddNewTask = false
     @ObservedObject var dayVVM = DayVVM.instance
     
     var body: some View {
         VStack {
             list
-                .background(Color.black.opacity(0.8).edgesIgnoringSafeArea(.all))
-            addButton
+                .background(color.edgesIgnoringSafeArea(.all))
         }
         
-        .sheet(isPresented: $isShowingAddNewTask) {
-            AddTaskView()
-                .navigationTitle("Add Task")
-        }
     }
     
     private var list: some View {
+        ScrollViewReader { scrollValue in
+            ScrollView {
+                ForEach((MFTask.examples + MFTask.examples + MFTask.examples).sorted(by: { $0.starTime < $1.starTime })) { task in
+                    DayTaskCell(task: .constant(task))
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
+                }
+            }
+            .onAppear {
+                let components = Calendar.current.dateComponents([.hour, .minute], from: day)
+                let doubleMinutes = Double(components.minute ?? 0)
+                let currentTimeDouble = Double(components.hour ?? 0) + (doubleMinutes / 60)
+
+                scrollValue.scrollTo(3, anchor: .top)
+            }
+        }
         
 //        List($dayVVM.tasks.sorted(by: { $0.starTime.wrappedValue < $1.starTime.wrappedValue})) { task in
-        List(MFTask.examples) { task in
-            DayTaskCell(task: .constant(task))
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.clear)
-            }
-            .listStyle(.plain)
         
+//        List(MFTask.examples) { task in
+//            DayTaskCell(task: .constant(task))
+//                    .listRowSeparator(.hidden)
+//                    .listRowBackground(Color.clear)
+//            }
+//            .listStyle(.plain)
     }
     
-    
-    private var addButton: some View {
-//        NavigationLink {
-//            // AddTask
-//        } label: {
-        Button {
-            self.isShowingAddNewTask = true
-        } label: {
-            Text("Add Task")
-        }
-
-                
-//        }
-
-    }
 }
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        let dayView = DayView(day: .constant(Date()))
+        let dayView = DayView(color: .white, day: .constant(Date()))
         let _ = dayView.dayVVM.tasks = [MFTask.exampleOne, MFTask.exampleTwo]
         return dayView
     }

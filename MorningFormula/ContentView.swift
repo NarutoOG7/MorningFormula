@@ -18,7 +18,7 @@ struct ContentView: View {
     @EnvironmentObject var userDefaultsManager: UserDefaultsManager
     
 //    var body: some View {
-//        VideoPlayerView()
+//        AVNarratorView()
 //    }
     
     var body: some View {

@@ -10,43 +10,66 @@ import SwiftUI
 struct Home: View {
     
     @State var day = Date()
+    @State var addActionIsVisible = false
+    @State var isDaySetByMidnight = true
     
     var body: some View {
         ZStack {
-            Color.black
-                .edgesIgnoringSafeArea(.all)
             VStack {
-                
+                dayDefinitionSwitch
                 timeView
-                DayView(day: $day)
+                DayView(color: .white, day: $day)
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink {
-                    AddGoalView()
-                } label: {
+                Button(action: toolbarAddTapped, label: {
                     Text("+")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
-                }
-
+                        .foregroundColor(.black)
+                })
+            }
+        }
+        
+        .confirmationDialog("", isPresented: $addActionIsVisible) {
+            NavigationLink {
+                AddGoalView()
+            } label: {
+                Text("Add Goal")
+            }
+            NavigationLink {
+                AddTaskView()
+            } label: {
+                Text("Add Task")
             }
         }
     }
     
     private var timeView: some View {
-        Circle()
-            .fill(.teal)
-            .frame(width: 250)
+        CircleDividerView(day: $day, isDaySetByMidnight: $isDaySetByMidnight)
+            .frame(width: 250, height: 250)
+//            .padding(.vertical)
+            .padding(.bottom, 40)
+
+    }
+    
+    private func toolbarAddTapped() {
+        addActionIsVisible = true
+    }
+    
+    private var dayDefinitionSwitch: some View {
+        Toggle(isOn: $isDaySetByMidnight) {}
+            .padding()
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            Home()
+        ZStack {
+            NavigationStack {
+                Home()
+            }
         }
     }
 }

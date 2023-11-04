@@ -96,10 +96,11 @@ struct VideoPlayerView: View {
 //                        }
 //                    }
                     
-                    FormulaManager.instance.buildFormulaVideo(frameRate: 1) { formula in
-                        self.formula = formula
-                    }
-                    
+//                    if self.url == nil {
+                        FormulaManager.instance.buildFormulaVideo(frameRate: 1) { formula in
+                            self.formula = formula
+                        }
+//                    }
                 }
  
                 if let videoURL = formula.formulaURL {
