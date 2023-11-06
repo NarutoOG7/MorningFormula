@@ -60,6 +60,8 @@
 		C97F25602AD79EC300D04C0A /* FMFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F255F2AD79EC300D04C0A /* FMFormula.swift */; };
 		C97F25622AD7A16A00D04C0A /* AVNarratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25612AD7A16A00D04C0A /* AVNarratorView.swift */; };
 		C97F25642AD89AC400D04C0A /* CodableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F25632AD89AC400D04C0A /* CodableColor.swift */; };
+		C98575202AF8992C00F40030 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985751F2AF8992C00F40030 /* EventManager.swift */; };
+		C98575222AF8AEFD00F40030 /* AddEKEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98575212AF8AEFD00F40030 /* AddEKEventView.swift */; };
 		C98B85F42AE6039900D2FDEA /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B85F32AE6039900D2FDEA /* VideoPlayerView.swift */; };
 		C98B85F62AE6423100D2FDEA /* VideoSample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C98B85F52AE6423100D2FDEA /* VideoSample.mp4 */; };
 		C990C97D2AEF54AD008FBE66 /* TimeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990C97C2AEF54AD008FBE66 /* TimeTrackerView.swift */; };
@@ -186,6 +188,9 @@
 		C97F255F2AD79EC300D04C0A /* FMFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMFormula.swift; sourceTree = "<group>"; };
 		C97F25612AD7A16A00D04C0A /* AVNarratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVNarratorView.swift; sourceTree = "<group>"; };
 		C97F25632AD89AC400D04C0A /* CodableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableColor.swift; sourceTree = "<group>"; };
+		C985751E2AF898A400F40030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C985751F2AF8992C00F40030 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		C98575212AF8AEFD00F40030 /* AddEKEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEKEventView.swift; sourceTree = "<group>"; };
 		C98B85F32AE6039900D2FDEA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		C98B85F52AE6423100D2FDEA /* VideoSample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = VideoSample.mp4; sourceTree = "<group>"; };
 		C990C97C2AEF54AD008FBE66 /* TimeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerView.swift; sourceTree = "<group>"; };
@@ -309,6 +314,7 @@
 		C92E3F7F2A52417C00E90371 /* MorningFormula */ = {
 			isa = PBXGroup;
 			children = (
+				C985751E2AF898A400F40030 /* Info.plist */,
 				C9F225CB2A550C320074AE89 /* MF */,
 				C92E3F802A52417C00E90371 /* MorningFormulaApp.swift */,
 				C97F25222AC7CC6C00D04C0A /* AppDelegate.swift */,
@@ -375,6 +381,7 @@
 				C97F25362AC80AF700D04C0A /* UserDefaultsManager.swift */,
 				C97F25322AC8060700D04C0A /* UserManager.swift */,
 				C913374D2AE4869700DA2D12 /* ChatServices.swift */,
+				C985751F2AF8992C00F40030 /* EventManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -458,6 +465,7 @@
 				C990C97E2AEF5F00008FBE66 /* CircularTextView.swift */,
 				C990C9802AF01889008FBE66 /* RoundedCapsuleView.swift */,
 				C990C9822AF02606008FBE66 /* CircleDividerView.swift */,
+				C98575212AF8AEFD00F40030 /* AddEKEventView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -713,6 +721,7 @@
 				C92E3F812A52417C00E90371 /* MorningFormulaApp.swift in Sources */,
 				C9540CF22AC201570067C6DE /* AddActivityView.swift in Sources */,
 				C97F25212AC7CBBF00D04C0A /* FirebaseManager.swift in Sources */,
+				C98575222AF8AEFD00F40030 /* AddEKEventView.swift in Sources */,
 				C9A0865A2ABBE05C00C2CC14 /* Season.swift in Sources */,
 				C97F253A2AC916E400D04C0A /* SettingsView.swift in Sources */,
 				C9A0863F2AB1773600C2CC14 /* CalendarManager.swift in Sources */,
@@ -729,6 +738,7 @@
 				C97F254D2AD0EF4600D04C0A /* Emotion.swift in Sources */,
 				C9540D0B2AC521C20067C6DE /* Virtue.swift in Sources */,
 				C9A086182AA6631900C2CC14 /* WeekView.swift in Sources */,
+				C98575202AF8992C00F40030 /* EventManager.swift in Sources */,
 				C97F25582AD279C400D04C0A /* Track.swift in Sources */,
 				C97F25352AC8065300D04C0A /* Constants.swift in Sources */,
 				C9A086142AA42AE600C2CC14 /* PlaceholderExt.swift in Sources */,
@@ -956,6 +966,7 @@
 				DEVELOPMENT_TEAM = Q4449HJNAM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorningFormula/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add your personal calendar events by allowing the app permission to your calnedars.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -986,6 +997,7 @@
 				DEVELOPMENT_TEAM = Q4449HJNAM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorningFormula/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add your personal calendar events by allowing the app permission to your calnedars.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

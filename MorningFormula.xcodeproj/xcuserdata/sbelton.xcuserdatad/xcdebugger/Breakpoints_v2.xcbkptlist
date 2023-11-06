@@ -828,5 +828,116 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3899150F-AD6E-41EF-9BBE-177B098D0D32"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/EventManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "saveEvent(_:wasSuccessful:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3899150F-AD6E-41EF-9BBE-177B098D0D32 - 7ce20e1d3ddea7c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.EventManager.deleteEvent(_: __C.EKEvent, wasSuccessful: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/EventManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "3899150F-AD6E-41EF-9BBE-177B098D0D32 - ce8a19456971af31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.EventManager.saveEvent(_: __C.EKEvent, wasSuccessful: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/EventManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A8FD9B3-5698-4BDC-B99C-D0FD4E907B39"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/EventManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "deleteEvent(_:wasSuccessful:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A8FD9B3-5698-4BDC-B99C-D0FD4E907B39 - 3ec39199304458c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.EventManager.deleteAtIndices(Foundation.IndexSet) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/EventManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "6A8FD9B3-5698-4BDC-B99C-D0FD4E907B39 - 3ec39199304458c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.EventManager.deleteAtIndices(Foundation.IndexSet) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/EventManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "6A8FD9B3-5698-4BDC-B99C-D0FD4E907B39 - 7ce20e1d3ddea67d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.EventManager.deleteEvent(_: __C.EKEvent, wasSuccessful: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/EventManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

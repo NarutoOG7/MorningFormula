@@ -15,6 +15,8 @@ struct Home: View {
     @State var wheelRotatesWithEOD = true
     @State var sleepTime = (start: 0.0, end: 8.0, duration: 8.0)
     
+    @ObservedObject var eventManager = EventManager.instance
+    
     var body: some View {
         ZStack {
             VStack {
@@ -22,19 +24,21 @@ struct Home: View {
                 wheelRotationSwitch
                 timeView
 //                DayView(color: .white, day: $day)
-                    Text("Sleep(start: \(Int(sleepTime.start)), end: \(Int(sleepTime.end)), duration: \(Int(sleepTime.duration)))")
-                Button {
-                    sleepTime.start += 1
-                    sleepTime.end += 1
-                    
-                } label: {
-                    Text("Up One")
-                }
+//                sleepAdjuster
 
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
+//                NavigationLink {
+//                    AddEKEventView()
+//                } label: {
+//                    Text("+")
+//                        .font(.title)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(.black)
+//                }
+
                 Button(action: toolbarAddTapped, label: {
                     Text("+")
                         .font(.title)
@@ -85,6 +89,18 @@ struct Home: View {
             .padding()
     }
     
+    private var sleepAdjuster: some View {
+        VStack {
+            Text("Sleep(start: \(Int(sleepTime.start)), end: \(Int(sleepTime.end)), duration: \(Int(sleepTime.duration)))")
+            Button {
+                sleepTime.start += 1
+                sleepTime.end += 1
+                
+            } label: {
+                Text("Up One")
+            }
+        }
+    }
 }
 
 struct Home_Previews: PreviewProvider {
