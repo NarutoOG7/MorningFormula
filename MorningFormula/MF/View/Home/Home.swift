@@ -12,13 +12,25 @@ struct Home: View {
     @State var day = Date()
     @State var addActionIsVisible = false
     @State var isDaySetByMidnight = true
+    @State var wheelRotatesWithEOD = true
+    @State var sleepTime = (start: 0.0, end: 8.0, duration: 8.0)
     
     var body: some View {
         ZStack {
             VStack {
                 dayDefinitionSwitch
+                wheelRotationSwitch
                 timeView
-                DayView(color: .white, day: $day)
+//                DayView(color: .white, day: $day)
+                    Text("Sleep(start: \(Int(sleepTime.start)), end: \(Int(sleepTime.end)), duration: \(Int(sleepTime.duration)))")
+                Button {
+                    sleepTime.start += 1
+                    sleepTime.end += 1
+                    
+                } label: {
+                    Text("Up One")
+                }
+
             }
         }
         .toolbar {
@@ -47,7 +59,9 @@ struct Home: View {
     }
     
     private var timeView: some View {
-        CircleDividerView(day: $day, isDaySetByMidnight: $isDaySetByMidnight)
+        CircleDividerView(day: $day,
+                          isDaySetByMidnight: $isDaySetByMidnight,
+                          wheelRotatesWithEOD: $wheelRotatesWithEOD, sleepTime: $sleepTime)
             .frame(width: 250, height: 250)
 //            .padding(.vertical)
             .padding(.bottom, 40)
@@ -59,9 +73,18 @@ struct Home: View {
     }
     
     private var dayDefinitionSwitch: some View {
-        Toggle(isOn: $isDaySetByMidnight) {}
+        Toggle(isOn: $isDaySetByMidnight) {
+            Text("Day Defined By Midnight?")
+        }
             .padding()
     }
+    private var wheelRotationSwitch: some View {
+        Toggle(isOn: $wheelRotatesWithEOD) {
+            Text("Wheel rotates withe EOD?")
+        }
+            .padding()
+    }
+    
 }
 
 struct Home_Previews: PreviewProvider {

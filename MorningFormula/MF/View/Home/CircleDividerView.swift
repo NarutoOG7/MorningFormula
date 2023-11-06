@@ -24,8 +24,8 @@ struct CircleTask: Identifiable, Hashable {
     var color: Color
     
     static let examples = [
-        CircleTask(title: "Sleep", duration: 8, start: 22, end: 6, color: .teal),
-        CircleTask(title: "Code", duration: 0.5, start: 6, end: 6.6, color: .yellow),
+//        CircleTask(title: "Sleep", duration: 8, start: 22, end: 6, color: .teal),
+        CircleTask(title: "Code", duration: 0.5, start: 6, end: 6.5, color: .yellow),
         CircleTask(title: "Workout", duration: 1, start: 7, end: 8, color: .purple),
         CircleTask(title: "Work", duration: 5, start: 9, end: 14, color: .red),
         CircleTask(title: "Code", duration: 3, start: 16, end: 19, color: .yellow),
@@ -36,19 +36,31 @@ struct CircleTask: Identifiable, Hashable {
 struct CircleDividerView: View {
     var numberOfSegments: Double = 24
     
-    var tasks: [CircleTask] = CircleTask.examples
+    var tasks: [CircleTask] {
+        let sleep = CircleTask(title: "Sleep", duration: sleepTime.duration, start: sleepTime.start, end: sleepTime.end, color: .cyan)
+        var tasks = CircleTask.examples
+
+        tasks.append(sleep)
+        return tasks
+    }
     
-    @State var bedTime: Double = 22
     @State var selectedTask: CircleTask?
     @Binding var day: Date
     @Binding var isDaySetByMidnight: Bool
+    @Binding var wheelRotatesWithEOD: Bool
+    @Binding var sleepTime: (start: Double, end: Double, duration: Double)
+
     
     var eodTime: Double {
-        isDaySetByMidnight ? 24 : bedTime
+        isDaySetByMidnight ? 24 : sleepTime.start
     }
     
     var angleIncrement: Double {
         360.0 / Double(numberOfSegments)
+    }
+    
+    var degreeRotation: Double {
+        (angleIncrement * eodTime) + 90
     }
     
     func radius(_ geo: GeometryProxy) -> CGFloat {
@@ -84,22 +96,29 @@ struct CircleDividerView: View {
                     let eodIsInTask = taskDurationRange.contains(eodTime)
 //                    let currentHourIsPassedTaskDuration = Double(currentHour) > (task.start + task.duration)
 //                    let taskStartIsBeforeEOD = eodIsInTask &&  task.start < eodTime
-                    let isPassed = Double(currentHour) > (task.start + task.duration)
-//                    let isPassed = taskStartIsBeforeEOD ? Double(currentHour) < task.start : currentHourIsPassedTaskDuration
+                    let mTime = getMilitaryTime()
+                    let minDecimal = Double(mTime.min) / 60.0
+                    let time = Double(mTime.hr) + minDecimal
                     
+                    let isPassed = time > (task.start + task.duration)
+//                    let isPassed = taskStartIsBeforeEOD ? Double(currentHour) < task.start : currentHourIsPassedTaskDuration
+
                     let color: Color = isPassed ? .gray : task.color
+                    let degreeRotation = wheelRotatesWithEOD ? degreeRotation : 90
                     if eodIsInTask {
                         Path { path in
-                            let firstStart = Angle(degrees: (Double(task.start) * angleIncrement) - 90)
-                            let firstEnd = Angle(degrees: (eodTime * angleIncrement) - 90)
+                            
+
+                            let firstStart = Angle(degrees: (Double(task.start) * angleIncrement) - degreeRotation)
+                            let firstEnd = Angle(degrees: (eodTime * angleIncrement) - degreeRotation)
                             path.addArc(center: center, radius: radius, startAngle: firstStart, endAngle: firstEnd, clockwise: false)
                             
                         }
                         .stroke(color,  lineWidth: 30)
                         
                         Path { path in
-                            let secondStart = Angle(degrees: (eodTime * angleIncrement) - 90)
-                            let secondEnd = Angle(degrees: (Double(task.start + task.duration) * angleIncrement) - 90)
+                            let secondStart = Angle(degrees: (eodTime * angleIncrement) - degreeRotation)
+                            let secondEnd = Angle(degrees: (Double(task.start + task.duration) * angleIncrement) - degreeRotation)
                             path.addArc(center: center, radius: radius, startAngle: secondStart, endAngle: secondEnd, clockwise: false)
                         }
                         .stroke(.gray,  lineWidth: 30)
@@ -108,8 +127,8 @@ struct CircleDividerView: View {
                     } else {
                         
                         Path { path in
-                            let startAngle = Angle(degrees: (Double(task.start) * angleIncrement) - 90)
-                            let endAngle = Angle(degrees: (Double(task.start + task.duration) * angleIncrement) - 90)
+                            let startAngle = Angle(degrees: (Double(task.start) * angleIncrement) - degreeRotation)
+                            let endAngle = Angle(degrees: (Double(task.start + task.duration) * angleIncrement) - degreeRotation)
                             
                             path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
                             
@@ -151,14 +170,15 @@ extension CircleDividerView {
         let radius = min(geometry.size.width, geometry.size.height) / 2
         let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
         let angleIncrement = 360.0 / Double(numberOfSegments)
-        
+        let degreeRotation = wheelRotatesWithEOD ? degreeRotation : 90
         let currentMilitaryHourGrade: Double = Double(currentHour) + Double(militaryMinutes / 60)
         
         let _ = print(militaryMinutes / 60)
         
+        
         return Path { path in
-            let startAngle = Angle(degrees: ((currentMilitaryHourGrade - 0.125) * angleIncrement) - 90)
-            let endAngle = Angle(degrees: ((currentMilitaryHourGrade + 0.125) * angleIncrement) - 90)
+            let startAngle = Angle(degrees: ((currentMilitaryHourGrade - 0.125) * angleIncrement) - degreeRotation)
+            let endAngle = Angle(degrees: ((currentMilitaryHourGrade + 0.125) * angleIncrement) - degreeRotation)
             
             path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
             
@@ -167,86 +187,36 @@ extension CircleDividerView {
     }
     
     private var currentTime: some View {
-        let components = Calendar.current.dateComponents([.hour, .minute], from: day)
-        let currentHour = components.hour ?? 0
-        let militaryMinutes = components.minute ?? 0
-        
+        let time = getMilitaryTime()
         return VStack {
             Text(day.formatted(date: .omitted, time: .shortened))
-            Text("\(currentHour):\(militaryMinutes)")
+            Text("\(time.hr):\(time.min)")
         }
+    }
+    
+    func getMilitaryTime() -> (hr: Int, min: Int) {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: day)
+        let hour = components.hour ?? 0
+        let minutes = components.minute ?? 0
+        return (hr: hour, min: minutes)
     }
 }
 
 extension CircleDividerView {
     //MARK: - End Of Day Marker
     
-    //    private func endOfDayMarker(_ geometry: GeometryProxy) -> some View {
-    //        let end = isDaySetByMidnight ? 24 : bedTime
-    //
-    //        let radius = min(geometry.size.width, geometry.size.height) / 2
-    //        let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
-    //        let angleIncrement = 360.0 / Double(numberOfSegments)
-    //
-    //        let startAngle = Angle(degrees: (end - 0.025) * angleIncrement - 90)
-    //        let endAngle = Angle(degrees: (end + 0.025) * angleIncrement - 90)
-    //
-    //        // Calculate the endpoint for the marker line
-    //        let dotOnCircle = CGPoint(x: center.x + Foundation.cos(endAngle.radians) * radius, y: center.y + Foundation.sin(endAngle.radians) * radius)
-    //
-    //
-    //        // Calculate the angle perpendicular to the endAngle
-    //        let perpendicularAngle = endAngle + Angle(degrees: 90.0)  // Adding 90 degrees for a perpendicular angle
-    //
-    //        // Calculate the position of the xPoint
-    //        let xOffset = cos(perpendicularAngle.radians) * 30.0  // 30.0 is the distance from the dotOnCircle
-    //        let yOffset = sin(perpendicularAngle.radians) * 30.0
-    //
-    //        let xPoint = CGPoint(x: dotOnCircle.x + xOffset, y: dotOnCircle.y + yOffset)
-    //
-    //
-    //        return Path { path in
-    //            path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
-    //        }
-    //        .stroke(.red, lineWidth: 60)
-    //        .overlay {
-    //            Text("\(startAngle.degrees)")
-    //                .position(xPoint)
-    //        }
-    //    }
-    
-    private func calculateDotOnCircle(geo: GeometryProxy, _ angle: Angle) -> CGPoint {
-        let center = center(geo)
-        let radius = radius(geo)
-        let xAngle = angle.radians // Angle in radians
-        let xPositionX = center.x + radius * cos(xAngle)
-        let xPositionY = center.y + radius * sin(xAngle)
-        
-        let pointX = CGPoint(x: xPositionX, y: xPositionY)
-        
-        return pointX
-    }
-    
-    private func calculateLineEndpoint(_ geo: GeometryProxy, _ angle: Angle) -> CGPoint {
-        let center = center(geo)
-        let radius = radius(geo)
-        
-        let x = center.x + radius * cos(angle.degrees)
-        let y = center.y + radius * sin(angle.degrees)
-        return CGPoint(x: x, y: y)
-    }
-    
-    
     private func endOfDayMarker(_ geometry: GeometryProxy) -> some View {
         
-        let end = isDaySetByMidnight ? 24 : bedTime
+        let end = isDaySetByMidnight ? 24 : sleepTime.start
         
         let radius = min(geometry.size.width, geometry.size.height) / 2
         let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
         let angleIncrement = 360.0 / Double(numberOfSegments)
+        let degreeRotation = wheelRotatesWithEOD ? degreeRotation : 90
         
-        let startAngle = Angle(degrees: ((end - 0.025) * angleIncrement) - 90)
-        let endAngle = Angle(degrees: ((end + 0.025) * angleIncrement) - 90)
+        let startAngle = Angle(degrees: ((end - 0.025) * angleIncrement) - degreeRotation)
+        let endAngle = Angle(degrees: ((end + 0.025) * angleIncrement) - degreeRotation)
+        
         
         return Path { path in
             path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
@@ -257,84 +227,13 @@ extension CircleDividerView {
         //                .position(calculateLineEndpoint(geometry, startAngle))
         //        }
     }
-    
-    
-    //    func pointOnCircle(center: CGPoint, radius: Double, angle: Angle) -> CGPoint {
-    //                let x = center.x + (radius * cos(angle.radians))
-    //                let y = center.y + (radius * sin(angle.radians))
-    //                return CGPoint(x: x, y: y)
-    //    }
-    
-    func pointOnCircle(center: CGPoint, radius: Double, angle: Angle) -> CGPoint {
-        let x = center.x + (radius * cos(angle.radians))
-        let y = center.y + (radius * sin(angle.radians))
-        let offset = offset(from: angle)
-        // Ensure the calculated point is within the canvas bounds
-        let clampedX = min(max(x, 0), Double(center.x) * 2) + offset.x
-        let clampedY = min(max(y, 0), Double(center.y) * 2) - offset.y
-        
-        return CGPoint(x: clampedX, y: clampedY)
-    }
-    
-    func offset(from angle: Angle) -> (x: Double, y: Double) {
-        switch angle.degrees {
-        case -75...(-45):
-            return (x: 30, y: 50)
-        case -45...(-15):
-            return (x: 60, y: 30)
-        case -15...0:
-            return (x: 60, y: 15)
-        case 0...15:
-            return (x: 60, y: -20)
-        default:
-            return (x: 30, y: 50)
-            
-        }
-    }
 }
 
-extension CircleDividerView {
-    //MARK: - Maths
-    
-    // Calculate the start and end angles for a given segment
-    private func angles(forSegment segment: Int) -> (start: Angle, end: Angle) {
-        let angleIncrement = 360.0 / self.numberOfSegments
-        let startAngle = Angle(degrees: Double(segment) * angleIncrement - 90)
-        let endAngle = Angle(degrees: Double(segment + 1) * angleIncrement - 90)
-        return (start: startAngle, end: endAngle)
-    }
-    
-    func offset(forSegment segment: Int) -> (x: Double, y: Double) {
-        let angleIncrement = 360.0 / self.numberOfSegments
-        // Calculate the midpoint angle for the segment
-        let midpointAngle = Angle(degrees: (Double(segment) + 0.5) * angleIncrement - 90)
-        
-        // Calculate the offset using trigonometry
-        let offsetMagnitude: Double = 20.0  // Adjust this value as needed
-        
-        // Calculate the X and Y offset based on the angle
-        let x = cos(midpointAngle.radians) * offsetMagnitude
-        let y = sin(midpointAngle.radians) * offsetMagnitude
-        
-        return (x: x, y: y)
-    }
-    //
-    //    // Calculate the offset for a given segment
-    //    private func offset(forSegment segment: Int) -> (x: Double, y: Double) {
-    //        let angleIncrement = 360.0 / numberOfSegments
-    //        let midAngle = Angle(degrees: Double(segment) * angleIncrement + angleIncrement / 2 - 90)
-    //        // Your offset logic here
-    //        // Example offset calculation:
-    //        let x = cos(midAngle.radians) * offsetValue
-    //        let y = sin(midAngle.radians) * offsetValue
-    //        return (x: x, y: y)
-    //    }
-}
 
 #Preview {
-    CircleDividerView(bedTime: 29,
-                      day: .constant(Date()),
-                      isDaySetByMidnight: .constant(false))
+    CircleDividerView(day: .constant(Date()),
+                    isDaySetByMidnight: .constant(false),
+                      wheelRotatesWithEOD: .constant(true), sleepTime: .constant((start: 22, end: 30, duration: 8)))
     .frame(width: 250, height: 250)
 }
 
