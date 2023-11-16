@@ -21,6 +21,13 @@ struct SpotifyItem: Codable, Identifiable {
         "\(name) · \(firstArtistName)"
     }
     
+    init(id: String = "", name: String = "", album: SpotifyAlbum = SpotifyAlbum(), artists: [Artist] = []) {
+        self.id = id
+        self.name = name
+        self.album = album
+        self.artists = artists
+    }
+    
     //MARK: - Examples
         
     static let dream = SpotifyItem(id: "1", name: "Dream", album: SpotifyAlbum.example, artists: [Artist.shaboozey])

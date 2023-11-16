@@ -16,7 +16,11 @@ struct Home: View {
     @State var wheelRotatesWithEOD = true
     @State var sleepTime = (start: 0.0, end: 8.0, duration: 8.0)
     
+    @State var showRecommendedSong = false
+    @State var recommendedSong: SpotifyItem?
+    
     @ObservedObject var addTaskViewModel = AddTaskViewModel.instance
+    @ObservedObject var spotifyManager = SpotifyManager.instance
     
     var body: some View {
                 NavigationStack {
@@ -40,16 +44,52 @@ struct Home: View {
         
         
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    viewModel.toolbarAddTapped()
-                } label: {
-                    Text("+")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
+            ToolbarItemGroup {
+                HStack {
+                    Button {
+                        spotifyManager.getRecommendedSong { song in
+                            self.showRecommendedSong = true
+                            self.recommendedSong = song
+                        }
+                    } label: {
+                        Image("SpotifyIcon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        viewModel.toolbarAddTapped()
+                    } label: {
+                        Text("+")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                    }
                 }
             }
+//            ToolbarItem(placement: .topBarTrailing) {
+//                Button {
+//                    viewModel.toolbarAddTapped()
+//                } label: {
+//                    Text("+")
+//                        .font(.title)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(.black)
+//                }
+//            }
+//            
+//            ToolbarItem(placement: .topBarLeading) {
+//                Button {
+//                    viewModel.toolbarAddTapped()
+//                } label: {
+//                    Image("SpotifyIcon")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fill)
+//                }
+//            }
+
         }
         
         .confirmationDialog("", isPresented: $viewModel.addActionIsVisible) {
@@ -65,7 +105,11 @@ struct Home: View {
             }
         }
         
-        
+        .fullScreenCover(isPresented: $showRecommendedSong, content: {
+//            if let song = recommendedSong {
+                SpotifyRecommendationView(song: recommendedSong ?? SpotifyItem())
+//            }
+        })
         
         .actionSheet(isPresented: $viewModel.showEventSpanOption) {
             ActionSheet(

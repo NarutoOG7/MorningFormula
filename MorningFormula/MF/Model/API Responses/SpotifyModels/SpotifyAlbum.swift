@@ -17,4 +17,9 @@ struct SpotifyAlbum: Codable, Identifiable {
     var images: [SpotifyImage]
     
     static let example = SpotifyAlbum(id: "example", images: [SpotifyImage.example])
+    
+    init(id: String = "", images: [SpotifyImage] = []) {
+        self.id = id
+        self.images = images
+    }
 }

@@ -83,5 +83,11 @@ class ChatManager: ObservableObject {
         // Assuming you want to return the first two paragraphs as a tuple
         return (first, String(paragraphs[1]))
     }
+    
+    func getSpotifyResponse(_ formula: Formula, withCompletion completion: @escaping(String?) -> Void) {
+        self.chatService.getChatResponseFromMessage(formula.spotifyRecommendationRequest) { response, error in
+                completion(response)
+        }
+    }
 }
 

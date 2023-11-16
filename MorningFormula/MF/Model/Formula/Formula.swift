@@ -50,15 +50,17 @@ struct Formula: Identifiable, Codable {
 //    Using these virtues: \(virtues), using these quotes: \(quotes), using these principles: \(principles), using these rules: \(rules).
     
     var spotifyRecommendationRequest: String {
-        let intro = "Hi there! I'm looking for some song recommendations based on my taste. I enjoy songs with a modern and fairly similar genre to the following tracks: "
-        let outro = " I'd like the recommendations to have a the same genre and prefer songs that aren't too mainstream. Can you suggest 3 tracks that fit these criteria and give them distinct separation of a specail character?"
+//        let intro = "Hi there! I'm looking for some song recommendations based on my taste. I enjoy songs with a modern and fairly similar genre to the following tracks: "
+//        let outro = " I'd like the recommendations to have a the same genre and prefer songs that aren't too mainstream. Can you suggest 3 tracks that fit these criteria and give them distinct separation of a specail character?"
+        let intro = "only respond with one real song title and artist please based off of my favorite artists and songs: 'Chemical' by Post Malone, 'Guts Over Fear' by Eminem."
+//        let outro = "This is supposed to be a new song for me."
         var songStrings: [String] = []
         for song in songs {
             let title = song.name
             let artist = song.firstArtistName
             songStrings.append("'\(title)' by \(artist)")
         }
-        let request = intro + songStrings.joined(separator: ",") + outro
+        let request = intro + songStrings.joined(separator: ",")
         return request
     }
     

@@ -161,6 +161,21 @@
                   endingLineNumber = "135"
                   offsetFromSymbolStart = "392">
                </Location>
+               <Location
+                  uuid = "8BA34DA7-2EF6-419A-BCCA-90A4D951BB93 - 3103ca5f5a146e14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.VideoBuilderManager.buildVideo() -&gt; Swift.Optional&lt;__C.AVAssetWriter&gt;"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "432">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -208,6 +223,21 @@
                   startingLineNumber = "171"
                   endingLineNumber = "171"
                   offsetFromSymbolStart = "812">
+               </Location>
+               <Location
+                  uuid = "7C350C3F-99E6-4539-BFB9-F063D3E19DCC - d75256afe7707e25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.VideoBuilderManager.writeVideo(Foundation.URL) -&gt; Swift.Optional&lt;__C.AVAssetWriter&gt;"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/VideoPlayerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "868">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -777,6 +807,21 @@
                   endingLineNumber = "354"
                   offsetFromSymbolStart = "2732">
                </Location>
+               <Location
+                  uuid = "E40D0034-9C8B-4DE6-A4BA-C47B0FDAFE03 - 5d5c9d9e0317ec27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.AVAudioBuffer) -&gt; () in MorningFormula.VideoManager.saveTTSAudio(formula: MorningFormula.Formula, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Formula/UpdatedVideoView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "354"
+                  endingLineNumber = "354"
+                  offsetFromSymbolStart = "2816">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -918,6 +963,21 @@
                   endingLineNumber = "82"
                   offsetFromSymbolStart = "604">
                </Location>
+               <Location
+                  uuid = "3899150F-AD6E-41EF-9BBE-177B098D0D32 - ce8a19456971ae82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.EventManager.saveEvent(_: __C.EKEvent, wasSuccessful: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/EventManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "632">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1041,6 +1101,21 @@
                   endingLineNumber = "92"
                   offsetFromSymbolStart = "568">
                </Location>
+               <Location
+                  uuid = "6A8FD9B3-5698-4BDC-B99C-D0FD4E907B39 - 74007c53ea8f4379"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.EventManager.deleteEvent(_: __C.EKEvent, span: __C.EKSpan, wasSuccessful: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/EventManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "596">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1058,6 +1133,38 @@
             endingLineNumber = "87"
             landmarkName = "getTask(_:withCompletion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1682AA29-F1E5-4FA7-8B51-9CB4A71C7382 - 9ac28d7544b391a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.FirebaseManager.getTask(_: Swift.String, withCompletion: (Swift.Optional&lt;MorningFormula.MFTask&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/FirebaseManager/FMTasks.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1844">
+               </Location>
+               <Location
+                  uuid = "1682AA29-F1E5-4FA7-8B51-9CB4A71C7382 - 9ac28d7544b391a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.FirebaseManager.getTask(_: Swift.String, withCompletion: (Swift.Optional&lt;MorningFormula.MFTask&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/FirebaseManager/FMTasks.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1884">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1074,6 +1181,38 @@
             endingLineNumber = "92"
             landmarkName = "getTask(_:withCompletion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6B74D80F-2C95-42D6-9FB0-6DBBA1922134 - 9ac28d7544b39074"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.FirebaseManager.getTask(_: Swift.String, withCompletion: (Swift.Optional&lt;MorningFormula.MFTask&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/FirebaseManager/FMTasks.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1096">
+               </Location>
+               <Location
+                  uuid = "6B74D80F-2C95-42D6-9FB0-6DBBA1922134 - 9ac28d7544b39074"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.FirebaseManager.getTask(_: Swift.String, withCompletion: (Swift.Optional&lt;MorningFormula.MFTask&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/FirebaseManager/FMTasks.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1576,6 +1715,793 @@
                   startingLineNumber = "72"
                   endingLineNumber = "72"
                   offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2D9AF73-2621-4256-B678-6A399D3EA13B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getChatResponseFromMessage(_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2D9AF73-2621-4256-B678-6A399D3EA13B - 1d001eec91ba9120"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.ChatGPTAPIService.getChatResponseFromMessage(_: Swift.String, withCompletion: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1300">
+               </Location>
+               <Location
+                  uuid = "B2D9AF73-2621-4256-B678-6A399D3EA13B - 1d001eec91ba9120"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.ChatGPTAPIService.getChatResponseFromMessage(_: Swift.String, withCompletion: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70A52B12-602B-4BD0-AC4B-DEC64B53DAC9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getChatResponseFromMessage(_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "70A52B12-602B-4BD0-AC4B-DEC64B53DAC9 - 1d001eec91ba9239"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.ChatGPTAPIService.getChatResponseFromMessage(_: Swift.String, withCompletion: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "70A52B12-602B-4BD0-AC4B-DEC64B53DAC9 - 1d001eec91ba9239"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.ChatGPTAPIService.getChatResponseFromMessage(_: Swift.String, withCompletion: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD1CE0F4-6335-4A08-8381-A6547137B309"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "urlRequestFromMessage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD1CE0F4-6335-4A08-8381-A6547137B309 - 81d25b797a8381"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.ChatGPTAPIService.urlRequestFromMessage(Swift.String) -&gt; Swift.Optional&lt;Foundation.URLRequest&gt;"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "4160">
+               </Location>
+               <Location
+                  uuid = "BD1CE0F4-6335-4A08-8381-A6547137B309 - 81d25b797a8381"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.ChatGPTAPIService.urlRequestFromMessage(Swift.String) -&gt; Swift.Optional&lt;Foundation.URLRequest&gt;"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "4440">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96C360F1-8166-4564-9A6A-83487EB15541"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "searchSongs(_:withCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7E51AD0-C8F5-4B15-95DB-6E402935F02D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "searchSongs(_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7E51AD0-C8F5-4B15-95DB-6E402935F02D - dfb073f2079f794a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+               <Location
+                  uuid = "A7E51AD0-C8F5-4B15-95DB-6E402935F02D - dfb073f2079f794a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53F53CC0-F7B5-46E5-B6B2-CA3BA86545E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "searchSongs(_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53F53CC0-F7B5-46E5-B6B2-CA3BA86545E7 - dfb073f2079f7969"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "53F53CC0-F7B5-46E5-B6B2-CA3BA86545E7 - dfb073f2079f7969"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "1212">
+               </Location>
+               <Location
+                  uuid = "53F53CC0-F7B5-46E5-B6B2-CA3BA86545E7 - dfb073f2079f7969"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  uuid = "53F53CC0-F7B5-46E5-B6B2-CA3BA86545E7 - dfb073f2079f7969"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "1240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "153BBA28-3DE4-4AD9-80C1-5DCCC599E499"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "searchSongs(_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "153BBA28-3DE4-4AD9-80C1-5DCCC599E499 - dfb073f2079f7888"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "153BBA28-3DE4-4AD9-80C1-5DCCC599E499 - dfb073f2079f7888"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "153BBA28-3DE4-4AD9-80C1-5DCCC599E499 - dfb073f2079f7888"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "153BBA28-3DE4-4AD9-80C1-5DCCC599E499 - dfb073f2079f7888"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.searchSongs(_: Swift.String, withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "656">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD53C53A-050C-4873-83ED-6D981D09ABC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "getRecommendedSong(withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD53C53A-050C-4873-83ED-6D981D09ABC5 - 7f57bf8b262e1657"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.getRecommendedSong(withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  uuid = "BD53C53A-050C-4873-83ED-6D981D09ABC5 - 7442cbab58bf29c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyManager.getRecommendedSong(withCompletion: (MorningFormula.SpotifyItem) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "524">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "794DA5E6-DB6A-40F9-9907-3DD14D6CB2AA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "getRecommendedSong(accessCode:_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "794DA5E6-DB6A-40F9-9907-3DD14D6CB2AA - 71f43fa7fb1100ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.SpotifyAPIService.getRecommendedSong(accessCode: Swift.String, _: MorningFormula.Formula, withCompletion: (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "794DA5E6-DB6A-40F9-9907-3DD14D6CB2AA - 71f43fa7fb1100ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.SpotifyAPIService.getRecommendedSong(accessCode: Swift.String, _: MorningFormula.Formula, withCompletion: (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "794DA5E6-DB6A-40F9-9907-3DD14D6CB2AA - c781871c8a4d9b09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.SpotifyAPIService.getRecommendedSong(accessCode: Swift.String, _: MorningFormula.Formula, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "794DA5E6-DB6A-40F9-9907-3DD14D6CB2AA - c781871c8a4d9b09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MorningFormula.SpotifyAPIService.getRecommendedSong(accessCode: Swift.String, _: MorningFormula.Formula, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "360">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE60BE60-E37C-4F9C-B697-E255573157BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "performURLSessionDataTask(request:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE60BE60-E37C-4F9C-B697-E255573157BB - 76792717cc7e8970"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "BE60BE60-E37C-4F9C-B697-E255573157BB - 76792717cc7e8970"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "BE60BE60-E37C-4F9C-B697-E255573157BB - 76792717cc7e8970"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.SpotifyRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "BE60BE60-E37C-4F9C-B697-E255573157BB - 5f55aa0481b68cbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "BE60BE60-E37C-4F9C-B697-E255573157BB - 5f55aa0481b68cbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "BE60BE60-E37C-4F9C-B697-E255573157BB - 5f55aa0481b68cbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "420">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A679987B-64E2-4184-B468-B3FDB599674B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "performURLSessionDataTask(request:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A679987B-64E2-4184-B468-B3FDB599674B - 5f55aa0481b68fa6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "1388">
+               </Location>
+               <Location
+                  uuid = "A679987B-64E2-4184-B468-B3FDB599674B - 5f55aa0481b68fa6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "A679987B-64E2-4184-B468-B3FDB599674B - 5f55aa0481b68fa6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MorningFormula.SpotifyAPIService.performURLSessionDataTask(request: Swift.Optional&lt;Foundation.URLRequest&gt;, withCompletion: (Swift.Optional&lt;MorningFormula.RecommendedRoot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/Spotify/SpotifyAPIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "1364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEB03E32-C519-40D4-AA50-3A8997AF04B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/View/Home/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BEB03E32-C519-40D4-AA50-3A8997AF04B7 - f12668a11700760d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; Swift.Optional&lt;MorningFormula.SpotifyRecommendationView&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.actionSheet(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.ActionSheet) -&gt; some&gt;&gt;.0 in MorningFormula.Home.body.getter : some"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Home/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "BEB03E32-C519-40D4-AA50-3A8997AF04B7 - f12668a11700760d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; Swift.Optional&lt;MorningFormula.SpotifyRecommendationView&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.actionSheet(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.ActionSheet) -&gt; some&gt;&gt;.0 in MorningFormula.Home.body.getter : some"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Home/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "BEB03E32-C519-40D4-AA50-3A8997AF04B7 - 1ac8147920a9e9f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; MorningFormula.SpotifyRecommendationView in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.actionSheet(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.ActionSheet) -&gt; some&gt;&gt;.0 in MorningFormula.Home.body.getter : some"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Home/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BADADAD8-D0A0-4729-9AE7-120356F9E542"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/View/Home/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BADADAD8-D0A0-4729-9AE7-120356F9E542 - f12668a11700762c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; Swift.Optional&lt;MorningFormula.SpotifyRecommendationView&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.actionSheet(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.ActionSheet) -&gt; some&gt;&gt;.0 in MorningFormula.Home.body.getter : some"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Home/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "BADADAD8-D0A0-4729-9AE7-120356F9E542 - f12668a11700762c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; Swift.Optional&lt;MorningFormula.SpotifyRecommendationView&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.actionSheet(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.ActionSheet) -&gt; some&gt;&gt;.0 in MorningFormula.Home.body.getter : some"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Home/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "BADADAD8-D0A0-4729-9AE7-120356F9E542 - 1ac8147920a9e9f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; MorningFormula.SpotifyRecommendationView in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.actionSheet(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.ActionSheet) -&gt; some&gt;&gt;.0 in MorningFormula.Home.body.getter : some"
+                  moduleName = "MorningFormula"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/View/Home/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "152">
                </Location>
             </Locations>
          </BreakpointContent>

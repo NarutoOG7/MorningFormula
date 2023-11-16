@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9123DFD2B027EEE009D61FA /* RecommendedRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9123DFC2B027EEE009D61FA /* RecommendedRoot.swift */; };
+		C9123E002B028199009D61FA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C9123DFF2B028199009D61FA /* SDWebImageSwiftUI */; };
 		C913374E2AE4869700DA2D12 /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913374D2AE4869700DA2D12 /* ChatServices.swift */; };
 		C91337532AE4ADF400DA2D12 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91337522AE4ADF400DA2D12 /* FormulaView.swift */; };
 		C92DF1412AE34D6B002AB002 /* MorningFormulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DF1402AE34D6B002AB002 /* MorningFormulaTests.swift */; };
@@ -145,6 +147,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9123DFC2B027EEE009D61FA /* RecommendedRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedRoot.swift; sourceTree = "<group>"; };
 		C913374D2AE4869700DA2D12 /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
 		C91337522AE4ADF400DA2D12 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
 		C92DF13E2AE34D6B002AB002 /* MorningFormulaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorningFormulaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9123E002B028199009D61FA /* SDWebImageSwiftUI in Frameworks */,
 				C99EECB02ADA4C2100F56FF9 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				C99EECA02ADA4C2100F56FF9 /* FirebaseDatabaseSwift in Frameworks */,
 				C99EEC9E2ADA4C2100F56FF9 /* FirebaseDatabase in Frameworks */,
@@ -391,8 +395,7 @@
 		C97F251F2AC7CBB000D04C0A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C985752D2AFBEAB800F40030 /* API Managers */,
-				C985752C2AFBEAAF00F40030 /* API Services */,
+				C985752C2AFBEAAF00F40030 /* APIs */,
 				C97F25242AC7CE0800D04C0A /* FirebaseManager */,
 				C9A0863E2AB1773600C2CC14 /* CalendarManager.swift */,
 				C9A086402AB1776400C2CC14 /* CalendarViewStore.swift */,
@@ -466,6 +469,7 @@
 				C97F25532AD2770C00D04C0A /* SpotifyAlbum.swift */,
 				C97F25552AD2775F00D04C0A /* SpotifyImage.swift */,
 				C97F25572AD279C400D04C0A /* Track.swift */,
+				C9123DFC2B027EEE009D61FA /* RecommendedRoot.swift */,
 			);
 			path = SpotifyModels;
 			sourceTree = "<group>";
@@ -515,22 +519,13 @@
 			path = Spotify;
 			sourceTree = "<group>";
 		};
-		C985752C2AFBEAAF00F40030 /* API Services */ = {
+		C985752C2AFBEAAF00F40030 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
 				C985753D2AFBEC3E00F40030 /* ChatGPT */,
 				C985753A2AFBEC0900F40030 /* Spotify */,
 			);
-			path = "API Services";
-			sourceTree = "<group>";
-		};
-		C985752D2AFBEAB800F40030 /* API Managers */ = {
-			isa = PBXGroup;
-			children = (
-				C97F25442AD0EEF800D04C0A /* SpotifyManager.swift */,
-				C985752E2AFBEADB00F40030 /* ChatManager.swift */,
-			);
-			path = "API Managers";
+			path = APIs;
 			sourceTree = "<group>";
 		};
 		C98575302AFBEAF400F40030 /* API Responses */ = {
@@ -554,6 +549,7 @@
 		C985753A2AFBEC0900F40030 /* Spotify */ = {
 			isa = PBXGroup;
 			children = (
+				C97F25442AD0EEF800D04C0A /* SpotifyManager.swift */,
 				C985753B2AFBEC1700F40030 /* SpotifyService.swift */,
 				C98575382AFBEBDC00F40030 /* SpotifyAPIService.swift */,
 			);
@@ -563,6 +559,7 @@
 		C985753D2AFBEC3E00F40030 /* ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				C985752E2AFBEADB00F40030 /* ChatManager.swift */,
 				C913374D2AE4869700DA2D12 /* ChatServices.swift */,
 				C985753E2AFBEC4E00F40030 /* ChatGPTService.swift */,
 			);
@@ -710,6 +707,7 @@
 				C99EECBB2ADA4C2100F56FF9 /* FirebaseRemoteConfigSwift */,
 				C99EECBD2ADA4C2100F56FF9 /* FirebaseStorage */,
 				C99EECBF2ADA4C2100F56FF9 /* FirebaseStorageCombine-Community */,
+				C9123DFF2B028199009D61FA /* SDWebImageSwiftUI */,
 			);
 			productName = MorningFormula;
 			productReference = C92E3F7D2A52417C00E90371 /* MorningFormula.app */;
@@ -752,6 +750,7 @@
 				C9A0863B2AB176B700C2CC14 /* XCRemoteSwiftPackageReference "SwiftUIInfiniteCarousel" */,
 				C9540D012AC243770067C6DE /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 				C99EEC8A2ADA4C2100F56FF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C9123DFE2B028199009D61FA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = C92E3F7E2A52417C00E90371 /* Products */;
 			projectDirPath = "";
@@ -830,6 +829,7 @@
 				C9A0865A2ABBE05C00C2CC14 /* Season.swift in Sources */,
 				C97F253A2AC916E400D04C0A /* SettingsView.swift in Sources */,
 				C9A0863F2AB1773600C2CC14 /* CalendarManager.swift in Sources */,
+				C9123DFD2B027EEE009D61FA /* RecommendedRoot.swift in Sources */,
 				C97F25402ACCDF4200D04C0A /* SpotifyView.swift in Sources */,
 				C97F25262AC7CE1500D04C0A /* FMAuthentication.swift in Sources */,
 				C97F253C2AC934A200D04C0A /* LogInView.swift in Sources */,
@@ -1158,6 +1158,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C9123DFE2B028199009D61FA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.4;
+			};
+		};
 		C937811F2AA39DF100EF490C /* XCRemoteSwiftPackageReference "SwiftUICalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GGJJack/SwiftUICalendar";
@@ -1225,6 +1233,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C9123DFF2B028199009D61FA /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9123DFE2B028199009D61FA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		C9540D022AC243770067C6DE /* SwiftUIIntrospect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C9540D012AC243770067C6DE /* XCRemoteSwiftPackageReference "swiftui-introspect" */;

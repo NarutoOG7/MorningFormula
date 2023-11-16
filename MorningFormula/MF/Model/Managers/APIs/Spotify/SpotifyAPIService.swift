@@ -11,23 +11,8 @@ class SpotifyAPIService: SpotifyService {
     
     func getSongFromSearch(accessCode: String, _ query: String, withCompletion completion: @escaping(SpotifyRoot?, Error?) -> Void) {
         
-        if let request = urlRequestFromQuery(accessCode: accessCode, query) {
-            let session = URLSession.shared
-            let task = session.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-                if let data = data {
-                    do {
-                        let root = try JSONDecoder().decode(SpotifyRoot.self, from: data)
-                        completion(root, nil)
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-            task.resume()
-        }
+        let request = urlRequestFromQuery(accessCode: accessCode, query)
+//        performURLSessionDataTask(request: request, withCompletion: completion)
     }
     
     func urlRequestFromQuery(accessCode: String, _ query: String) -> URLRequest? {
@@ -110,6 +95,63 @@ class SpotifyAPIService: SpotifyService {
         }
     }
     
+    func getRecommendedSong(accessCode: String, _ formula: Formula, withCompletion completion: @escaping (RecommendedRoot?, Error?) -> Void) {
+        let request = urlRequestForSongRecommendation(accessCode: accessCode, formula)
+        print(request?.debug())
+        performURLSessionDataTask(request: request, withCompletion: completion)
+    }
+ 
+    
+    func urlRequestForSongRecommendation(accessCode: String, _ formula: Formula) -> URLRequest? {
+        guard var baseURL = URLComponents(string: "https://api.spotify.com/v1/recommendations") else {
+            return nil
+        }
+        
+        let authKey = "Bearer \(accessCode)"
+        
+        
+        let headers = [
+            "Authorization" : authKey
+        ]
+        
+        baseURL.queryItems = [
+            URLQueryItem(name: "limit", value: "3"),
+            URLQueryItem(name: "market", value: "US"),
+            URLQueryItem(name: "seed_artists", value: "4NHQUGzhtTLFvgF5SZesLK"),
+            URLQueryItem(name: "seed_genres", value: "classical, country"),
+            URLQueryItem(name: "seed_tracks", value: "0c6xIDDpzE81m2q797ordA"),
+
+        ]
+        
+        baseURL.percentEncodedQuery = baseURL.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        if let url = baseURL.url {
+            let request = NSMutableURLRequest(url: url)
+            request.httpMethod = "GET"
+            request.allHTTPHeaderFields = headers
+            return request as URLRequest
+        }
+            return nil
+    }
+  
+    func performURLSessionDataTask(request: URLRequest?, withCompletion completion: @escaping(RecommendedRoot?, Error?) -> Void) {
+        if let request = request {
+            let session = URLSession.shared
+            let task = session.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    completion(nil, error)
+                }
+                if let data = data {
+                    do {
+                        let root = try JSONDecoder().decode(RecommendedRoot.self, from: data)
+                        completion(root, nil)
+                    } catch {
+                        print(error.localizedDescription)
+                        completion(nil, error)
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
 }
-
-
