@@ -18,6 +18,9 @@ class HomeViewModel: ObservableObject {
     @Published var showEventSpanOption = false
     @Published var indexSetForDeletingTask: IndexSet?
     
+    @Published var showRecommendedSong = false
+    @Published var recommendedSong = SpotifyItem()
+    
      var tasks: [MFTask] = [] {
         didSet {
             sortedTasks = tasks.sortedByTime()

@@ -9,48 +9,58 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct SpotifyRecommendationView: View {
+        
+    @Environment(\.dismiss) var dismiss
     
     @ObservedObject var spotifyManager = SpotifyManager.instance
     
     var song: SpotifyItem
     
     var body: some View {
-        VStack(alignment: .center) {
-            GeometryReader { geo in
-                VStack(alignment: .center, spacing: 10) {
-                    albumArt(geo)
-                        .padding(.bottom, 60)
-                    songTitle
-                    artistName
-                    openInSpotifyButton
-                        .padding(.vertical, 30)
+        NavigationStack {
+            VStack(alignment: .center) {
+                GeometryReader { geo in
+                    VStack(alignment: .center, spacing: 10) {
+                        albumArt(geo)
+                            .padding(.bottom, 60)
+                        songTitle
+                        artistName
+                        if spotifyManager.isSpotifyInstalledOnDevice() {
+                            openInSpotifyButton
+                                .padding(.vertical, 30)
+                        }
+                    }
+                    /// Makes View listen to alignment in stack by limiting container size
+                    .frame(width: geo.size.width, height: geo.size.height)
                     
                 }
-                /// Makes View listen to alignment in stack by limiting container size
-                .frame(width: geo.size.width, height: geo.size.height)
-
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        backButton
+                    }
+                }
             }
         }
     }
     
     private var songTitle: some View {
-//        Text(song.name)
-        Text("Song Name")
+        Text(song.name)
+//        Text("Song Name")
             .font(.title3)
             .bold()
     }
 
     private var artistName: some View {
-//        Text(song.firstArtistName)
-        Text("Artist Name")
+        Text(song.firstArtistName)
+//        Text("Artist Name")
             .font(.subheadline)
             .foregroundStyle(.gray)
 
     }
     
     private func albumArt(_ geo: GeometryProxy) -> some View {
-//        WebImage(url: URL(string: song.album.images.first?.url ?? ""))
-        WebImage(url: URL(string: "https://i.scdn.co/image/ab67616d0000b273e9afc4cd4b7d009ea37540d7"))
+        WebImage(url: URL(string: song.album.images.first?.url ?? ""))
+//        WebImage(url: URL(string: "https://i.scdn.co/image/ab67616d0000b273e9afc4cd4b7d009ea37540d7"))
             .resizable()
             .aspectRatio(contentMode: .fit)
             .clipShape(Circle())
@@ -62,9 +72,20 @@ struct SpotifyRecommendationView: View {
     
     private var openInSpotifyButton: some View {
         Button {
-            spotifyManager.openSpotify(uri: "")
+            spotifyManager.openSpotify(uri: song.uri)
         } label: {
             Text("Open in Spotify")
+        }
+
+    }
+    
+    private var backButton: some View {
+        Button {
+            self.dismiss()
+        } label: {
+            Image(systemName: "x.circle")
+                .foregroundStyle(.gray.opacity(0.6))
+                .font(.title)
         }
 
     }

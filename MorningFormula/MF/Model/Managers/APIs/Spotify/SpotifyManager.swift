@@ -13,7 +13,7 @@ class SpotifyManager: ObservableObject {
     
     private var spotifyService: SpotifyService
     
-    private var accessCode = "BQA5onlP-Hq0zAmNocjY7rWmeacdwYUTzzpxvKbRGuoGrt5vrZDmtucnsVYojXUKMHjov4GjOwhTE2TidV1iIfvBYdzxQJIagxFIg0Ksn1o2Gg6xaJs"
+    private var accessCode = "BQAaYLxNk6f-3nVDhj_0_nO-BImcfgyesql8novDddrRtSPfcc-8bvDBQq6vHPUlz7jKmII16HS4xbR_NkCDaCA6vJVn0qgptqjRXMv7zqQ4VC7hhVo"
     var accessTokenTimer: Timer?
     
     @Published var pauseSearch = false {
@@ -142,24 +142,43 @@ class SpotifyManager: ObservableObject {
     }
     
     func isSpotifyInstalledOnDevice() -> Bool {
-        if let spotifyURL = NSURL(string: "spotify") as URL?, UIApplication.shared.canOpenURL(spotifyURL) {
-            print("Spotify can be opened")
-            return true
+//        if let spotifyURL = NSURL(string: "spotify") as URL?, UIApplication.shared.canOpenURL(spotifyURL) {
+//            print("Spotify can be opened")
+//            return true
+//        } else {
+//            print("Spotify cannot be opened")
+//            return false
+//        }
+        
+        let appName = "spotify"
+        let appScheme = "\(appName)://"
+        let appUrl = URL(string: appScheme)
+
+        if UIApplication.shared.canOpenURL(appUrl! as URL) {
+           return true
         } else {
-            print("Spotify cannot be opened")
+            print("App not installed")
             return false
         }
     }
     
     func openSpotify(uri: String) {
         if let bundleId = Bundle.main.bundleIdentifier {
-            let canonicalURL = "https://open.spotify.com/album/0sNOF9WDwhWunNAHPD3Baj"
+            let uriAsURLString = uriAsURLString(uri)
+            let canonicalURL = "https://open.spotify.com/\(uriAsURLString)?play=true"
             let branchLink = "https://spotify.link/content_linking?~campaign=\(bundleId)&$canonical_url=\(canonicalURL)"
 
             if let url = URL(string: branchLink) {
                 UIApplication.shared.open(url)
             }
         }
+    }
+    
+    func uriAsURLString(_ uri: String) -> String {
+        let components = uri.components(separatedBy: ":")
+        let type = components[1]
+        let id = components[2]
+        return type + "/" + id
     }
 }
 

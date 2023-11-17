@@ -12,6 +12,7 @@ struct SpotifyItem: Codable, Identifiable {
     var name: String
     var album: SpotifyAlbum
     var artists: [Artist]
+    var uri: String
     
     var firstArtistName: String {
         artists.first?.name ?? ""
@@ -21,11 +22,12 @@ struct SpotifyItem: Codable, Identifiable {
         "\(name) · \(firstArtistName)"
     }
     
-    init(id: String = "", name: String = "", album: SpotifyAlbum = SpotifyAlbum(), artists: [Artist] = []) {
+    init(id: String = "", name: String = "", album: SpotifyAlbum = SpotifyAlbum(), artists: [Artist] = [], uri: String = "") {
         self.id = id
         self.name = name
         self.album = album
         self.artists = artists
+        self.uri = uri
     }
     
     //MARK: - Examples

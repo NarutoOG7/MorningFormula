@@ -16,9 +16,7 @@ struct Home: View {
     @State var wheelRotatesWithEOD = true
     @State var sleepTime = (start: 0.0, end: 8.0, duration: 8.0)
     
-    @State var showRecommendedSong = false
-    @State var recommendedSong: SpotifyItem?
-    
+
     @ObservedObject var addTaskViewModel = AddTaskViewModel.instance
     @ObservedObject var spotifyManager = SpotifyManager.instance
     
@@ -48,8 +46,8 @@ struct Home: View {
                 HStack {
                     Button {
                         spotifyManager.getRecommendedSong { song in
-                            self.showRecommendedSong = true
-                            self.recommendedSong = song
+                            viewModel.recommendedSong = song
+                            viewModel.showRecommendedSong = true
                         }
                     } label: {
                         Image("SpotifyIcon")
@@ -105,9 +103,9 @@ struct Home: View {
             }
         }
         
-        .fullScreenCover(isPresented: $showRecommendedSong, content: {
+        .fullScreenCover(isPresented: $viewModel.showRecommendedSong, content: {
 //            if let song = recommendedSong {
-                SpotifyRecommendationView(song: recommendedSong ?? SpotifyItem())
+            SpotifyRecommendationView(song: viewModel.recommendedSong)
 //            }
         })
         
