@@ -22,14 +22,16 @@ struct SpotifyRecommendationView: View {
                 GeometryReader { geo in
                     VStack(alignment: .center, spacing: 10) {
                         albumArt(geo)
-                            .padding(.bottom, 60)
+                            .padding(.bottom, 50)
                         songTitle
                         artistName
+                        Spacer()
                         if spotifyManager.isSpotifyInstalledOnDevice() {
                             openInSpotifyButton
                                 .padding(.vertical, 30)
                         }
                     }
+                    .padding()
                     /// Makes View listen to alignment in stack by limiting container size
                     .frame(width: geo.size.width, height: geo.size.height)
                     
@@ -75,6 +77,7 @@ struct SpotifyRecommendationView: View {
             spotifyManager.openSpotify(uri: song.uri)
         } label: {
             Text("Open in Spotify")
+                .foregroundStyle(.green)
         }
 
     }
@@ -92,5 +95,5 @@ struct SpotifyRecommendationView: View {
 }
 
 #Preview {
-    SpotifyRecommendationView(song: SpotifyItem())
+    SpotifyRecommendationView(song: SpotifyItem.colorsNShapes)
 }

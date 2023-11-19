@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-class DayVVM: ObservableObject {
-    static let instance = DayVVM()
-    
-    @Published var tasks: [MFTask] = []
-}
-
 struct DayView: View {
     
     let color: Color
@@ -22,7 +16,7 @@ struct DayView: View {
     
 //    @ObservedObject var dayVVM = DayVVM.instance
 //    @ObservedObject var addTaskViewModel = AddTaskViewModel.instance
-    @ObservedObject var viewModel = HomeViewModel.instance
+    @ObservedObject var viewModel = TodayViewModel.instance
     var body: some View {
         VStack {
             list
@@ -36,7 +30,7 @@ struct DayView: View {
         ScrollViewReader { scrollValue in
 //            ScrollView {
                 List {
-                    ForEach(viewModel.sortedTasks) { task in
+                    ForEach(MFTask.examples/*viewModel.sortedTasks*/) { task in
                         DayTaskCell(task: .constant(task))
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color.clear)

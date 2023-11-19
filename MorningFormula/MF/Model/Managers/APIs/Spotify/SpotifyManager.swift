@@ -13,7 +13,7 @@ class SpotifyManager: ObservableObject {
     
     private var spotifyService: SpotifyService
     
-    private var accessCode = "BQAaYLxNk6f-3nVDhj_0_nO-BImcfgyesql8novDddrRtSPfcc-8bvDBQq6vHPUlz7jKmII16HS4xbR_NkCDaCA6vJVn0qgptqjRXMv7zqQ4VC7hhVo"
+    private var accessCode = "BQCh63uPGeqaljmOewJCXJyTWDmL1rnNAwx8HAoYgFmaozACcM2kwjgb4q4Wj1ZDFeEQ87RG32qB4LcDpRJBSLfD-c8_px_YDad8J42xaKLtL_BZp6s"
     var accessTokenTimer: Timer?
     
     @Published var pauseSearch = false {

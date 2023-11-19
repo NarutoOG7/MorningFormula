@@ -11,6 +11,8 @@ import PhotosUI
 
 struct ContentView: View {
     
+    @State private var selection: Int = 0
+    
     @ObservedObject var vm = CalendarManager.instance
 //    @ObservedObject var userManager = UserManager.instance
     @State var hasFinishedOnboarding = false
@@ -25,7 +27,14 @@ struct ContentView: View {
 
         if userManager.signedIn {
             if userManager.finishedOnboarding {
+
+//                ZStack {
+//                    CustomCurvedBar()
+//                    CustomTabBar(selection: $selection)
+//                }
                     TabBarView()
+
+
                 
             } else {
                 NavigationStack {
@@ -35,6 +44,7 @@ struct ContentView: View {
         } else {
             AuthenticationView()
         }
+        
     }
     
 
@@ -44,5 +54,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(UserManager.instance)
     }
 }

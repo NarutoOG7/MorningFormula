@@ -97,7 +97,6 @@ class SpotifyAPIService: SpotifyService {
     
     func getRecommendedSong(accessCode: String, _ formula: Formula, withCompletion completion: @escaping (RecommendedRoot?, Error?) -> Void) {
         let request = urlRequestForSongRecommendation(accessCode: accessCode, formula)
-        print(request?.debug())
         performURLSessionDataTask(request: request, withCompletion: completion)
     }
  

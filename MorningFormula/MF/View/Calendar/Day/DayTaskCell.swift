@@ -19,14 +19,15 @@ struct DayTaskCell: View {
                 taskCell
                     .padding(.leading, 20)
                 
-            }
+        }
     }
     
     private var time: some View {
         Text(task.starTime.formatted(date: .omitted, time: .shortened))
             .font(.subheadline)
-            .frame(width: 80)
+            .frame(width: 80, alignment: .leading)
             .foregroundColor(task.chosenColor)
+
     }
     
     private var taskCell: some View {
@@ -39,6 +40,7 @@ struct DayTaskCell: View {
             Spacer()
             startEndTimeView
         }
+        .padding(.top, 4)
         }
     }
     
@@ -85,6 +87,7 @@ struct DayTaskCell_Previews: PreviewProvider {
         ZStack {
             Color.black.opacity(0.8).edgesIgnoringSafeArea(.all)
             DayTaskCell(task: .constant(MFTask.exampleOne))
+                .padding()
 
         }
     }

@@ -11,10 +11,15 @@ struct SettingsView: View {
     
     let auth = FirebaseManager.instance
     
+    @ObservedObject var todayViewModel = TodayViewModel.instance
+    
     var body: some View {
        
         List {
-            logOutButton
+            dayDefinitionSwitch
+            Section {
+                logOutButton
+            }
         }
     }
     
@@ -37,6 +42,12 @@ struct SettingsView: View {
         auth.logOutTapped()
     }
     
+    private var dayDefinitionSwitch: some View {
+        Toggle(isOn: $todayViewModel.isDaySetByMidnight) {
+            Text("Day Defined By Midnight?")
+        }
+        .padding()
+    }
 }
 
 struct SettingsView_Previews: PreviewProvider {

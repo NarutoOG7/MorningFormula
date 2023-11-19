@@ -13,7 +13,7 @@ struct TabBarView: View {
     
     @ObservedObject var calendarManager = CalendarManager.instance
     
-    @StateObject var homeViewModel = HomeViewModel.instance
+    @StateObject var todayViewModel = TodayViewModel.instance
 
 
     var body: some View {
@@ -21,7 +21,8 @@ struct TabBarView: View {
             TabView(selection: $selection) {
                 formulaView
                 homeView
-                goalsView
+                todayView
+//                goalsView
                 settingsView
             }
         }
@@ -45,31 +46,34 @@ struct TabBarView: View {
                     Image(systemName: "house")
                 }
                 .tag(1)
-            
-                .onAppear {
-                    homeViewModel.eventManager.fetchEvents { events in
-                        if events.count > 0 {
-                            homeViewModel.ekEvents = events
-                            print(events.count)
-                            print(homeViewModel.ekEvents.count)
-                        }
-                    }
-                }
-            
-
-            
-         
     }
     
-    private var goalsView: some View {
-        Goals()
-            .padding()
+    private var todayView: some View {
+        Today()
             .tabItem {
-                Text("My Goals")
-                Image(systemName: "testtube.2")
+                Text("Today")
+                Image(systemName: "calendar")
             }
             .tag(2)
+        
+            .onAppear {
+                todayViewModel.eventManager.fetchEvents { events in
+                    if events.count > 0 {
+                        todayViewModel.ekEvents = events
+                    }
+                }
+            }
     }
+    
+//    private var goalsView: some View {
+//        Goals()
+//            .padding()
+//            .tabItem {
+//                Text("My Goals")
+//                Image(systemName: "testtube.2")
+//            }
+//            .tag(2)
+//    }
     
     
     private var settingsView: some View {
@@ -99,6 +103,9 @@ struct TabBarView: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        ZStack {
+            TabBarView()
+            RuleOfThirds()
+        }
     }
 }
