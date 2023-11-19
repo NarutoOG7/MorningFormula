@@ -12,4 +12,7 @@ protocol ChatGPTService {
     func getChatResponseFromMessage(_ message: String, withCompletion completion: @escaping(String?, Error?) -> Void)
     
     func urlRequestFromMessage(_ message: String) -> URLRequest?
+    
+    func getStressedOutResponseFromMessage(_ message: String, withCompletion completion: @escaping (String?, Error?) -> Void)
+
 }

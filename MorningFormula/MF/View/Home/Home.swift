@@ -13,18 +13,28 @@ struct Home: View {
     @ObservedObject var spotifyManager = SpotifyManager.instance
     
     var body: some View {
+        let showStressedPrompt = viewModel.stressedOutPrompt != nil
         NavigationStack {
-            List {
-                greeting
-                songRecommendationView
-                imStressedButton
-                
+            ZStack {
+                List {
+                    greeting
+                    songRecommendationView
+                    imStressedButton
+                    
+                }
+                .scrollContentBackground(.hidden)
+                .blur(radius: showStressedPrompt ? 7 : 0)
+                .overlay(showStressedPrompt ? Color.gray.opacity(0.3) : Color.clear)
+                if showStressedPrompt {
+                    StressedOutView(viewModel: viewModel)
+                        .padding()
+                }
             }
-            .scrollContentBackground(.hidden)
         }
         .fullScreenCover(isPresented: $viewModel.showRecommendedSong, content: {
             SpotifyRecommendationView(song: viewModel.recommendedSong)
         })
+    
     }
     
     private var greeting: some View {
@@ -57,7 +67,9 @@ struct Home: View {
     
     private var imStressedButton: some View {
         Section {
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                viewModel.imStressedTapped()
+            }, label: {
                 Text("I'm Stressed")
                     .font(.roboto(size: 20, weight: .Medium))
                     .foregroundStyle(.red)

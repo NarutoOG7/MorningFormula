@@ -153,6 +153,7 @@
 		C9F225CD2A55A3680074AE89 /* GoalsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F225CC2A55A3680074AE89 /* GoalsInput.swift */; };
 		C9FE0AD52B09839B00191086 /* CustomCurvedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE0AD42B09839B00191086 /* CustomCurvedBar.swift */; };
 		C9FE0AD72B09C64400191086 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE0AD62B09C64400191086 /* HomeViewModel.swift */; };
+		C9FE0AD92B09DC3E00191086 /* StressedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE0AD82B09DC3E00191086 /* StressedOutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +286,7 @@
 		C9F225CC2A55A3680074AE89 /* GoalsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsInput.swift; sourceTree = "<group>"; };
 		C9FE0AD42B09839B00191086 /* CustomCurvedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCurvedBar.swift; sourceTree = "<group>"; };
 		C9FE0AD62B09C64400191086 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C9FE0AD82B09DC3E00191086 /* StressedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressedOutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +580,7 @@
 				C990C97E2AEF5F00008FBE66 /* CircularTextView.swift */,
 				C990C9802AF01889008FBE66 /* RoundedCapsuleView.swift */,
 				C990C9822AF02606008FBE66 /* CircleDividerView.swift */,
+				C9FE0AD82B09DC3E00191086 /* StressedOutView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -907,6 +910,7 @@
 				C98575282AF9FBAA00F40030 /* EventReccurrenceView.swift in Sources */,
 				C9A086472AB177D300C2CC14 /* CalendarView.swift in Sources */,
 				C9540D0D2AC522C00067C6DE /* Rule.swift in Sources */,
+				C9FE0AD92B09DC3E00191086 /* StressedOutView.swift in Sources */,
 				C985752B2AFBE9F900F40030 /* SpotifyRecommendationView.swift in Sources */,
 				C98575262AF966E000F40030 /* FMTasks.swift in Sources */,
 				C97F254B2AD0EF3400D04C0A /* Artist.swift in Sources */,

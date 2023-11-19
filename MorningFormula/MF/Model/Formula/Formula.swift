@@ -64,6 +64,10 @@ struct Formula: Identifiable, Codable {
         return request
     }
     
+    var imStressedRequest: String {
+        "Give me one random action for me to complete that helps ease stress. Looking for it to be between 2 and 10 minutes. Return just the action please."
+    }
+    
     init(dict: [String:Any]) {
         self.id = dict["id"] as? String ?? ""
         self.userID = dict["id"] as? String ?? ""

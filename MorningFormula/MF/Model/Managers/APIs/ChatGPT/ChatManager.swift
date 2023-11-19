@@ -20,6 +20,17 @@ class ChatManager: ObservableObject {
         self.chatService = chatService
     }
     
+    func getStressdOutPrompt(_ formula: Formula, withCompletion completion: @escaping(String?, Error?) -> Void) {
+        self.chatService.getStressedOutResponseFromMessage(formula.imStressedRequest) { response, error in
+            if let error = error {
+                completion(nil, error)
+            }
+            if let response = response {
+                completion(response, nil)
+            }
+        }
+    }
+    
     func getPersonalSummaryFromFormula(_ formula: Formula) {
         self.chatService.getChatResponseFromMessage(formula.summaryForChat) { response, error in
             if let response = response {

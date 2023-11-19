@@ -248,7 +248,7 @@ class VideoManager {
         if let videoAssetTrack = videoAsset.tracks(withMediaType: .video).first {
             let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
             do {
-                try videoTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: videoAsset.duration), of: videoAssetTrack, at: CMTime.zero)
+                try videoTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: audioAsset.duration), of: videoAssetTrack, at: CMTime.zero)
             } catch {
                 print("Error inserting video track: \(error.localizedDescription)")
                 completion(nil)
@@ -260,7 +260,7 @@ class VideoManager {
         if let audioAssetTrack = audioAsset.tracks(withMediaType: .audio).first {
             let audioTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
             do {
-                try audioTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: videoAsset.duration), of: audioAssetTrack, at: CMTime.zero)
+                try audioTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: audioAsset.duration), of: audioAssetTrack, at: CMTime.zero)
             } catch {
                 print("Error inserting audio track: \(error.localizedDescription)")
                 completion(nil)

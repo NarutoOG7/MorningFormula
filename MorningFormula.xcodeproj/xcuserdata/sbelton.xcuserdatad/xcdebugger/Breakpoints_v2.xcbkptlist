@@ -1733,13 +1733,13 @@
             filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "getChatResponseFromMessage(_:withCompletion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B2D9AF73-2621-4256-B678-6A399D3EA13B - 1d001eec91ba9120"
+                  uuid = "B2D9AF73-2621-4256-B678-6A399D3EA13B - 1d001eec91ba9fdb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1749,12 +1749,12 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "1300">
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1604">
                </Location>
                <Location
-                  uuid = "B2D9AF73-2621-4256-B678-6A399D3EA13B - 1d001eec91ba9120"
+                  uuid = "B2D9AF73-2621-4256-B678-6A399D3EA13B - 1d001eec91ba9fdb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1764,8 +1764,8 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
                   offsetFromSymbolStart = "1356">
                </Location>
             </Locations>
@@ -1781,13 +1781,13 @@
             filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "getChatResponseFromMessage(_:withCompletion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "70A52B12-602B-4BD0-AC4B-DEC64B53DAC9 - 1d001eec91ba9239"
+                  uuid = "70A52B12-602B-4BD0-AC4B-DEC64B53DAC9 - 1d001eec91ba9f30"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1797,12 +1797,12 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "404">
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "648">
                </Location>
                <Location
-                  uuid = "70A52B12-602B-4BD0-AC4B-DEC64B53DAC9 - 1d001eec91ba9239"
+                  uuid = "70A52B12-602B-4BD0-AC4B-DEC64B53DAC9 - 1d001eec91ba9f30"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1812,8 +1812,8 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
                   offsetFromSymbolStart = "432">
                </Location>
             </Locations>
@@ -1829,13 +1829,13 @@
             filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "urlRequestFromMessage(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BD1CE0F4-6335-4A08-8381-A6547137B309 - 81d25b797a8381"
+                  uuid = "BD1CE0F4-6335-4A08-8381-A6547137B309 - 81d25b797a809e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1845,12 +1845,12 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "4160">
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "4712">
                </Location>
                <Location
-                  uuid = "BD1CE0F4-6335-4A08-8381-A6547137B309 - 81d25b797a8381"
+                  uuid = "BD1CE0F4-6335-4A08-8381-A6547137B309 - 81d25b797a809e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1860,8 +1860,8 @@
                   urlString = "file:///Users/sbelton/Library/Mobile%20Documents/com~apple~CloudDocs/Apps/MorningFormula/MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
                   offsetFromSymbolStart = "4440">
                </Location>
             </Locations>
@@ -2378,6 +2378,38 @@
                   offsetFromSymbolStart = "1364">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00516881-8B89-48F5-80C9-982646084016"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getStressedOutResponseFromMessage(_:withCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A05CF0C1-533B-4D1E-B452-5440563549AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MorningFormula/MF/Model/Managers/APIs/ChatGPT/ChatServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getStressedOutResponseFromMessage(_:withCompletion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
